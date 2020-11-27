@@ -1,0 +1,5 @@
+require('./archive.twig')
+require('./archive-sidebar.twig')
+require('./blog.twig')
+require('./contact.twig')
+require('./article.twig')

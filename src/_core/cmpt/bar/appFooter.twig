@@ -1,0 +1,30 @@
+{# 不建議調用 #}
+
+<div class="app-footer  --{{mode}} {{color}} border-t border-lighter">
+  <div class="container px-4">
+    {% if mode == 'level' %}
+    <div class="flex flex-wrap">
+      <div class="brand">
+        <a href="{{ site.link }}">
+          <img class="logo dark link"
+               src="{{ logo_dark }}"
+               alt="logo">
+        </a>
+        {% include '@core/cmpt/appFooter/_menu.twig' with {
+          menu:menu,
+        } only %}
+      </div>
+      <div class="w-3/12">
+        {% include '@core/cmpt/appFooter/_menu.twig' with {
+          menu:menu,
+        } only %}
+
+      </div>
+      <div class="w-3/12">
+        {% include '@core/cmpt/social/social.twig'  %}
+      </div>
+    </div>
+    {% endif %}
+    {% include '@core/cmpt/appFooter/_copyright.twig'  %}
+  </div>
+</div>

@@ -1,0 +1,32 @@
+.breadcrumb {
+  @apply text-lighter flex inline-flex;
+
+  &.light {
+    @apply text-dark;
+    a {
+      @apply text-light;
+    }
+  }
+
+  &.dark {
+    @apply text-white;
+    a {
+      @apply text-lighter;
+    }
+  }
+
+  .breadcrumb-item,
+  li {
+    @apply pr-2 py-2;
+
+    ~ li,
+    ~ .breadcrumb-item {
+      @apply pl-2;
+
+      &::before {
+        content: '/';
+        @apply px-2;
+      }
+    }
+  }
+}

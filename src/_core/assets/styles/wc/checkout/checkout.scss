@@ -1,0 +1,181 @@
+.page.woocommerce-checkout.woocommerce-checkout {
+  .woocommerce {
+    @extend .container-sm;
+
+    h3 {
+      margin-bottom: 1rem;
+    }
+    .product-total {
+      text-align: right;
+    }
+
+    .cart-subtotal,
+    .order-total {
+      td {
+        text-align: right;
+      }
+    }
+
+    .payment_box {
+      @apply text-sm text-lighter;
+    }
+
+    //社群登陸
+    .woocommerce-form-login-social {
+      @apply mb-2 px-4;
+
+      a {
+        display: block;
+      }
+    }
+
+    //登入
+    .woocommerce-form-login-toggle {
+      @apply py-4 text-center;
+      @extend .box;
+
+      .woocommerce-info {
+        a {
+          @extend .btn;
+        }
+      }
+    }
+
+    // 登入框  主要設定在form/login
+    .woocommerce-form-login {
+      @apply flex flex-col;
+      @extend .box;
+
+      > p {
+        &:first-child {
+          @apply text-sm text-light mb-4;
+        }
+      }
+
+      .actions {
+        .form-row {
+          .woocommerce-form__label-for-checkbox {
+            order: 2;
+            position: relative;
+            transform: translateY(0);
+          }
+
+          .woocommerce-button {
+            order: 1;
+            @apply bg-dark;
+            @extend .btn;
+            @extend .btn-block;
+            @extend .btn-lighter;
+          }
+        }
+      }
+    }
+  }
+}
+//區塊最上層
+form.checkout {
+  @apply flex flex-wrap w-full;
+
+  #customer_details.col2-set {
+    flex: 1 0 100%;
+
+    // 帳單資訊
+    .col-1 {
+      // 運送欄位
+      .woocommerce-billing-fields {
+        @apply mt-2;
+        @extend .box;
+      }
+
+      //是否建立帳號
+      .woocommerce-account-fields {
+        @apply mt-4;
+        @extend .box;
+      }
+    }
+
+    // 地址資訊  額外資訊
+    .col-2 {
+      .woocommerce-shipping-fields {
+        @extend .box;
+        @apply mt-2;
+
+        // display: none;
+      }
+
+      .woocommerce-additional-fields {
+        @apply mt-2;
+        @extend .box;
+      }
+    }
+  }
+
+  // 發票
+  #electronic_invoice_fields {
+    @apply mt-10 p-0;
+    @extend .box;
+    .form-row {
+      margin-top: 1.5rem !important;
+      select {
+        margin-bottom: 1rem;
+      }
+    }
+
+    option[value='-1'] {
+      display: none;
+    }
+  }
+
+  // 折價券 改用自製的
+  .woocommerce-form-coupon {
+    @apply mt-2 flex-grow;
+    @extend .box;
+  }
+
+  // 付款方式
+  .woocommerce-checkout-payment {
+    @apply flex flex-col w-full mt-2;
+
+    ul.wc_payment_methods {
+      li {
+        @apply pt-8;
+
+        > div {
+          @apply pl-8;
+        }
+      }
+    }
+    .wc_payment_method.payment_method_newebpay {
+      img {
+        display: none;
+      }
+    }
+  }
+
+  #order_review {
+    @extend .box;
+  }
+
+  .place-order {
+    @apply pt-4;
+  }
+  .woocommerce-terms-and-conditions-wrapper {
+    @apply pt-4;
+  }
+
+  .woocommerce-privacy-policy-text {
+    @apply text-sm text-light py-2;
+  }
+
+  .woocommerce-billing-fields__field-wrapper,
+  .woocommerce-shipping-fields__field-wrapper {
+    @extend .form-rows;
+  }
+
+  .button[name='woocommerce_checkout_place_order'] {
+    @apply mt-4;
+    @extend .btn;
+    @extend .btn-block;
+    @extend .btn-lighter;
+  }
+}

@@ -1,0 +1,61 @@
+.modal {
+	@apply p-4;
+	&.active {
+		// display: flex;
+		// flex-direction: column;
+		@apply flex flex-col justify-center;
+	}
+
+	&:focus {
+		outline: none;
+	}
+	bottom: 0;
+	left: 0;
+
+	right: 0;
+	top: 0;
+	align-items: center;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	overflow: hidden;
+	position: fixed;
+	z-index: 1030;
+	pointer-events: none;
+
+	.modal-header {
+		@apply flex items-center bg-white px-4  relative;
+		max-width: 800px;
+
+		width: 100%;
+		flex: 0 0 50px;
+
+		.modal-close {
+			cursor: pointer;
+
+			@apply ml-auto;
+		}
+	}
+
+	.modal-content {
+		pointer-events: auto;
+		margin: 0 auto;
+		// max-height: calc(100vh - 40px);
+		flex: 0 1 auto;
+		overflow: auto;
+		max-width: 800px;
+		width: 100%;
+		position: relative;
+		z-index: 2;
+	}
+
+	.modal-footer {
+		max-width: 800px;
+
+		width: 100%;
+		.btn {
+		}
+
+		flex: 0 0 56px;
+	}
+}

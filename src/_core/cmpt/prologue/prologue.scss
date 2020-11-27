@@ -1,0 +1,23 @@
+.prologue {
+  h1 {
+    @apply text-4xl font-heading font-black;
+  }
+
+  .banner {
+    @apply py-10;
+
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .meta {
+    @apply text-light text-sm mt-2;
+  }
+
+  .excerpt {
+    @apply text-light text-2xl mt-8;
+  }
+}

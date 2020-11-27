@@ -1,0 +1,39 @@
+<ul class=" {{breakpoint[1]}}:flex-row flex-col">
+	{% for item in menu %}
+		{% if item.rows %}
+			<li class="item has-dropdown is-hoverable">
+				<a class="link {{ item.class }}">
+					{{ item.title }}
+				</a>
+				{# Second level menu #}
+				<ul class=" dropdown l2">
+					{% for child in item.rows %}
+						<li class="item {{ child.class }} {{ child.get_children ? 'has-children' }}">
+							<a class="link flex items-center" href="{{ child.link }}">
+								{{ child.title }}
+							</a>
+							{% if child.get_children %}
+								{# Third level menu #}
+								<div class="navbar-dropdown ">
+									{% for grandchild in child.rows %}
+										<a class="navbar-item {{ grandchild.class }}" href="{{ grandchild.link }}">
+											{{ grandchild.title }}
+										</a>
+									{% endfor %}
+								</div>
+
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+
+			</li>
+		{% else %}
+			<li class="item px-3 {{ item.class }}">
+				<a class="link flex items-center" href="{{ item.uri | router}} ">
+					{{ item.title | raw}}
+				</a>
+			</li>
+		{% endif %}
+	{% endfor %}
+</ul>

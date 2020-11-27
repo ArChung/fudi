@@ -1,0 +1,37 @@
+<div class="prologue --{{mode}}">
+  <h1 class="title">{{ row.title }}</h1>
+  <p class="meta">
+
+    {{row.post_date | date('Y M d')}}
+    {% if row.authors %}
+    {% for author in row.authors %}
+    <span>
+      |
+    </span>
+    <a href="{{author.slug}}">{{author.title}}</a>
+    {% endfor %}
+    {% endif %}
+  </p>
+
+  {% if row.tags is defined  and  row.tags | length > 0 %}
+  <p class="tags mt-3">
+    {% for tag in row.tags %}
+    <span class="badge inline-block mb-2">{{tag.title}}</span>
+    {% endfor %}
+  </p>
+  {% endif %}
+
+  {% if row.banner is defined  and row.banner != '' %}
+  <div class="banner">
+
+    <img src="{{row.banner | assets}}"
+         alt="">
+  </div>
+
+  {% endif %}
+
+
+
+  <p class="excerpt ">{{row.info}}</p>
+
+</div>

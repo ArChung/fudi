@@ -1,0 +1,26 @@
+#shipping_option {
+  select {
+    opacity: 1;
+  }
+  #__paymentButton {
+    // @apply inline-block  font-bold text-center text-white px-5 py-3 bg-lighter  rounded-full;
+    // padding: 0.5rem 1rem !important;
+  }
+}
+
+.payment_method_ecpay {
+  img {
+    display: none;
+  }
+  .payment_box.payment_method_ecpay {
+    select {
+      opacity: 1;
+      @apply text-sm text-lighter border-lighter;
+    }
+  }
+}
+#purchaserStore_field,
+#purchaserPhone_field,
+#purchaserAddress_field {
+  display: none;
+}

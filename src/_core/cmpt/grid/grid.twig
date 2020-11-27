@@ -1,0 +1,42 @@
+{% if mode == 'masonry' %}
+	<div class="grid --{{mode}} {{cls}} gee" data-uid="{{uid}}" data-masonry-filter="{{masonryFilter}}" data-masonry-cb="{{masonryCb}}" data-gene="init:masonry.init">
+	{% else %}
+		<div class="grid --{{mode}}  {{cls}}">
+		{% endif %}
+		<div class="container container{% if fluid %}-fluid {% endif %} ">
+			{% if gaps %}
+				{% set wrap_mx = 'lg:-mx-' ~ gaps[0] ~ ' md:-mx-' ~ gaps[1] ~ ' -mx-' ~ gaps[2]  %}
+				{% set gap_all = 'lg:px-' ~ gaps[0] ~ ' lg:mb-' ~ gaps[0] * 3  
+					~ ' md:px-' ~ gaps[1] ~ ' md:mb-' ~ gaps[1] * 3 
+					~ ' px-' ~ gaps[2] ~ ' mb-' ~ gaps[2] * 3
+					%}
+			{% else %}
+				{% set gap_all = 'px-' ~ gap ~ ' mb-' ~ gap * 3 %}
+				{% set wrap_mx = '-mx-' ~ gap  %}
+			{% endif %}
+
+			<div class=" flex flex-wrap {{wrap_mx}}">
+				{% set lg = 12 / cols[0] == 1 ?  'lg:w-full' :'lg:w-'~ 12 / cols[0] ~'/12' %}
+				{% set md = 12 / cols[1] == 1 ?  'md:w-full' :'md:w-'~ 12 / cols[1] ~'/12' %}
+				{% set all = 12 / cols[2] == 1 ?  'w-full' :'w-'~ 12 / cols[2] ~'/12' %}
+
+				{% for key,row in rows %}
+					<div class="item {{lg}}  {{md}}  {{all}} {{gap_all}} {{row.terms_class}}">
+						{% include  _slot.src is defined ? _slot.src  : '@core/cmpt/card/card.twig' with  {
+							row:row ,
+							key:key ,
+							lazy:lazy,
+							cls:_slot.cls,
+							fields:_slot.fields,
+							terms:_slot.terms,
+							color:_slot.color,
+							thumbnail_size:_slot.thumbnail_size,
+							mode:_slot.mode ,
+							preview:_slot.preview
+						} only %}
+					</div>
+				{% endfor %}
+
+			</div>
+		</div>
+	</div>

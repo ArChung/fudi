@@ -1,0 +1,110 @@
+.item.cart-item {
+	@apply flex mb-4 items-stretch mb-4;
+
+	.delete {
+	}
+
+	.item-img {
+		flex: 0 110px;
+		@apply mr-6;
+	}
+
+	.item-body {
+		flex: 1 0 0;
+
+		@apply flex flex-col mr-4 items-center justify-start;
+
+		.title,
+		a {
+			@apply flex-grow block w-full font-bold mb-3;
+		}
+		div.price {
+			@apply w-full;
+		}
+
+		.variations {
+			@apply text-light text-sm;
+		}
+
+		.addons {
+			@apply text-light text-sm;
+		}
+
+		.amount {
+			@apply text-xl text-sm;
+		}
+	}
+	@include media-breakpoint-down(md) {
+		a.item-img {
+			margin-right: 0.5rem;
+		}
+
+		.title {
+			@apply text-sm;
+		}
+
+		.variations {
+			@apply text-xs;
+		}
+
+		.addons {
+			@apply text-xs;
+		}
+
+		div.price {
+			@apply text-sm;
+		}
+	}
+
+	.subtotal {
+		@apply mr-6;
+	}
+
+	.actions {
+	}
+
+	.quantity {
+		@apply flex mr-6 items-end;
+
+		flex: 0 0 80px;
+
+		> div.update {
+			width: 40px;
+			height: 40px;
+			display: block;
+			font-size: 1.5rem;
+			text-align: center;
+			z-index: 2;
+			cursor: pointer;
+			i {
+				display: block;
+			}
+		}
+
+		input {
+			margin: 0 -1rem;
+			padding: 0 2rem;
+			text-align: center;
+		}
+
+		@include media-breakpoint-down(md) {
+			@apply flex-col justify-between mr-0;
+			flex: 0 0 40px;
+
+			> div.update {
+				flex: 0 0 40px;
+				font-size: 1.2rem;
+				i {
+					@apply bg-lighter rounded-full  text-lightest;
+					line-height: 40px !important;
+				}
+			}
+			input {
+				margin: 0;
+				padding: 0;
+				border-width: 0;
+				height: 34px;
+			}
+		}
+	}
+}

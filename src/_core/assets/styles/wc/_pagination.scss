@@ -1,0 +1,28 @@
+.woocommerce-pagination {
+  @apply flex py-4 items-center;
+  .pages {
+    .current {
+      @apply text-2xl;
+    }
+    .total {
+      @apply text-light;
+    }
+  }
+
+  ul.page-numbers {
+    @apply inline-flex ml-auto justify-center;
+    a.page-numbers,
+    span.page-numbers {
+      @apply border border-lighter text-center inline-block bg-white text-sm text-lighter;
+
+      width: 34px;
+      height: 34px;
+
+      line-height: 34px;
+
+      &.current {
+        @apply text-white bg-dark border-dark;
+      }
+    }
+  }
+}

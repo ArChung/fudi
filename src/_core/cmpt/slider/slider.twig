@@ -1,0 +1,20 @@
+<div class="slider gee --{{mode}}  {{cls}}  {{color}}" data-autoheight="{{autoHeight}}" data-nav="{{nav}}" data-loop="{{loop}}" data-cols="[{{cols[0]}},{{cols[1]}},{{cols[2]}}]" data-dots="{{dots}}" data-margin="{{gap * 10}}" data-gene="init:slider.init">
+	{% if mode == 'grid' %}
+		<div class="">製作中</div>
+	{% else %}
+		{% for row in rows %}
+			<div class="slide ">
+				{% include _slot.src is defined ? _slot.src  : '@core/cmpt/card/card.twig' with  {
+        path:data.path,
+        row:row,
+        color:_slot.color,
+        cls:_slot.cls,
+        fields:_slot.fields,
+        mode:_slot.mode
+      }%}
+			</div>
+		{% endfor %}
+	{% endif %}
+
+
+</div>

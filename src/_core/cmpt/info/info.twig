@@ -1,0 +1,35 @@
+<div class="info flex flex-col --{{mode}} {{cls}}">
+	{% if info.email %}
+		<div class="mt-2">
+			{% if has_icon %}
+				<i class="icon icon-email"></i>
+			{% endif %}
+			{{info.email}}
+		</div>
+	{% endif %}
+	{% if info.tel %}
+		<div class="mt-2">
+			{% if has_icon %}
+				<i class="icon icon-phone"></i>
+			{% endif %}
+			{{info.tel}}
+		</div>
+	{% endif %}
+	{% if info.fax %}
+		<div class="mt-2">
+			{% if has_icon %}
+				<i class="icon icon-fax"></i>
+			{% endif %}
+			{{info.fax}}
+		</div>
+	{% endif %}
+	{% if info.address %}
+		<div class="mt-2">
+			{% if has_icon %}
+				<i class="icon icon-map"></i>
+			{% endif %}
+			{{info.address}}
+		</div>
+	{% endif %}
+
+</div>

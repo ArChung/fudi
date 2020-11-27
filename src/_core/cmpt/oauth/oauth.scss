@@ -1,0 +1,64 @@
+.wc-social-login,
+.oauth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  text-align: center;
+  z-index: 2;
+  flex-wrap: wrap;
+
+  .item {
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+
+    @include media-breakpoint-down(lg) {
+      @apply px-4;
+    }
+
+    a {
+      @apply mx-auto flex items-center justify-center text-center text-xs text-lighter;
+
+      &::before {
+        display: none;
+      }
+
+      line-height: 1.5;
+      // padding: 0;
+      width: 100%;
+      max-width: 650px;
+      // height: 80px;
+      border-radius: 23px;
+      transition: 0.5s all;
+
+      &:hover {
+        // transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.or-line {
+  position: relative;
+  display: block;
+  margin: 1rem 0;
+  text-align: center;
+
+  span {
+    position: relative;
+    padding: 1rem;
+    background: #fff;
+  }
+
+  &::before {
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    flex: 1 1 100%;
+    content: '';
+    @apply absolute  block bg-lightest w-full;
+  }
+}

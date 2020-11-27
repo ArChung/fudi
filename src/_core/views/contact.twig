@@ -1,0 +1,25 @@
+{% extends "@layout/base.twig"%}
+{% block necker %}
+	{% include '@views/_partial/necker.twig' %}
+{% endblock %}
+{% block bodier %}
+	<article class="main-article {{post.class}} px-4">
+		<div class="container-sm px-4">
+			<div class="flex flex-wrap row">
+
+				<div
+					class="w-full flex-grow lg:mt-0">
+					{# <h2 class="text-2xl font-black">聯絡</h2> #}
+					<div class="wysiwyg">
+						{{info}}
+					</div>
+					{% include '@core/cmpt/touch/touch.wp.twig' with {
+             endpoint:endpoint,
+             fields:['']
+           }%}
+				</div>
+
+			</div>
+		</div>
+	</article>
+{% endblock %}

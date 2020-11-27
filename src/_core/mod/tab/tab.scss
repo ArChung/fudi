@@ -1,0 +1,10 @@
+.tab {
+	.tab-content {
+		> div {
+			@apply hidden;
+			&.active {
+				@apply block;
+			}
+		}
+	}
+}

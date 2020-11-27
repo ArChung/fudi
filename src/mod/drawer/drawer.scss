@@ -1,0 +1,82 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1029;
+	display: none;
+	&.active {
+		display: block;
+	}
+}
+
+@mixin drawer-style {
+	position: fixed !important;
+	// z-index: 1040;
+	width: calc(100% - 80px);
+	max-width: 100%;
+	background: #fff;
+	z-index: 1040;
+	transition: 0.4s transform;
+
+	&.w-full {
+		width: 100% !important;
+	}
+	&.active {
+		z-index: 1030;
+		transform: translateX(0) translateY(0) !important;
+		> a.close {
+			@apply block;
+		}
+	}
+
+	&.--bottom {
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		max-width: 100% !important;
+		transform: translateY(100%);
+	}
+
+	&.--left {
+		bottom: 0;
+		left: 0;
+
+		height: 100%;
+		max-width: 600px;
+		transform: translateX(-100%);
+	}
+
+	&.--right {
+		bottom: 0;
+		right: 0;
+
+		height: 100%;
+		max-width: 600px;
+		transform: translateX(100%);
+	}
+}
+
+// li 語法資料庫，套用在ul li
+.drawer {
+	> a.close {
+		display: none;
+		@apply fixed z-50;
+		top: 1rem;
+		right: 1rem;
+	}
+	// overflow-x: hidden;
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		@include media-breakpoint-down($breakpoint) {
+			&.#{$breakpoint}\:drawer {
+				@include drawer-style;
+			}
+		}
+	}
+
+	&.x\:drawer {
+		@include drawer-style;
+	}
+}

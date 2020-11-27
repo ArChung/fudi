@@ -1,0 +1,90 @@
+.woocommerce-product-gallery {
+	position: relative;
+	.flexslider {
+		ul.flex-direction-nav {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			pointer-events: none;
+			li {
+				pointer-events: auto;
+				a {
+					position: absolute;
+					top: 50%;
+					z-index: 99;
+					pointer-events: auto;
+					display: block;
+					color: #fff;
+					// text-indent: -9999px;
+					background-color: rgba(0, 0, 0, 0.5);
+					overflow: hidden;
+					border-radius: 50%;
+
+					text-align: center;
+					&:before {
+						color: #fff;
+						font-size: 18px;
+						line-height: inherit;
+						text-shadow: none;
+					}
+				}
+			}
+		}
+	}
+
+	// nav
+	#carousel.flexslider {
+		background: transparent;
+		border-width: 0;
+		.flex-direction-nav {
+			li {
+				a {
+					width: 30px;
+					height: 30px;
+					line-height: 30px;
+				}
+			}
+		}
+	}
+
+	// 主圖
+	#slider.flexslider {
+		background: transparent;
+		border-width: 0;
+		.woocommerce-product-gallery__image {
+			img {
+				display: block;
+			}
+			a {
+				display: block;
+			}
+		}
+		.flex-direction-nav {
+			li {
+				a {
+					width: 50px;
+					height: 50px;
+					line-height: 50px;
+				}
+			}
+		}
+		.flex-control-nav {
+			position: relative;
+			z-index: 99;
+			&.flex-control-thumbs {
+				@apply mt-8;
+				li {
+					cursor: pointer;
+					height: 50px;
+					width: 50px;
+					border: 3px solid rgba(255, 255, 255, 0.3);
+					@apply overflow-hidden rounded-full mt-2;
+				}
+			}
+			&.flex-control-paging {
+			}
+		}
+	}
+}

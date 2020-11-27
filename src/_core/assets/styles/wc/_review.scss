@@ -1,0 +1,115 @@
+@import '../../../mod/form/forms/index.scss';
+
+.woocommerce-Reviews {
+  #comments {
+    flex: 1 0 0;
+    @apply relative;
+    h2.woocommerce-Reviews-title {
+      display: none;
+
+      span {
+        display: none;
+        @apply text-dark text-lg font-black;
+      }
+      @apply text-light text-sm;
+    }
+
+    .commentlist {
+      // 大標題 加上 列表
+
+      .comment_container {
+        > img {
+          display: none;
+        }
+
+        .comment-text {
+          .star-rating {
+            order: 2;
+            @apply ml-auto;
+          }
+
+          .meta {
+            order: 1;
+
+            .woocommerce-review__author {
+              @apply text-dark font-black;
+            }
+
+            .woocommerce-review__verified {
+              @apply text-light text-xs;
+            }
+
+            .woocommerce-review__published-date {
+              @apply text-light text-xs;
+            }
+          }
+
+          .description {
+            order: 3;
+            @apply w-full mt-2 text-light text-sm;
+          }
+          @apply flex flex-wrap;
+        }
+        @apply mb-8;
+      }
+      @apply flex-grow overflow-hidden relative;
+    }
+  }
+
+  .clear {
+    display: none;
+  }
+
+  #review_form_wrapper {
+    flex: 0 0 auto;
+
+    .comment-reply-title {
+      display: none;
+    }
+
+    .comment-form {
+      .comment-form-rating {
+        p.stars {
+          height: 20px;
+        }
+        @apply flex items-center w-full mt-2;
+      }
+
+      .comment-notes {
+        display: none;
+
+        @apply w-full text-sm text-lighter mt-2;
+      }
+
+      .comment-form-author {
+        @apply w-5/12 mt-2;
+      }
+
+      .comment-form-email {
+        @apply w-7/12 mt-2 pl-3;
+      }
+
+      textarea {
+        @extend .materialize-textarea;
+
+        height: 60px !important;
+      }
+
+      .comment-form-cookies-consent {
+        display: none;
+      }
+
+      .form-submit {
+        input {
+          @extend .btn;
+          @extend .btn-block;
+          @extend .btn-lighter;
+        }
+        @apply w-full block mt-2;
+      }
+      @apply flex flex-wrap border-t border-lightest pt-2 mt-2;
+    }
+    @apply pt-4;
+  }
+  @apply h-full relative flex flex-col;
+}

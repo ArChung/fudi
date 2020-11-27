@@ -1,0 +1,22 @@
+.mailpoet_paragraph {
+  text-align: center;
+}
+.mailpoet_text {
+  display: inline-block !important;
+  text-align: center;
+}
+.mailpoet_validate_success,
+.mailpoet_validate_error {
+  text-align: center;
+}
+.mailpoet_submit {
+  @apply block relative font-bold py-1 px-1 mx-auto;
+  width: auto !important;
+  white-space: nowrap;
+  transition: all 0.5s;
+  @apply inline-block  font-bold text-center text-white px-5 py-3 bg-lighter  rounded-full;
+
+  &:hover {
+    @apply bg-dark;
+  }
+}

@@ -1,0 +1,32 @@
+:root {
+	--color-white: #fff;
+	--color-black: #000;
+	--color-green: #58B291;
+	--color-red: #ad0000;
+	--color-yellow: #fbca3c;
+	--color-lightest: #ebebeb;
+	--color-lighter: #ccc;
+	--color-light: #979797;
+	--color-dark: #333;
+	--color-darker: #111;
+	--color-primary: #fbca3c;
+	--color-blue: #0062ff;
+	--color-secondary: #0072b4;
+	--color-info: #00cc0a;
+	--color-danger: #e00000;
+	--color-warn: #df4400;
+	--color-success: #2b6cb0;
+	--color-transparent: transparent;
+
+	--color-label: #666;
+	--color-input-border: #666;
+	--color-input-text: #666;
+}
+
+/* .w-1 {
+	width: .25rem;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

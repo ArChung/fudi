@@ -1,0 +1,36 @@
+<div class="item">
+  <div class="bg z-0">
+
+    {% if lazy == true %}
+    <picture>
+      <source class="owl-lazy"
+              media="(max-width: 650px)"
+              data-srcset="{{row.mobile}}">
+      <img class="owl-lazy"
+           data-src="{{row.thumbnail.src}} "
+           alt="{{row.title|striptags }}">
+    </picture>
+
+    {% else %}
+    <img src="{{row.thumbnail.src}}"
+         alt="{{row.title|striptags}}">
+    {% endif %}
+  </div>
+  <div class="para z-30 absolute bottom-0 left-0 ml-10 mb-4 lg:mb-32">
+    {% if 'subtitle' in fields %}
+    <p class="subtitle text-white text-md">{{row.subtitle}}</p>
+    {% endif %}
+    {% if 'title' in fields %}
+    <h2 class="title font-heading font-black text-white lg:text-6xl text-4xl leading-tight">{{row.title}}</h2>
+
+    {% endif %}
+    {% if 'link' in fields and row.link2  %}
+    <a class="block btn-link  text-white"
+       href="{{row.link2}}"
+       target="{{row.target}}}">
+      了解更多
+      <i class="icon icon-arrow-right"></i>
+    </a>
+    {% endif %}
+  </div>
+</div>

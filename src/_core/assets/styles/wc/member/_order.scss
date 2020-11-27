@@ -1,0 +1,85 @@
+.page.woocommerce-account.woocommerce-orders {
+  .woocommerce {
+    table.shop_table {
+      @include media-breakpoint-down(md) {
+        .item-data {
+          display: block !important;
+        }
+
+        .woocommerce-orders-table__header-order-date,
+        .woocommerce-orders-table__cell-order-date,
+        .woocommerce-orders-table__cell-order-total,
+        .woocommerce-orders-table__header-order-total {
+          display: none;
+        }
+
+        .woocommerce-orders-table__cell-order-number {
+          .item-data {
+            time {
+              @apply block text-xs  text-lighter;
+            }
+
+            .woocommerce-Price-amount {
+              @apply block mt-4;
+            }
+          }
+        }
+
+        .woocommerce-orders-table__header-order-status,
+        .woocommerce-orders-table__cell-order-status {
+          width: 100px;
+          @apply text-right;
+        }
+
+        .woocommerce-orders-table__header-order-actions,
+        .woocommerce-orders-table__cell-order-actions {
+          width: 130px;
+          @apply text-right;
+          @include media-breakpoint-down(md) {
+            width: 130px;
+          }
+        }
+      }
+
+      .woocommerce-orders-table__cell-order-number {
+        > a {
+          @apply text-lg font-black;
+        }
+      }
+
+      th {
+        @apply pt-0 border-b-2 border-lighter;
+      }
+
+      td {
+        @apply py-8 border-b border-lighter;
+      }
+
+      .item-data {
+        display: none;
+      }
+
+      .woocommerce-orders-table__cell-order-status {
+      }
+    }
+  }
+}
+
+.woocommerce-order-details {
+  h2 {
+    @apply text-2xl font-black mb-4;
+  }
+}
+
+.woocommerce-customer-details {
+  @apply mt-4;
+
+  h2 {
+    @apply text-2xl font-black  mb-4;
+  }
+
+  address {
+    font-style: normal;
+    line-height: 2;
+  }
+}

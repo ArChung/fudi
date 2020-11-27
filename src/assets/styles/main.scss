@@ -1,0 +1,265 @@
+// @import "./tailwind.scss";
+// @import "./breakpoints";
+@import "../icons/_icon.css";
+@import "./sr.scss";
+@import "./dots.scss";
+// @import "../icons/_icon.css";
+// @import "../../_core/assets/styles/index.scss";
+
+@import "../../_core/assets/styles/common.scss";
+@import "../../_core/assets/styles/box.scss";
+@import "../../_core/assets/styles/btn.scss";
+@import "../../_core/assets/styles/wysiwyg.scss";
+@import "../../_core/assets/styles/container.scss";
+
+@import "../../_core/assets/styles/layout.scss";
+// @import "../../_core/assets/styles/panel.scss";
+// @import "../../_core/assets/styles/table.scss";
+// @import "../../_core/assets/styles/badge.scss";
+// @import "../../_core/assets/styles/dropdown.scss";
+// @import "./wrap.scss";
+
+// @import "./wysiwyg.scss";
+.carou.\--basic {
+	.owl-dots {
+		text-align: center;
+		position: absolute;
+
+		left: 0;
+		bottom: 0;
+
+		margin-bottom: 1rem;
+		margin-left: 1rem;
+
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.bodier {
+	// min-height: calc(100vh - 222px);
+}
+.bodier {
+	background-color: #fff;
+}
+ul.nav {
+	li {
+		&.active {
+			a {
+				@apply relative block;
+				&:after {
+					@apply bg-primary;
+					content: "";
+					width: 100%;
+					height: 3px;
+					position: absolute;
+					bottom: 3px;
+					left: 0;
+				}
+			}
+		}
+	}
+}
+
+.card {
+	.card-img {
+		@apply w-full;
+		img {
+			@apply w-full;
+		}
+	}
+
+	&.\--media {
+		@apply flex items-center;
+		.card-img {
+			flex: 0 0 130px;
+		}
+		.card-body {
+			@apply w-full px-8;
+			flex: 1 0 0;
+		}
+
+		@include media-breakpoint-down(md) {
+			@apply flex flex-col;
+			.card-img {
+			}
+			.card-body {
+				@apply px-0 mt-4;
+				flex: 1 0 0;
+			}
+		}
+	}
+}
+.bodier {
+	.bodier-title {
+		@apply mb-20;
+		@include media-breakpoint-down(md) {
+			@apply mb-10;
+		}
+	}
+	.bodier-body {
+	}
+}
+.title-underline {
+	@apply font-heading text-5xl relative font-bold text-center pb-4;
+	&:before,
+	&:after {
+		content: "";
+		@apply absolute   w-20 bg-primary  block;
+		left: 50%;
+		bottom: 0;
+		height: 5px;
+		transform: translateX(-50%);
+	}
+}
+.title-box {
+	@apply flex justify-center items-center text-xl font-bold bg-lightest p-10;
+}
+.last-mb-0:last-child {
+	margin-bottom: 0 !important;
+}
+.section {
+	~ .section {
+		@apply mt-20;
+	}
+	.section-header {
+		.title {
+		}
+	}
+	.section-body {
+	}
+	.section-action {
+		@apply mt-20;
+	}
+	@include media-breakpoint-down(md) {
+		~ .section {
+			@apply mt-10;
+		}
+		.section-header {
+			.title {
+				@apply mb-10;
+			}
+		}
+		.section-action {
+			@apply mt-10;
+		}
+	}
+}
+
+.app-footer {
+	.copyright {
+		@include media-breakpoint-down(lg) {
+			font-size: 0.6rem;
+		}
+	}
+}
+.modal {
+	.modal-content {
+	}
+	&.modal-invitation {
+		.col-account {
+			display: block;
+		}
+	}
+}
+
+.container {
+	// margin: 0 auto;
+}
+.font-heading {
+	font-variant-ligatures: no-common-ligatures;
+}
+.line-camp {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 32;
+	overflow: hidden;
+}
+.single {
+	.bodier {
+		.container {
+		}
+	}
+}
+.container {
+	&.sm {
+		max-width: 720px;
+	}
+	&.xs {
+		max-width: 400px;
+	}
+}
+
+form {
+	.field,
+	.input-field {
+		@apply flex flex-col mb-4;
+		label {
+			@apply text-lg font-bold mb-1;
+		}
+		input[type="file"] {
+		}
+		textarea,
+		input[type="email"],
+		input[type="text"],
+		input[type="password"],
+		select {
+			@apply border border-light rounded-md bg-white px-4;
+		}
+		input[type="email"],
+		input[type="text"],
+		input[type="password"],
+		select {
+			@apply h-10;
+		}
+		textarea {
+			@apply h-20;
+		}
+		&.required {
+			label {
+				&:after {
+					content: "*";
+					display: inline-block;
+					color: #ff0000;
+					font-size: 0.9rem;
+					transform: translateY(-30%);
+				}
+			}
+		}
+	}
+
+	&.--h {
+		.field {
+			@apply flex-row;
+			> label:not(.radio) {
+				@apply w-40;
+			}
+			> div {
+			}
+		}
+		@include media-breakpoint-down(md) {
+			.field {
+				@apply flex-col;
+			}
+		}
+	}
+}
+
+.btn {
+	@apply rounded-md px-3 cursor-pointer;
+	&.btn-primary {
+		@apply text-white;
+	}
+	&.btn-yellow {
+		@apply text-white bg-primary;
+	}
+	&.btn-green {
+		@apply bg-green text-white;
+	}
+	&.btn-light {
+		@apply bg-light text-white;
+	}
+	&.btn-dark {
+		@apply text-white;
+	}
+}

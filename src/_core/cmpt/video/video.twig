@@ -1,0 +1,13 @@
+<div class="video --{{mode}} --{{type}} --{{ratio}} ">
+	{% if type=='yt' %}
+		{% set url = type=='yt' ? 'https://www.youtube.com/embed/' : '????' %}
+		<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" src="{{url}}{{src}}" width="100%"></iframe>
+	{% else %}
+		<video height="auto" width="100%" {% if controls is true %} controls {% endif %}>
+			<source
+			src="{{src}}" type="video/mp4">
+			{# <source src="movie.ogg" type="video/ogg"> #}
+			Your browser does not support the video tag.
+		</video>
+	{% endif %}
+</div>

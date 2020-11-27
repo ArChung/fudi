@@ -1,0 +1,90 @@
+{% extends "@layouts/base.twig" %}
+{% block necker %}
+	<div class="necker">
+		{% include "@cmpt/banner/banner.twig"  with {
+		row:{
+		thumbnail:{
+		src:	'images/banner-note.jpg',
+		alt:	'Banner 在牆上的便利貼寫東西',
+			}
+		}
+			}%}
+
+	</div>
+{% endblock %}
+{% block bodier_cls %}py-20
+{% endblock %}
+{% block bodier %}
+	<div class="container sm px-4 lg:px-0">
+		<div class="bodier-title">
+			<h1 class="title-underline">網站導覽</h1>
+		</div>
+
+		<div class="section">
+
+
+			<div class="section-body">
+				{% set sitemap = [
+				{
+					title:'最新消息',
+					description:'文章列表與內容',
+					link:'archive-press.html',
+					children:[]
+				},
+					{
+					title:'職場安全健康週專區',
+						description:'文章列表與內容',
+					link:'archive-event.html',
+					children:[]
+				},
+				{
+					title:'意見信箱',
+					link:'contact.html',
+					description:'文章列表與內容',
+					children:[]
+				},
+				{
+					title:'會員專區',
+					link:'member.html',
+					description:'新增，上傳報告等相關內容',
+					children:[]
+				},
+
+			] %}
+
+				<div class="leader ">
+
+					<p>本網站依照「無障礙網頁開發規範」原則設計， 遵循無障礙網站設計之規範提供網頁導盲磚(:::)、網站導覽 (Site Navigator)、鍵盤快速鍵 (Access Key) 等設計方式。 下列為本網站使用鍵盤快速鍵 (Access Key) 操作方式說明：</p>
+
+					<p class="mt-10">Alt + U：上方主選單連結區，主要有網站導覽、意見信箱、主要選單。</p>
+					<p>Alt + C：主要內容區，移至網頁之主要內容區位置。</p>
+					<p>Alt + B：下方選單，包含快速選單、聯絡資訊。</p>
+				</div>
+				<div class="flex flex-wrap -mx-4 mt-10">
+					{% for item in sitemap %}
+						<div class="w-full lg:w-6/12 px-4 mb-8">
+							<div class="card border border-lighter w-full text-center p-6">
+								<h2 class="font-bold text-heading">
+									<a class="block " href="{{item.link}}" title="{{item.title}}">{{item.title}}</a>
+									<small class="block text-lighter mt-2">{{item.description}}</small>
+								</h2>
+								{% if item.children | length %}
+									<ul>
+										{% for child in item.children %}
+											<li>
+												<a href="{{child.link | default('#')}}" title="{{child.title}}">{{child.title}}</a>
+											</li>
+										{% endfor %}
+									</ul>
+								{% endif %}
+							</div>
+						</div>
+					{% endfor %}
+
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+{% endblock %}

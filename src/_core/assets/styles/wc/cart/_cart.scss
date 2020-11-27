@@ -1,0 +1,57 @@
+@import './table.scss';
+@import './coupon.scss';
+@import './collaterals.scss';
+
+
+.page.woocommerce-cart {
+
+  // @extend .container;
+
+  .woocommerce {
+    @extend .container-sm;
+  }
+
+  form.woocommerce-cart-form {
+    @apply flex flex-col;
+  }
+
+  form.woocommerce-cart-form {
+    table.shop_table {
+      @apply bg-white;
+    }
+  }
+
+  .coupon {
+
+    @extend .box;
+    width: 60%;
+    @apply mt-4 ml-auto;
+
+    .input-group {}
+  }
+
+  .cart-collaterals {
+    width: 50%;
+    @extend .box;
+    @apply ml-auto mt-4;
+
+    .cart_totals {
+      // @apply py-6;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    form.woocommerce-cart-form {}
+
+    .coupon {
+
+      width: 100%;
+
+    }
+
+    .cart-collaterals {
+      @apply mt-4;
+      width: 100%;
+    }
+  }
+}

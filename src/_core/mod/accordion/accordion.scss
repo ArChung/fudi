@@ -1,0 +1,50 @@
+.accordion-list {
+  .accordion-list-header {
+    @apply text-2xl mb-4 font-black;
+  }
+}
+
+.accordion {
+  .accordion-header {
+    @apply justify-start;
+    .title,
+    h4 {
+      @apply flex-grow text-lg font-bold;
+    }
+
+    .actions {
+      flex: 0 0 50px;
+
+      @apply ml-4  font-normal;
+
+      .up {
+        display: none;
+      }
+    }
+  }
+
+  .accordion-body {
+    @apply mt-2 mb-4;
+
+    overflow: hidden;
+    height: auto;
+    max-height: 0;
+    transition: 0.5s all;
+  }
+
+  &.active {
+    .accordion-body {
+      max-height: 1000px;
+    }
+
+    .actions {
+      .up {
+        display: block;
+      }
+
+      .down {
+        display: none;
+      }
+    }
+  }
+}

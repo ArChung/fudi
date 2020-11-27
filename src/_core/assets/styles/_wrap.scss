@@ -1,0 +1,19 @@
+.wrap-title {
+	@apply text-3xl text-left;
+}
+
+.wrap {
+	position: relative;
+	z-index: 0;
+	.wrap-header {
+		@apply text-center px-4 pt-12 pb-6;
+
+		.title,
+		.wrap-title {
+			@apply font-heading text-3xl mb-2;
+		}
+	}
+	.wrap-body {
+		@apply relative;
+	}
+}

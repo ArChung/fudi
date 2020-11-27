@@ -1,0 +1,17 @@
+.grid {
+	display: block !important;
+	&.dark {
+	}
+
+	&.light {
+	}
+
+	&.\--masonry {
+		// 奇怪的換行問題
+		.w-6\/12 {
+			@include media-breakpoint-down(sm) {
+				width: 49.5%;
+			}
+		}
+	}
+}

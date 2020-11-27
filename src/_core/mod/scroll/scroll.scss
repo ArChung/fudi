@@ -1,0 +1,35 @@
+ul.scroll-nav {
+  @apply fixed;
+
+  top: 50%;
+  right: 1rem;
+  z-index: 2;
+  transform: translateY(-50%);
+
+  li {
+    @apply py-3 relative block;
+
+    &.active {
+      a {
+        @apply bg-primary border-b border-dark;
+      }
+
+      // &::after {
+      //   margin-left: -10px;
+      //   margin-bottom: 10px;
+      //   width: 10px;
+      //   height: 2px;
+      //   background: #000;
+
+      //   @apply absolute bottom-0 left-0 border-b border-dark;
+      // }
+    }
+
+    a {
+      @apply text-xs text-center block bg-lighter rounded-full  overflow-hidden;
+
+      width: 6px;
+      height: 6px;
+    }
+  }
+}

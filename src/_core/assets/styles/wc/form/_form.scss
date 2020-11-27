@@ -1,0 +1,78 @@
+@import '../../../../mod/form/forms/index';
+
+.select2-container {
+  height: 3rem;
+  label {
+    position: absolute;
+    top: 0;
+    transform: translateY(-14px) scale(0.9);
+  }
+
+  .select2-selection--single {
+    height: 3rem;
+    background: transparent;
+    border-radius: 0;
+    outline-width: 0;
+
+    .select2-selection__rendered {
+      padding-left: 0;
+      height: 3rem;
+      line-height: 3rem;
+      @apply text-sm;
+    }
+    @apply border-0 border-b border-lighter;
+  }
+
+  .select2-selection__arrow {
+    display: none;
+  }
+  //夏拉兩部分  框 和 夏拉
+  .select2-dropdown.select2-dropdown--below {
+    transform: translateY(-45px);
+
+    // 框
+
+    .select2-search--dropdown {
+      padding: 0;
+
+      .select2-search__field {
+        margin-bottom: 0;
+        border-width: 0;
+        @apply border-t border-b;
+      }
+    }
+
+    // 夏拉
+    .select2-results {
+      .select2-results__option {
+        &.select2-results__option--highlighted {
+          @apply bg-light;
+        }
+        @apply text-sm;
+      }
+    }
+  }
+}
+
+// .input[type='radio'] {
+// }
+
+.form-row {
+  // @extend .input-field;
+
+  textarea {
+    @extend .materialize-textarea;
+  }
+}
+
+.form-rows {
+  .form-row {
+    &.input-field {
+      label {
+        @apply ml-4;
+      }
+    }
+    @apply px-4 mt-6;
+  }
+  @apply -mx-4 flex flex-wrap;
+}

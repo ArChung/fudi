@@ -1,0 +1,9 @@
+<ul class="nav --{{mode}} {{cls}}">
+	{% for row in rows %}
+		<li class="item ">
+			<a href="{{row.link}}" class="link" title="連結 {{row.title}}">
+				{{row.title}}
+			</a>
+		</li>
+	{% endfor %}
+</ul>

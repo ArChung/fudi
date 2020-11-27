@@ -1,0 +1,12 @@
+.woocommerce-product-attributes {
+  h2 {
+    @apply text-dark w-20;
+  }
+
+  .woocommerce-product-attributes-item__label {
+    @apply text-light w-20;
+  }
+
+  .woocommerce-product-attributes-item__value {
+  }
+}

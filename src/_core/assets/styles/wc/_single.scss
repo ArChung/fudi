@@ -1,0 +1,18 @@
+.woocommerce.single-product {
+  .woocommerce-product-attributes {
+    @include media-breakpoint-down(md) {
+      @apply text-sm;
+    }
+
+    th {
+      vertical-align: top;
+      width: 110px;
+      @apply text-left py-4;
+    }
+
+    td {
+      vertical-align: top;
+      @apply text-light py-4;
+    }
+  }
+}

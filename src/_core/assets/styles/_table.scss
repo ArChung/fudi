@@ -1,0 +1,21 @@
+.table {
+  @apply w-full text-left;
+
+  th {
+    @apply py-4 px-1 font-black;
+  }
+
+  td {
+    @apply py-4 px-1 text-sm;
+  }
+
+  &.bordered {
+    th {
+      @apply border-b border-lighter;
+    }
+
+    td {
+      @apply border-b border-lighter;
+    }
+  }
+}

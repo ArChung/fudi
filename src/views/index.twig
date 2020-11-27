@@ -1,0 +1,192 @@
+{% set page = 'index' %}
+{% extends "@layouts/base.twig" %}
+{% block necker %}
+	{% include "@cmpt/carou/carou2.twig" with {
+   mode:"basic",
+     color:"light",
+     animation:"slide-left",
+     height:"auto",
+     nav:false,
+     autoplay:true,
+     lazy:true,
+     dots:true,
+     rows: [
+			 {
+				title:"Banner 各行各業的工作成果",
+				thumbnail:{
+					src:"/assets/images/banner.jpg",
+				},
+				mobile:"/assets/images/banner-m.jpg",
+			},
+			{
+				title:"Banner 各行各業的工作成果",
+				thumbnail:{
+					src:"/assets/images/differect-people-working.jpg",
+				},
+				mobile:"/assets/images/banner-m.jpg",
+			}
+		],
+     _slot:{
+       src:"@cmpt/carou/item.twig",
+     },
+	}
+	%}
+
+{% endblock %}
+{% block bodier %}
+	{% embed "@cmpt/wrap/wrap.twig" with {
+		title: '最新消息',
+		cls:'',
+		actions:{
+			more:'archive-press.html'
+		},
+		container:'sm px-4 lg:px-0'
+	} %}
+		{% block body %}
+			{% include "@cmpt/list/list.twig"  with { rows: [
+				{
+					date:'2020/2/2',
+					title:'勞勞動部直播啟動「全國職場安全健康週',
+				},
+				{
+					date:'2020/2/2',
+					title:'勞動部直播啟動「全國職場安勞動部直播啟及防疫工作全健康週」，呼籲企業應做好職場安全衛生及',
+				},
+				{
+					date:'2020/2/2',
+					title:'勞動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生',
+				},
+				{
+					date:'2020/2/2',
+					title:'勞動部直播啟動「全國職做好職場安全衛生及防疫工作/2',
+				},
+				{
+					date:'2020/2/2',
+					title:'播啟動「全國職場安全健康週」，呼籲企業應做好場安全衛生及防疫工作',
+				},
+				{
+					date:'2020/2/2',
+					title:'勞動部直播啟動「全國職場生防疫工作',
+				},
+		] ,fields:['date','title']} %}
+		{% endblock %}
+	{% endembed %}
+
+
+	{% set events = [
+				{
+					thumbnail:'images/event-thumbnail.jpg',
+					date:'109年',
+					title:'全國職場安全健康週計畫暨成果提報',
+				},
+				{
+					thumbnail:'images/event-thumbnail.jpg',
+					date:'109年',
+					title:'全國職場安全健康週計畫暨成果提報',
+				},
+				{
+					thumbnail:'images/event-thumbnail.jpg',
+					date:'109年',
+					title:'全國職場安全健康週計畫暨成果提報',
+				},
+				{
+					thumbnail:'images/event-thumbnail.jpg',
+					date:'109年',
+					title:'全國職場安全健康週計畫暨成果提報',
+				},
+				{
+					thumbnail:'images/event-thumbnail.jpg',
+					date:'109年',
+					title:'全國職場安全健康週計畫暨成果提報',
+				},
+				{
+					thumbnail:'images/event-thumbnail.jpg',
+					date:'109年',
+					title:'全國職場安全健康週計畫暨成果提報',
+				}
+				]
+				%}
+	{% embed "@cmpt/wrap/wrap.twig" with {
+		title: '職場安全健康週專區',
+		cls:'bg-lightest',
+		actions:{
+			more:'archive-event.html'
+		},
+		container:' px-4 lg:px-0'
+	} %}
+		{% block body %}
+			<div class="flex flex-wrap -mx-4">
+				{% for row in events %}
+					<div class="w-1/2  lg:w-4/12 mb-8 px-4 ">
+						<div class="card --media">
+							<a href="{{row.link}}" class="card-img" title="文章連結-{{row.title}}">
+								<img src="{{row.thumbnail | assets }}" alt="縮圖 {{row.title}}">
+							</a>
+							<div class="card-body ">
+								<p class="text-xl font-bold">{{row.date}}</p>
+								<a class="h4 title text-xl font-bold" href="{{row.link}}" title="文章連結-{{row.title}}">{{row.title}}</a>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		{% endblock %}
+	{% endembed %}
+	{% set links = [
+				{
+					thumbnail:'images/logo-osha.jpg',
+					link2:'google.com',
+				},
+				{
+					thumbnail:'images/logo-mol.jpg',
+					link2:'google.com',
+				},
+					{
+						thumbnail:'images/logo-osha.jpg',
+					link2:'google.com',
+				},
+				]
+				%}
+	{% embed "@cmpt/wrap/wrap.twig" with {
+		title: '外部連結',
+		cls:'',
+    container:'sm px-4 lg:px-0'
+	} %}
+		{% block body %}
+			<div class="flex flex-wrap -mx-4">
+				{% for row in links %}
+					<div class="w-full  lg:w-4/12 px-4 mb-8 last-mb-0">
+						<div class="card --thumbnail border border-lightest">
+							<a href="{{row.link}}" class="card-img " title="文章連結-{{row.title}}">
+								<img src="{{row.thumbnail | assets }}" alt="縮圖-{{row.title}}">
+							</a>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		{% endblock %}
+	{% endembed %}
+{% endblock %}
+{% block append %}
+
+	<a href="javascript:;" data-gene="modal.toggle" data-ta=".modal-alert" class="btn btn-primary gee">modal test</a>
+
+	<div class="modal modal-alert ">
+		<div class="modal-wrap px-8 w-full" style="max-width:700px">
+			<div class="rounded-lg bg-white overflow-hidden">
+				<div class=" w-full  bg-primary flex items-center px-4 py-2">
+					<div class="text-white ">說明文字</div>
+					<button class="modal-close text-white ml-auto gee" data-ta=".modal-alert" data-gene="click:modal.toggle" aria-label="close">
+						<i class="icon icon-close" aria-hidden="true"></i>
+						<span class="sr-only">關閉</span>
+					</button>
+				</div>
+				<div class="px-4 lg:px-16 py-4 lg:py-10">
+					說明文字
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}

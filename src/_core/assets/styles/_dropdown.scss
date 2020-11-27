@@ -1,0 +1,25 @@
+// .dropdown {
+//   position: relative;
+//   > ul {
+//     min-width: 50px;
+//     @apply right-0 top-0 mt-6 absolute hidden bg-white rounded-sm overflow-hidden;
+//     z-index: 1;
+//     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+//     li {
+//       a {
+//         @apply block px-3 py-2 text-xs;
+
+//         text-decoration: none;
+
+//         &:hover {
+//           @apply bg-lightest;
+//         }
+//       }
+//     }
+//   }
+//   &:hover {
+//     > ul {
+//       @apply block;
+//     }
+//   }
+// }

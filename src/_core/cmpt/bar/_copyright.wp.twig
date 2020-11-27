@@ -1,0 +1,15 @@
+<div class="copyright flex flex-wrap items-center {{cls}}">
+  <div>
+    Copyright ©
+    {{info.company_name}}
+    2020, All Rights Reserved
+  </div>
+  <div class="nav ml-0 lg:ml-auto">
+    {% for item in menu %}
+    <a href="{{item.link}}"
+       class="btn btn-link">
+      {{item.title}}
+    </a>
+    {% endfor %}
+  </div>
+</div>

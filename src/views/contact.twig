@@ -1,0 +1,42 @@
+{% set page = 'memeber' %}
+{% set isLogined = false %}
+{% extends "@layouts/base.twig" %}
+{% block necker %}
+	{% include "@cmpt/banner/banner.twig"  with {
+		row:{
+		thumbnail:{
+		src:	'images/banner-note.jpg',
+		alt:	'Banner 明淨的桌面上的咖啡杯',
+			}
+
+	}  }%}
+{% endblock %}
+{% block bodier_cls %}py-20
+{% endblock %}
+{% block bodier %}
+	<div class="bodier-title">
+		<h1 class="title-underline">意見信箱</h1>
+	</div>
+	<div class="container sm px-4 lg:px-0">
+		<div class="section">
+			<div class="section-header">
+				<h2 class="title title-box">歡迎使用意見信箱</h2>
+			</div>
+			<div class="section-body">
+				<div
+					class="w-full flex-grow ">
+					{# <h2 class="text-2xl font-black">聯絡</h2> #}
+					<div class="wysiwyg my-10">
+						為維護陳情人及被陳情人權益，避免浪費行政資源，凡所有陳情內容應與民眾自身權益有關，請您務必於來信資料中填具真實姓名及聯絡方式（聯絡地址、電話及電子郵件信箱），作為受理依據。
+					</div>
+					{% include '@cmpt/touch/touch.twig' with {
+             endpoint:'/api/contact',
+             fields:['']
+           }%}
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+{% endblock %}

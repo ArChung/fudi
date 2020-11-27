@@ -1,0 +1,16 @@
+.app-footer {
+	@apply pt-4 z-0 relative;
+
+	.brand {
+		.logo {
+			height: 60px;
+		}
+	}
+	&.dark {
+		@apply text-white;
+	}
+	.copyright {
+		.nav {
+		}
+	}
+}

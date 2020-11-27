@@ -1,0 +1,47 @@
+.slider {
+	&.dark {
+		.owl-dots {
+			> button.owl-dot {
+				> span,
+				&::after {
+					background-color: var(--color-white);
+				}
+			}
+		}
+	}
+
+	&.light {
+		.owl-dots {
+			> button.owl-dot {
+				> span,
+				&::after {
+					background-color: var(--color-dark);
+				}
+			}
+		}
+	}
+
+	&.\--normal {
+	}
+
+	.owl-stage-outer {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		// overflow: visible;
+	}
+
+	.owl-dots {
+		@apply text-left mt-4;
+
+		// button {
+		//   @apply w-3 h-3 mx-2 rounded-full overflow-hidden bg-lightest;
+
+		//   &.active {
+		//     @apply bg-primary;
+		//   }
+		// }
+	}
+
+	.owl-nav {
+	}
+}

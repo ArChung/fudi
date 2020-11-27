@@ -1,0 +1,43 @@
+<ul class="gee" data-gene="init:initTmpl" data-tmpl="menu-main">
+  {{props data}}
+  <li class="item {{if #index == 0 }}active{{/if }}">
+    {{if prop.rows.length == 0 }}
+    {{if prop.slug }}
+    <a
+      class="pre-gee link px-3"
+      data-gene="click:preview.fillMain"
+      data-src="{{:prop.slug }}"
+      href="javascript:;"
+    >
+      {{:prop.title }}<span class="sr-only">{{:prop.title}}</span>
+    </a>
+    {{else}}
+    <a
+      href="{{:prop.uri}}"
+      target="{{if prop.blank == 'Yes' }}_blank{{else}}_top{{/if}}"
+      class="link"
+    >
+      {{:prop.title}}<span class="sr-only">{{:prop.title}}</span>
+    </a>
+    {{/if}}
+    {{else}}
+    <a href="javascript:;" data-toggle="dropdown">
+      {{:prop.title}}<i class="fa fa-angle-down"> </i>
+    </a>
+    <ul class="dropdown-menu">
+      {{props prop.rows}}
+      <li>
+        <a
+          href="{{:prop.uri}}"
+          target="{{if prop.blank == 'Yes' }}_blank{{else}}_top{{/if}}"
+          onclick="gee.exe('site.closeNav');"
+        >
+          {{:prop.title}}<span class="sr-only">{{:prop.title}}</span>
+        </a>
+      </li>
+      {{/props}}
+    </ul>
+    {{/if}}
+  </li>
+  {{/props}}
+</ul>

@@ -1,0 +1,10 @@
+<div class="social text-3xl flex flex-wrap">
+	{% for row in rows %}
+		{% if row.url != '' %}
+			<a class="mr-2 {{link_cls}}" target="_blank" title="{{row.type}}" href="{{row.url}}">
+				<i class="bd  bd-{{row.type}} " aria-hidden="true"></i>
+			</a>
+		{% endif %}
+	{% endfor %}
+
+</div>

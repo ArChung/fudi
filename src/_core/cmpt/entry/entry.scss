@@ -1,0 +1,125 @@
+/* stylelint-disable */
+.entry {
+	@apply flex flex-wrap;
+	z-index: 9;
+	@include media-breakpoint-down(md) {
+		.entry-images {
+			@apply px-0 py-4 w-full;
+		}
+
+		.entry-summary {
+			@apply px-4 py-8 w-full;
+		}
+	}
+
+	.entry-images {
+		@apply py-0 w-3/6 min-h-24;
+		@include media-breakpoint-down(md) {
+			@apply pt-32 w-full;
+		}
+	}
+
+	.entry-summary {
+		@apply px-8 py-24 w-3/6;
+		@include media-breakpoint-down(md) {
+			@apply w-full;
+		}
+	}
+
+	.entry-title {
+		@apply text-5xl font-black font-heading;
+
+		line-height: 1.2;
+	}
+
+	.stock {
+		@apply border-4 border-dark px-4 py-2 inline-block;
+
+		&.in-stock {
+			display: none;
+		}
+	}
+
+	.entry-excerpt {
+		@apply mt-8;
+	}
+
+	.entry-rating {
+		@apply flex mt-2 items-center;
+
+		.star-rating {
+		}
+
+		.review-link {
+			@apply text-xs ml-3 text-light;
+		}
+	}
+
+	// .variations_form cart swatches-support  收核對向
+	.entry-control {
+		@apply mt-12;
+		@include media-breakpoint-down(md) {
+			@apply mt-0;
+		}
+
+		.entry-result {
+			@apply flex items-end;
+
+			.entry-price {
+				@apply text-3xl font-bold;
+			}
+
+			.entry-stock {
+				@apply ml-4 text-xs;
+			}
+		}
+
+		.entry-variations {
+			@apply font-bold text-base mt-8;
+
+			.entry-variation {
+				.label {
+					@apply font-bold text-base w-16;
+				}
+
+				.value {
+					@apply text-light;
+
+					.reset {
+						@apply border text-xs mt-4 px-1 py-1 w-16 text-center;
+					}
+				}
+			}
+		}
+
+		.entry-variation-actions {
+			@apply flex  mt-8;
+
+			.entry-addon {
+				@apply px-2 py-2 w-full text-center py-4;
+			}
+
+			.entry-actions {
+				input.quantity {
+					@apply px-2 py-2 w-32 text-center h-8 m-0;
+				}
+
+				.add-to-cart {
+					@apply w-full px-4 py-2 ml-4 text-center bg-dark text-white;
+				}
+			}
+		}
+	}
+
+	.entry-meta {
+		@apply block mt-8;
+
+		> * {
+			@apply block w-full  mb-2 font-bold text-sm;
+
+			> * {
+				@apply inline-block  mb-2 font-normal  text-sm;
+			}
+		}
+	}
+}

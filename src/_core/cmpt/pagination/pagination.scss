@@ -1,0 +1,37 @@
+.paginations {
+	@apply flex py-4 items-center;
+	.pages {
+		.current {
+			@apply text-2xl;
+		}
+		.total {
+			@apply text-light;
+		}
+	}
+
+	.pagination {
+		@apply inline-flex ml-auto justify-center;
+		.page-item {
+			@apply border border-lighter text-center inline-block bg-white text-sm text-lighter;
+
+			width: 34px;
+			height: 34px;
+
+			line-height: 34px;
+
+			&.active {
+				@apply text-white bg-primary border-primary;
+			}
+		}
+	}
+
+	&.\--stacked {
+		@apply flex-col;
+		.pages {
+			@apply mb-4;
+		}
+		.pagination {
+			@apply mx-auto;
+		}
+	}
+}

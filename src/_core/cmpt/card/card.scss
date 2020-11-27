@@ -1,0 +1,136 @@
+.card {
+	@apply flex flex-col h-full;
+	&.center {
+		.card-body {
+			@apply items-center;
+		}
+	}
+
+	.card-body {
+		@apply relative flex flex-col flex-grow max-w-full;
+
+		.arthur {
+			@apply text-sm text-light;
+		}
+
+		.excerpt {
+			@apply mt-4 text-sm text-light;
+		}
+
+		.category {
+			@apply text-sm text-light;
+		}
+
+		.read-more {
+			@apply block text-xs font-bold mt-2;
+		}
+
+		.meta {
+			@apply text-xs;
+			opacity: 0.6;
+		}
+
+		.date {
+			@apply text-xs;
+			opacity: 0.8;
+		}
+	}
+	.card-img {
+		position: relative;
+		img {
+			@apply w-full;
+		}
+	}
+
+	&.img-as {
+		.card-img {
+			position: relative;
+			// overflow: hidden;
+			// padding-top: 56.25%;
+			height: 0;
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&.as-4-3 {
+			// display: none;
+
+			.card-img {
+				padding-top: 65.25%;
+			}
+		}
+
+		&.as-16-9 {
+			.card-img {
+				padding-top: 65.25%;
+			}
+		}
+
+		&.as-1-1 {
+			.card-img {
+				padding-top: 100%;
+			}
+		}
+	}
+
+	&.\--media {
+		@apply flex flex-row  justify-start items-start;
+		.card-img {
+			@apply rounded-sm overflow-hidden;
+
+			flex: 0 0 30%;
+			display: block;
+		}
+
+		.card-body {
+			@apply px-4 py-4;
+			flex: 1 1 0;
+			width: 0;
+		}
+		@include media-breakpoint-down(md) {
+			.card-img {
+				flex: 0 0 40%;
+			}
+		}
+	}
+
+	&.--normal {
+		.card-img {
+		}
+
+		.card-body {
+			@apply px-4 py-4;
+		}
+	}
+
+	&.--cover {
+		.card-img {
+			opacity: 1;
+			transition: opacity 0.5s;
+		}
+
+		.card-body {
+			// transition: opacity 0.5s;
+			transition: all 0.5s;
+			@apply text-lightest text-center absolute flex-col top-0 left-0 w-full h-full flex justify-center items-center;
+			background: rgba(0, 0, 0, 0.5);
+		}
+
+		&:hover {
+			.card-img {
+			}
+
+			.card-body {
+				background: rgba(0, 0, 0, 0);
+			}
+		}
+	}
+}

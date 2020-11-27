@@ -1,0 +1,12 @@
+<div class="entry --{{mode}} {{cls}} {{color}}" style="background-color:{{bgColor}}">
+	<div class="container{% if mode == 'screen' %}-fluid{% endif %} mx-auto flex flex-wrap">
+		<div class="entry-images">
+			<div class="woocommerce-product-gallery" {{gallery_mode}}>
+				{% do action('woocommerce_before_single_product_summary') %}
+			</div>
+		</div>
+		<div class="entry-summary">
+			{% do action('woocommerce_single_product_summary') %}
+		</div>
+	</div>
+</div>

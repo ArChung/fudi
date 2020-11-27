@@ -1,0 +1,37 @@
+.page.woocommerce-order-received {
+  .woocommerce {
+    h2 {
+      // @extend .box-title
+    }
+  }
+
+  .woocommerce-notice {
+    @apply mb-8;
+  }
+
+  .woocommerce-order-overview {
+    @apply flex flex-wrap -mx-3;
+
+    > li {
+      @apply text-sm mb-8 w-2/6 px-3 text-light;
+
+      strong {
+        @apply block font-bold text-base text-xl;
+      }
+    }
+  }
+
+  .woocommerce-order-details {
+    @apply mt-8;
+
+    .shop_table {
+    }
+  }
+
+  .woocommerce-customer-details {
+    @apply mt-8;
+  }
+  .woocommerce-columns {
+    display: flex;
+  }
+}

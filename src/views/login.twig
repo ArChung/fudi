@@ -1,0 +1,52 @@
+{% set page = 'login' %}
+
+{% extends "@layouts/base.twig" %}
+{% block necker %}
+	{% include "@cmpt/banner/banner.twig"  with {
+		row:{
+		thumbnail:{
+		src:	'images/banner-note.jpg',
+		alt:	'Banner 明淨的桌面上的咖啡杯',
+			}
+
+	}  }%}
+{% endblock %}
+{% block bodier_cls %}py-20
+{% endblock %}
+{% block bodier %}
+	<div class="bodier-title">
+		<h1 class="title-underline">會員登錄</h1>
+	</div>
+	<div class="container xs px-4 lg:px-0">
+		<form method="post" accept-charset="UTF-8">
+			<div class="field required">
+				<label for="username">帳號</label>
+				<input id="username " required type="text" name="username">
+			</div>
+			<div class="field required">
+				<label for="lid">勞保證號</label>
+				<input id="lid " required type="text" name="lid">
+			</div>
+			<div class="field required">
+				<label for="password">密碼</label>
+				<input id="password " required type="password" name="password">
+			</div>
+			<div class="field required">
+				<input class="btn btn-primary btn-block" type="submit" value="登錄" title="送出表單">
+			</div>
+		</form>
+		<div class="flex justify-center">
+			<ul class="nav --normal">
+				<li>
+					<a href="register.html" title="馬上註冊">馬上註冊</a>
+				</li>
+				<li>
+					<a href="forgot.html" title="忘記密碼">忘記密碼</a>
+				</li>
+				<li>
+					<a href="page.html" title="如何使用">如何使用</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}

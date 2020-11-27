@@ -1,0 +1,35 @@
+.screen-reader-text {
+	@apply hidden;
+}
+
+.col-1,
+.col-2 {
+	width: 100%;
+}
+
+.woocommerce-Price-currencySymbol {
+	@apply text-xs mr-1;
+}
+
+table.shop_table {
+	@extend .table;
+	@extend .bordered;
+
+	.woocommerce-button {
+		@extend .btn;
+	}
+}
+
+span.onsale {
+	font-size: 0.65rem !important;
+}
+
+.button {
+	@extend .btn;
+}
+
+.price {
+	del {
+		@apply text-xs text-lighter;
+	}
+}

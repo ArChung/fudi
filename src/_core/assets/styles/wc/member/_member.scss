@@ -1,0 +1,92 @@
+// @import '../../../cmpt/submenu/submenu.scss';
+
+.page.woocommerce-account.logged-in {
+	.woocommerce {
+		// @extend .container;
+		@apply mx-auto flex px-4;
+
+		//之後
+		.woocommerce-MyAccount-navigation {
+			@include media-breakpoint-up(lg) {
+				flex: 0 0 25%;
+			}
+
+			// .woocommerce-MyAccount-navigation-link--dashboard {
+			// 	a {
+			// 		&::before {
+			// 			font-weight: 900;
+			// 			content: '\E031';
+			// 		}
+			// 	}
+			// }
+
+			// .woocommerce-MyAccount-navigation-link--orders {
+			// 	a {
+			// 		&::before {
+			// 			font-weight: 900;
+			// 			content: '\E032';
+			// 		}
+			// 	}
+			// }
+
+			// .woocommerce-MyAccount-navigation-link--edit-address {
+			// 	a {
+			// 		&::before {
+			// 			font-weight: 900;
+			// 			content: '\E033';
+			// 		}
+			// 	}
+			// }
+
+			// .woocommerce-MyAccount-navigation-link--edit-account {
+			// 	a {
+			// 		&::before {
+			// 			font-weight: 900;
+			// 			content: '\E036';
+			// 		}
+			// 	}
+			// }
+
+			// .woocommerce-MyAccount-navigation-link--customer-logout {
+			// 	a {
+			// 		&::before {
+			// 			font-weight: 900;
+			// 			content: '\E037';
+			// 		}
+			// 	}
+			// }
+		}
+
+		.woocommerce-MyAccount-content {
+			@apply bg-white mt-4;
+			// margin-left: auto;
+
+			@include media-breakpoint-down(md) {
+				@apply bg-white;
+			}
+
+			flex-grow: 1;
+
+			.col2-set {
+				display: flex;
+
+				.col-1 {
+					flex: 0 0 50%;
+					max-width: 50%;
+				}
+
+				.col-2 {
+					flex: 0 0 50%;
+					max-width: 50%;
+				}
+			}
+		}
+
+		// 竟然沒有filter
+
+		// .woocommerce-address-fields__field-wrapper,
+		// .woocommerce-EditAccountForm {
+		//   @extend .form;
+		// }
+	}
+}

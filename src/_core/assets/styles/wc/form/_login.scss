@@ -1,0 +1,26 @@
+.woocommerce-form-login,
+.woocommerce-form-register {
+  .actions {
+    @apply flex flex-col;
+
+    .form-row {
+      @apply flex flex-col;
+    }
+  }
+
+  .woocommerce-button {
+    @apply mt-4;
+  }
+
+  .woocommerce-form-login__rememberme {
+    @apply mt-4;
+  }
+
+  .lost_password {
+    @apply text-center mt-2;
+
+    a {
+      @extend .btn;
+    }
+  }
+}

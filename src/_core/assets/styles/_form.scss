@@ -1,0 +1,9 @@
+.input-group {
+	display: flex !important;
+
+	input {
+		width: auto !important;
+		flex: 1 0 auto;
+		@apply flex-grow w-auto;
+	}
+}

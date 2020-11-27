@@ -1,0 +1,58 @@
+{# fields :[  img, title , price , excerpt ] #}
+
+<div class="card --{{mode}} {{color}} {{row.post_type}}">
+
+  {% if 'thumbnail' in fields  %}
+  <a class="card-img"
+     href="{{row.slug | router( path )}}">
+
+    <img src="{{row.cover | assets}}"
+         alt="{{row.title}}">
+  </a>
+  {% endif %}
+  <div class="card-body">
+    {% if 'category' in fields %}
+    <p class="category">
+      {{row.category}}
+    </p>
+    {% endif %}
+    <p class="meta ">
+      {% if 'date' in fields %}
+      <span>{{row.online_date }}</span>
+      {% endif %}
+
+      {% if 'date' in fields and 'authors' in fields %}
+      |
+      {% endif %}
+      {% if 'authors' in fields %}
+      {% for author in row.authors %}
+      <span class=" ">{{author.title}}</span>
+      {% endfor %}
+      {% endif %}
+    </p>
+
+    {% if 'title' in fields  %}
+    |
+    <a href="{{row.link}}">
+      <h4 class="title ">{{row.title}}</h4>
+    </a>
+    {% endif %}
+    {% if 'tags' in fields %}
+    <p class="tags mt-3">
+      {% for tag in row.tags %}
+      <span class="badge ">{{tag.title}}</span>
+      {% endfor %}
+    </p>
+    {% endif %}
+    {% if 'price' in fields %}
+    <p class="price">
+      {{row.price_html }}
+    </p>
+    {% endif %}
+    {% if 'excerpt' in fields %}
+    <p class="excerpt">
+      {{row.info}}
+    </p>
+    {% endif %}
+  </div>
+</div>

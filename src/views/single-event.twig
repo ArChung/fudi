@@ -1,0 +1,200 @@
+{% extends "@layouts/base.twig" %}
+{% block necker %}
+	<div class="necker">
+		{% include "@cmpt/banner/banner.twig"  with {
+			row:{
+			thumbnail:{
+				src:'images/banner-cooperation.jpg',
+				alt:'Banner 一群人擊拳互相激勵'
+			},
+		}  }%}
+	</div>
+{% endblock %}
+{% block bodier_cls %}py-20
+{% endblock %}
+{% block bodier %}
+	<div class="container sm px-4 lg:px-0">
+		<div class="bodier-title">
+			<h2 class="title-underline">職場安全健康週專區</h2>
+		</div>
+		<article class="article section">
+			<div class="section-header">
+				<h1 class="title title-box">勞動部直播啟動「全國職場安全健康週」，企業應做好職場安全衛生防疫工作</h1>
+			</div>
+			<div class="wysiwyg mt-10 lg:mt-20 ">
+				<p>4月28日是國際勞工組織(ILO)訂定之「世界職業安全衛生日」，勞動部配合舉辦「全國職場安全健康週」啟動活動，今(109)年因應嚴重特殊傳染性肺炎(COVID-19)疫情，特別在Facebook網路直播舉辦「提升職場健康勞動力研討會」，林政務次長明裕親臨直播現場，呼籲企業應做好職場安全衛生及防疫工作。</p>
+				<p>林次長致詞時表示，面對嚴重特殊傳染性肺炎疫情仍然嚴峻，感謝企業及勞工這段期間以來對於防疫的努力與堅持，也呼籲企業積極參與推動職場安全健康週活動，並落實職場安全衛生及防疫工作，確保企業持續營運與勞工的安全健康。</p>
+				<p>職安署署長鄒子廉表示，「世界職業安全衛生日」的意義，旨在喚起各界重視工作安全，有效預防職業災害與疾病，建立安全衛生文化，盼藉由舉辦職場安全健康週活動，能帶動政府機關、各公民營企業、各級學校、相關雇主及勞工團體、職業安全衛生相關專業機構等積極參與，除落實職場防疫外，也不忘對工作夥伴宣示職場安全與健康服務之年度目標及工作重點，以積極營造友善工作環境，提升我國整體產業安全衛生水準。</p>
+				<p>本次研討會，以職場防疫及中高齡勞工職場健康保護為重點，邀請國家職業安全衛生獎得主(群創光電公司及衛福部桃園醫院)，分享「面對看不見的武漢肺炎病毒職場如何因應」及「職場健康服務推動價值」，並邀請相關領域之專家學者，共同分享強化企業推動勞工健康服務之實務經驗，研討會相關內容可於臉書上搜尋「109年全國職場安全健康週」專頁觀賞。</p>
+				<br>
+				<p>資料來源：勞動部職業安全衛生署</p>
+			</div>
+			<div class="section-action text-center">
+				<a href="#" class="btn btn-primary">我要回報</a>
+			</div>
+		</article>
+		<div class="section">
+			<div class="section-header">
+				<h2 class="title title-box">已繳交單位清單</h2>
+			</div>
+			<div class="section-body">
+				{% set units = [
+						{
+							id:'gov',
+							link:'#gov',
+							title:'政府機關',
+							children:[
+									{
+
+										title:'勞勞動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作/2',
+										actions:{
+											plan:'已提報計畫'
+										}
+									},
+									{
+										title:'勞勞動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作/2',
+										actions:{
+											plan:'已提報計畫'
+										}
+									},
+									{
+										title:'勞勞動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作/2',
+										actions:{
+											plan:'已提報計畫'
+										}
+									}
+							]
+						},
+						{
+							id:'business',
+									link:'#business',
+							title:'事業單位',
+								children:[
+									{
+
+										title:'勞勞動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作/2',
+										actions:{
+											plan:'已提報計畫'
+										}
+									},
+									{
+										title:'勞勞動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作/2',
+										actions:{
+											plan:'已提報計畫'
+										}
+									},
+									{
+										title:'勞勞動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作/2',
+										actions:{
+											plan:'已提報計畫'
+										}
+									}
+							]
+						},
+						{
+							id:'school',
+									link:'#school',
+							title:'各級學校',	children:[
+									{
+
+										title:'勞勞動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作/2',
+										actions:{
+											plan:'已提報計畫'
+										}
+									},
+									{
+										title:'勞勞動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作/2',
+										actions:{
+											plan:'已提報計畫'
+										}
+									},
+									{
+										title:'勞勞動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作/2',
+										actions:{
+											plan:'已提報計畫'
+										}
+									}
+							]
+						},
+						{
+							id:'industry',
+							link:'#industry',
+							title:'工業(圓)區',	children:[
+									{
+
+										title:'勞勞動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作/2',
+										actions:{
+											plan:'已提報計畫'
+										}
+									},
+									{
+										title:'勞勞動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作/2',
+										actions:{
+											plan:'已提報計畫'
+										}
+									},
+									{
+										title:'勞勞動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作/2',
+										actions:{
+											plan:'已提報計畫'
+										}
+									},
+									{
+										title:'勞勞場安全衛生及防疫工作動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作/2',
+										actions:{
+											plan:'已提報計畫'
+										}
+									}
+							]
+						},
+						{
+							id:'other',
+							link:'#other',
+							title:'其他團體',	children:[
+									{
+
+										title:'勞勞動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作/2',
+										actions:{
+											plan:'已提報計畫'
+										}
+									},
+
+									{
+										title:'勞勞動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作動部直播啟動「全國職場安全健康週」，呼籲企業應做好職場安全衛生及防疫工作/2',
+										actions:{
+											plan:'已提報計畫'
+										}
+									}
+							]
+						}
+					] %}
+				<div class="tab gee" data-gene="init:tab.init">
+					<div class="py-8 flex justify-center">
+						{% include "@core/cmpt/nav/nav.twig" with {
+						mode:'normal',
+						cls:'tab-nav',
+						rows:units
+
+				} %}
+					</div>
+					<div class="tab-content">
+						{% for unit in units %}
+							<div id="{{unit.id}}" class="w-full">
+								{% include "@cmpt/list/list.twig"  with {
+										rows: unit.children,
+										fields:['title'],
+										actions:[{
+											title:'已提報計畫',
+											link:'#',
+											color:'light',
+										 }
+									 ]
+									} %}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

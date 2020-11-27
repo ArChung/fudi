@@ -1,0 +1,22 @@
+<nav class="app-bar gee --{{mode}}  {{cls}} {{color}} flex  container{% if fluid %}-fluid{% endif %}" data-gene="init:appBar.init" {% if pull %} data-pull="true" {% endif %} {% if sticky %} data-sticky="true" {% endif %}>
+	{% include '@core/cmpt/appBar/_brand.twig' %}
+	<div class="menu drawer w-full lg:w-auto {{breakpoint[0]}}:drawer --left">
+		<a href="javascript:;" class="close">
+			<i class="icon icon-close"></i>
+		</a>
+		{% include  _slot_menu.src is defined ? _slot_menu.src : '@core/cmpt/appBar/_menu.twig' with {
+			menu:_slot_menu.rows,
+			dropmenu:_slot_menu.dropmenu ,
+
+			 }  %}
+	</div>
+	{% if icons|length != 0  %}
+		{% include  _slot_icons.src is defined ? _slot_icons.src :  '@core/cmpt/appBar/_icons.twig' with {
+    icons:icons} %}
+	{% endif %}
+	<div class="item toggler {{breakpoint[1]}}:hidden xs:block">
+		<button class="gee link" data-gene="click:drawer.toggle" data-ta="{{toggle is defined ? toggle :'.app-bar .menu'}}">
+			<i class="icon icon-menu"></i>
+		</button>
+	</div>
+</nav>

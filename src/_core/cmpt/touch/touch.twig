@@ -1,0 +1,42 @@
+<form class="form flex flex-wrap">
+	<div class="input-field w-6/12">
+		<input class="form-control" placeholder="{{'form.title.label' | t }}" type="text" name="name"/>
+		<label for="name">
+			{{'form.title.label' | t }}
+		</label>
+	</div>
+	<div class="input-field w-6/12">
+		<input class="form-control" placeholder="{{'form.email.label' | t }}" type="email" name="email"/>
+		<label for="email">
+			{{'form.email.label' | t }}
+		</label>
+	</div>
+	<div class="input-field w-full">
+		<select class="browser-default ">
+			<option value="" disabled selected>
+				{{'form.type.none'|t}}
+			</option>
+			<option>
+				{{'form.type.quotation' | t }}
+			</option>
+			<option>
+				{{'form.type.broken' | t }}
+			</option>
+		</select>
+		<label class="active">
+			{{'form.type.label'| t}}
+		</label>
+	</div>
+	<div class="input-field w-full">
+		<textarea class="materialize-textarea" placeholder="{{'form.message.label' | t }}" rows="5" name="message"></textarea>
+
+		<label for="textarea2">
+			{{'form.message.label' | t }}
+		</label>
+	</div>
+	<div class="w-full">
+		<a class="gee btn btn-block w-full" data-gene="click:stdSubmit" {# data-uri="/sender/wp_sender" #} data-uri="{{endpoint}}" href="javascript:;">
+			{{'form.submit' |t }}
+		</a>
+	</div>
+</form>

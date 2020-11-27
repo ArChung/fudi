@@ -1,0 +1,53 @@
+{# fields :[  img, title , price , excerpt ] #}
+<div class="card --{{mode}} {{cls}} {{row.post_type}} ">
+	{% if 'thumbnail' in fields and row.thumbnail != '' %}
+		{% set modal =  'modal' in fields and ( row.video|length > 0  or row._dflip_data|length > 0) %}
+		<a class="card-img  {% if modal == true %}gee{% endif %}" {% if modal == true %} data-gene="click:modal.toggle" {% endif %} {% if row.video|length > 0 %} data-endpoint="/video/{{row.id}}" {% endif %} {% if row._dflip_data|length > 0 %} data-endpoint="/book/{{row.id}}" {% endif %} href="{{row.link}}">
+			{% set size =  thumbnail_size   ? thumbnail_size : 'thumbnail' %}
+			{% if lazy == true %}
+				<img class="lazy" height="400" data-src="{{row.thumbnail.src(size)}}" alt="{{row.thumbnail.alt}}">
+			{% else %}
+				<img src="{{row.thumbnail.src(size)}}" alt="{{row.thumbnail.alt}}">
+			{% endif %}
+		</a>
+	{% endif %}
+	<div class="card-body">
+		{% if row.is_on_sale %}
+			<div class="absolute right-0 -mt-10 lg:mt-4 top-0 mr-4 rounded-lg bg-red mb-1 text-white px-2 text-xs py-1">
+				特價中
+			</div>
+		{% endif %}
+		{% if 'date' in fields %}
+			<p class="date">
+				{{row.date }}
+			</p>
+		{% endif %}
+		<a class="title truncate  w-full mb-0" href="{{row.link}}">
+			{{row.title}}
+		</a>
+		{% if terms is defined %}
+			{% for term in terms %}
+				<p class="terms text-sm my-0 font-bold">
+					{{row.terms({query:{taxonomy: term }})|join(',') }}
+				</p>
+			{% endfor %}
+		{% endif %}
+		{% if 'category' in fields %}
+			<a
+				href="{{row.categories[1].link}}" class="category text-sm my-0 font-bold">
+				{# {{function('dump',row.categories[1].link)}} #}
+				{{row.categories[1].name}}
+			</a>
+		{% endif %}
+		{% if 'price' in fields %}
+			<p class="price">
+				{{row.price_html }}
+			</p>
+		{% endif %}
+		{% if 'excerpt' in fields %}
+			<p class="excerpt">
+				{{row.preview.length(preview_length | default(3)).read_more(preview_text | default('more')) }}
+			</p>
+		{% endif %}
+	</div>
+</div>

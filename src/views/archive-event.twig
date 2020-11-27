@@ -1,0 +1,113 @@
+{% extends "@layouts/base.twig" %}
+{% block necker %}
+	<div class="necker">
+		{% include "@cmpt/banner/banner.twig"  with {
+			row:{
+			thumbnail:{
+				src:'images/banner-cooperation.jpg',
+				alt:'Banner 一群人擊拳互相激勵'
+			},
+		}  }%}
+	</div>
+{% endblock %}
+{% block bodier_cls %}py-20
+{% endblock %}
+{% block bodier %}
+	<div class="container px-4 lg:px-0">
+		<div class="bodier-title">
+			<h2 class="title-underline">職場安全健康週專區</h2>
+		</div>
+
+		<div class="section">
+			<div class="section-body">
+				<div class=" flex flex-wrap -mx-6">
+					{% set events = [
+						{
+							title:'105年職場安健康週',
+							link:'single-event.html'
+						},
+						{
+							title:'105年職場安全健康週計畫成果提報全國職場安全健康週',
+							link:'single-event.html'
+						},
+						{
+							title:'105年職場安全健康週計畫成果提報全國職場安全健康週',
+							link:'single-event.html'
+						},
+						{
+							title:'105年職場安全健康週計畫成果提報全國職場安全健康週',
+							link:'single-event.html'
+						},
+						{
+							title:'105年職場安全健康週計畫成果提報全國職場安全健康週',
+							link:'single-event.html'
+						},
+						{
+							title:'105年職場安全健康週計畫成果提報全國職場安全健康週',
+							link:'single-event.html'
+						},
+						{
+							title:'105年職場安全健康週計畫成果提報全國職場安全健康週',
+							link:'single-event.html'
+						},
+						{
+							title:'105年職場安全健康週計畫成果提報全國職場安全健康週',
+							link:'single-event.html'
+						},
+						{
+							title:'105年職場安全健康週計畫成果提報全國職場安全健康週',
+							link:'single-event.html'
+						},
+						{
+							title:'105年職場安全健康週計畫成果提報全國職場安全健康週',
+							link:'single-event.html'
+						},
+						{
+							title:'105年職場安全健康週計畫成果提報全國職場安全健康週',
+							link:'single-event.html'
+						},
+						] %}
+					{% for row in events %}
+						<div class="w-full lg:w-4/12 px-6 mb-12">
+							<a href="{{row.link}}" class=" card block bg-white rounded-lg py-6 px-12 border border-light hover:bg-primary transit  transition-all   h-full" title="連結 {{row.title}}">
+								<span class=" card-body flex justify-center items-center  h-full">
+									<span class="title ">{{row.title}}</span>
+								</span>
+							</a>
+						</div>
+					{% endfor %}
+				</div>
+
+				{% include "@core/cmpt/pagination/pagination.twig" with {
+						mode:'stacked',
+						ranges: {
+							total:65,
+							current:1,
+							start:1,
+							end:12
+						},
+						row:{
+							prev:{
+								link:'#',
+								title:'文章標題'
+							},
+							next:{
+								link:'#',
+								title:'文章標題'
+							},
+							pages:[
+								{title:'1' },
+								{link:'#',title:'2'},
+								{link:'#',title:'3'},
+								{link:'#',title:'4'},
+								{link:'#',title:'5'},
+								{link:'#',title:'6'},
+								{link:'#',title:'7'},
+
+							]
+						}
+					} %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+<ul id="{{filter_id}}"
+    class="nav  mt-8 justify-start lg:justify-center">
+  {% for item in filters %}
+  <li>
+    <a href="javascript:;"
+       data-filter=".{{item.name}}"
+       class="  btn btn-primary-ouline btn-sm ">{{item.title}}</a>
+  </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,29 @@
+.page.woocommerce-edit-address {
+  .woocommerce-Address {
+    .woocommerce-Address-title {
+      @apply flex mb-8 items-center;
+
+      h3 {
+        @apply text-2xl font-black;
+      }
+
+      a {
+        @apply ml-4 bg-dark text-white rounded-lg text-xs px-3 py-1;
+      }
+    }
+
+    address {
+      font-style: normal;
+      line-height: 2;
+    }
+  }
+
+  button[type='submit'] {
+    @extend .btn-block;
+    @extend .btn-lighter;
+  }
+}
+
+.woocommerce-address-fields__field-wrapper {
+  @extend .form-rows;
+}

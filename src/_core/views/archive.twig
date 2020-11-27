@@ -1,0 +1,25 @@
+{% extends "@layout/base.twig"%}
+{% block necker %}
+	{# {% include '@views/_partial/necker.twig' %} #}
+{% endblock %}
+{% block bodier %}
+	<div class="container">
+		<div class="flex ">
+			<div class="w-9/12">
+				{% include "@core/cmpt/grid/grid.twig" with {
+          mode:'normal',
+          fluid:true,
+          cols:[3,2,2],
+          rows:rows,
+          item: {
+            mode:'normal',
+            fields:['title','date','authur','excerpt','thumbnail'],
+          }
+     }%}
+				{% if pagination.pages %}
+					{% include '@core/cmpt/pagination/pagination.twig' with { cls:'px-4', row:pagination} only %}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

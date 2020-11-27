@@ -1,0 +1,7 @@
+ @import '../../../mod/notice/notice.scss';
+
+ // .woocommerce-info,
+ .woocommerce-message,
+ .woocommerce-error {
+   @extend .notice;
+ }

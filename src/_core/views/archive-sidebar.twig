@@ -1,0 +1,46 @@
+{% extends "@layout/base.twig"%}
+{% block necker %}
+	{% include '@partial/necker.twig' %}
+{% endblock %}
+{% block bodierCls %}mb-20
+{% endblock %}
+{% block bodier %}
+	<div
+		class="container px-4">
+		{# 建議製作cmpt #}
+		{% set sidebar = function([ 'Dowo\\Sidebar', 'render' ]) %}
+		{% if sidebar %}
+			<div class="loopbar flex mb-3">
+				<a class="btn px-2 py-1 gee lg:none" data-ta=".sidebar-drawer" data-gene="click:drawer.toggle" href="javascript:;">
+					<i class="icon icon-menu"></i>
+					分類選單</a>
+			</div>
+		{% endif %}
+		<div class="flex ">
+			{% if sidebar %}
+				<div class="sidebar-drawer  drawer md:drawer --left p-4  flex-grow lg:w-2/12">
+					{{ sidebar }}
+				</div>
+			{% endif %}
+			<div class="w-full flex-glow">
+				{% include "@core/cmpt/grid/grid.twig" with {
+          mode:'normal',
+          fluid:true,
+          gap:4,
+          cols:[4,2,1],
+          rows:posts,
+          _slot: {
+            src:'@core/cmpt/card/card.wp.twig',
+            cls:'border border-lightest',
+            mode:'normal',
+            fields:['title','tags','date','authors','thumbnail','modal','excerpt'],
+          }
+     }%}
+				{# cls:'img-as as-4-3 border border-lightest', #}
+				{% if pagination.total > 1 %}
+					{% include '@core/cmpt/pagination/pagination.wp.twig' with { cls:'px-4', row:pagination} only %}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

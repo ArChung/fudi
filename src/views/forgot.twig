@@ -1,0 +1,43 @@
+{% set page = 'login' %}
+
+{% extends "@layouts/base.twig" %}
+{% block necker %}
+	{% include "@cmpt/banner/banner.twig"  with {
+		row:{
+		thumbnail:{
+		src:	'images/banner-note.jpg',
+		alt:	'Banner 明淨的桌面上的咖啡杯',
+			}
+
+	}  }%}
+{% endblock %}
+{% block bodier_cls %}py-20
+{% endblock %}
+{% block bodier %}}
+	<div class="bodier-title">
+		<h1 class="title-underline">
+			忘記密碼
+		</h1>
+	</div>
+	<div class="container xs px-4 lg:px-0">
+		<form method="post" accept-charset="UTF-8">
+			<div class="field required">
+				<label for="email">Email</label>
+				<input id="email" required type="text" name="email">
+			</div>
+			<div class="field">
+				<input class="btn btn-primary btn-block" type="submit" value="送出" title="送出">
+			</div>
+		</form>
+		<div class="flex justify-center">
+			<ul class="nav --normal">
+				<li>
+					<a href="register.html" title="註冊">馬上註冊</a>
+				</li>
+				<li>
+					<a href="login.html" title="登入">登入</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}

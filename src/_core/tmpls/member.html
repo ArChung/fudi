@@ -1,0 +1,91 @@
+<div class="member-modal gee" data-gene="init:initTmpl" data-tmpl="member-modal">
+    <div class="member login">
+        <div class="member-header">
+            <p>{{:~t('cmpt.member.login.leader')}}</p>
+        </div>
+        <div class="social mt-4">
+            <div class="row">
+                <div class="col">
+                    <ahref="javascript:;" class="btn btn-facebook">
+                        <i class="fa fa-facebook"></i>
+                        {{:~t('cmpt.member.login.fb')}}
+                        </a>
+                </div>
+                <div class="col">
+                    <a class=" btn btn-google " href="javascript:;">
+                        <i class="fa fa-google"></i>
+                        {{:~t('cmpt.member.login.google')}}
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="or">
+            OR
+        </p>
+        <form class="login-form form">
+            <div class="form-group">
+                <input class="form-control" placeholder="{{:~t('form.email.label')}}" name="email" type="text" />
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="{{:~t('form.password.label')}}" name="password" type="password" />
+            </div>
+            <a class="btn btn-primary btn-block gee" href="javascript:;" data-gene="click:login">
+                <i class="fas fa-sign-in-alt"></i>
+                {{:~t('cmpt.member.login.submit')}}</a>
+            <p class="mt-1 text-muted">
+                {{:~t('cmpt.member.login.note')}}</p>
+        </form>
+        <hr>
+        <div class="actions">
+            <a class="pre-gee" data-gene="click:member.switch" data-title="{{:~t('cmpt.member.forgot.title')}}" data-ta="forgot" href="javascript:;">{{:~t('cmpt.member.login.forget')}}</a>
+            <a class="pre-gee" data-gene="click:member.switch" data-title="{{:~t('cmpt.member.register.title')}}" data-ta="register" href="javascript:;">{{:~t('cmpt.member.login.register')}}</a>
+        </div>
+    </div>
+    <div class="member forgot">
+        <div class="member-header">
+            <p>{{:~t('cmpt.member.forgot.leader')}}</p>
+        </div>
+        <form class="forgot-form form">
+            <div class="form-group">
+                <input class="form-control" placeholder="{{:~t('form.email.label')}}" type="text" />
+            </div>
+            <a class="btn btn-primary btn-block" href="#" type="submit">
+                <i class="fas fa-sign-in-alt"></i>
+                {{:~t('cmpt.member.forgot.submit')}}</a>
+            <p class="mt-1 text-muted">
+                {{:~t('cmpt.member.forgot.note')}}</p>
+        </form>
+        <hr>
+        <div class="actions">
+            <a class="pre-gee" data-gene="click:member.switch" data-title="{{:~t('cmpt.member.login.title')}}" data-ta="login" href="javascript:;">{{:~t('cmpt.member.forgot.login')}}</a>
+            <a class="pre-gee" data-gene="click:member.switch" data-title="{{:~t('cmpt.member.register.title')}}" data-ta="register" href="javascript:;">{{:~t('cmpt.member.forgot.register')}}</a>
+        </div>
+    </div>
+    <div class="member register">
+        <div class="member-header">
+            <p>{{:~t('cmpt.member.register.leader')}}</p>
+        </div>
+        <form class="member-form form">
+            <div class="form-group">
+                <input class="form-control" placeholder="{{:~t('form.email.label')}}" name="email" type="text" />
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="{{:~t('form.password.label')}}" name="password" type="password" />
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="agree_cb" name="agree">
+                <label class="form-check-label" for="agree_cb"> 同意會員條款?</label>
+              </div>
+            <a class="btn btn-primary btn-block gee" href="javascript:;" data-gene="click:register">
+                <i class="fas fa-sign-in-alt"></i>
+                {{:~t('cmpt.member.register.submit')}}</a>
+            <p class="mt-1 text-muted">
+                {{:~t('cmpt.member.register.note')}}</p>
+        </form>
+        <hr>
+        <div class="actions">
+            <a class="pre-gee" data-gene="click:member.switch" data-title="{{:~t('cmpt.member.forgot.title')}}" data-ta="forgot" href="javascript:;">{{:~t('cmpt.member.register.forget')}}</a>
+            <a class="pre-gee" data-gene="click:member.switch" data-title="{{:~t('cmpt.member.login.title')}}" data-ta="login" href="javascript:;">{{:~t('cmpt.member.register.login')}}</a>
+        </div>
+    </div>
+</div>

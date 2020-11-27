@@ -1,0 +1,67 @@
+<ul class="icons flex">
+	{% if 'account' in icons %}
+		{% if  user %}
+			<li class="item item-account">
+				<a href="/my-account" class="link flex items-center">
+					<i class="icon icon-user"></i>
+				</a>
+			</li>
+		{% else %}
+			<li class="item">
+				<a href="/my-account" class="link">
+					{{'登入' | t}}
+				</a>
+			</li>
+
+		{% endif %}
+	{% endif %}
+	{% if 'search' in icons %}
+		<li class="item item-search">
+			<a href="javascript:;" class="cart gee link " data-gene="click:modal.toggle" data-ta=".search-modal">
+				<i class="icon icon-search "></i>
+			</a>
+		</li>
+
+	{% endif %}
+
+	{% if 'lang' in icons %}
+		<li class="item dropdown item-lang">
+			<a class="link" href="javascript:;" class="link ">{{langs.active}}</a>
+			<ul>
+				{% for lang in langs.list %}
+					<li class="{{lang.classes|join(',')}}">
+						<a href="{{lang.href}}" hreflang="{{lang.hreflang}}" title="{{lang.title}}">
+							{{lang.name}}
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</li>
+	{% endif %}
+
+	{% if 'social' in icons %}
+		{% for row in  site.socials %}
+			{% if row.url != '' %}
+				<li class="item item-social">
+					<a target="_blank" title="{{row.type}}" href="{{row.url}}" class="  link ">
+						<i class="icon bd bd-{{row.type}} " aria-hidden="true"></i>
+					</a>
+				</li>
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+
+
+	{% if 'cart' in icons %}
+		<li class="item item-cart ">
+			<a href="#" class="cart link gee flex items-center" data-gene="click:cart.show">
+				<i class="icon icon-shopping-cart "></i>
+				<span style="line-height:2" class="text-white text-xs leader-normal  cart-count rounded-full bg-primary inline-block ml-1 h-6 w-6  text-center">
+					<span class="mini-cart-num">
+						0
+					</span>
+				</span>
+			</a>
+		</li>
+	{% endif %}
+</ul>

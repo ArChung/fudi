@@ -1,0 +1,29 @@
+<div class="slide gee" data-gene="init:initTmpl" data-tmpl="carou-slide">
+  {{props data}}
+  <div
+    class="item carou-item {{:prop.meta.txt_color}} {{:prop.meta.txt_algin}}"
+  >
+    <div class="img">
+      <img pre-src="{{:~loadPic(prop.cover)}}" alt="{{:prop.title}}" />
+    </div>
+    <div class="container">
+      <div class="para">
+        <h2 class="title">{{:prop.title}}</h2>
+        {{if prop.subtitle }}
+        <p class="subtitle">{{:prop.subtitle}}</p>
+        {{/if }}
+        {{if prop.content }}
+        <p class="info">{{:prop.content}}</p>
+        {{/if }}
+        {{if prop.uri }}
+        <a
+          href="{{:~linkAPI('resource/pass/'+ prop.id)}}"
+          class="btn btn-primary"
+          >{{:prop.meta.btn_txt}}</a
+        >
+        {{/if }}
+      </div>
+    </div>
+  </div>
+  {{/props}}
+</div>

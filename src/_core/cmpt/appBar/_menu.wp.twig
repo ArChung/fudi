@@ -1,0 +1,39 @@
+{% set mid = (menu|length / 2)|round(0, 'floor') %}
+<ul class=" flex {{breakpoint[1]}}:flex-row flex-col">
+	{% for item in menu %}
+
+		{% if item.get_children and dropdown == true %}
+			<li class="item px-3 dropdown">
+				<a href="javascript:;" class=" link {{ item.class }}" data-gene="click:toggleClass" data-ta="">
+					{{ item.title }}
+
+					<i class="icon icon-angle-up up"></i>
+					<i class="icon icon-angle-down down"></i>
+				</a>
+				{# Second level menu #}
+				<ul class="l2">
+					{% for child in item.get_children %}
+						<li class="item {{ child.class }} {{ child.get_children ? 'has-children' }}">
+							<a class="link " href="{{ child.link }}">
+								{{ child.title }}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+
+			</li>
+		{% else %}
+
+			<li class="item px-3 {{ item.class }}">
+				<a class="link " target="{{item.target}}" href="{{ item.link}}">
+					{{ item.title  }}
+				</a>
+			</li>
+
+		{% endif %}
+
+		{% if loop.index == mid  %}
+			<li class="item space"></li>
+		{% endif %}
+	{% endfor %}
+</ul>

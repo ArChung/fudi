@@ -1,0 +1,44 @@
+.layout-top {
+	z-index: 99;
+}
+.app-header {
+	z-index: 2;
+	&.active {
+		@extend .layout-top;
+	}
+}
+
+.necker,
+.app-necker {
+	z-index: 1;
+	&.active {
+		@extend .layout-top;
+	}
+}
+
+.app-footer {
+	z-index: 1;
+	&.active {
+		@extend .layout-top;
+	}
+}
+
+.bodier,
+.app-bodier {
+	z-index: 1;
+	width: 100%;
+	overflow-x: hidden;
+	&.active {
+		@extend .layout-top;
+	}
+}
+.single-product,
+.woocommerce-account {
+	@include media-breakpoint-down(md) {
+		.app-footer {
+			div.copyright {
+				display: none !important;
+			}
+		}
+	}
+}

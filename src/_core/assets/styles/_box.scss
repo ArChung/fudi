@@ -1,0 +1,11 @@
+.box {
+
+  @include media-breakpoint-down(md) {
+    @apply bg-white px-4 py-4;
+  }
+
+  > h3 {
+    @apply font-bold text-2xl;
+  }
+  @apply bg-white px-4 py-4 w-full;
+}

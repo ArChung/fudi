@@ -1,0 +1,176 @@
+{% set page = 'memeber' %}
+{% set isLogined = false %}
+{% extends "@layouts/base.twig" %}
+{% block necker %}
+	{% include "@cmpt/banner/banner.twig"  with {
+		row:{
+		thumbnail:{
+		src:	'images/banner-note.jpg',
+		alt:	'Banner 明淨的桌面上的咖啡杯',
+			}
+
+	}  }%}
+{% endblock %}
+{% block bodier_cls %}py-20
+{% endblock %}
+{% block bodier %}
+	<div class="bodier-title">
+		<h1 class="title-underline">會員</h1>
+	</div>
+	<div class="container sm px-4 lg:px-0">
+		<div class="section">
+			<div class="section-header">
+				<h2 class="title title-box">您好</h2>
+			</div>
+			<div class="section-body">
+				<p class="text-center mt-2">您可以在這裡找到工安週的歷史紀錄，也可以修改會員資訊以及密碼。</p>
+				<div class="flex justify-center py-10">
+					{% include "@core/cmpt/nav/nav.twig" with {
+					mode:'normal',
+					rows:[
+						{title:'如何使用',link:'page.html'},
+						{title:'修改資料',link:'profile.html'},
+						{title:'登出',link:'logout'},
+					]
+				} %}
+				</div>
+				{% include "@cmpt/steps/steps.twig" %}
+			</div>
+			<div class="section-action text-center">
+				<a href="javascript:;" data-gene="modal.toggle" data-ta=".modal-create-plan" class="btn btn-primary gee">新增計畫</a>
+			</div>
+		</div>
+		<div class="section">
+			<div class="section-header">
+				<h2 class="title title-box">工安週歷史紀錄</h2>
+			</div>
+			<div class="section-body mt-10">
+				{% include "@cmpt/list/list.twig"  with {
+							rows: [
+									{
+										title:'勞勞動部直職場安全衛生及防疫工作/2',
+										new:true
+									},
+									{
+										title:'勞勞動部直播啟動「全國職企業應做好職場安全衛生及防疫工作/2',
+
+									}
+							],
+							fields:['title'],
+							actions:[{
+								title:'計畫書下載',
+								link:'#',
+								color:'green',
+								},
+								{
+								title:'上傳報告',
+								link:'#',
+								cls:'gee',
+								color:'light',
+								attr:'data-gene="modal.toggle" data-ta=".modal-upload-report"'
+								},
+								{
+								title:'刪除計畫',
+								link:'#',
+								color:'dark',
+								}
+							]
+						} %}
+			</div>
+		</div>
+	</div>
+{% endblock %}
+{% block append %}
+	<div class="modal modal-upload-report ">
+		<div class="modal-wrap px-8 w-full" style="max-width:700px">
+			<div class="rounded-lg bg-white overflow-hidden">
+				<div class=" w-full  bg-primary flex items-center px-4 py-2">
+					<div class="text-white ">上傳後續報告</div>
+					<button class="modal-close text-white ml-auto gee" data-ta=".modal-upload-report" data-gene="click:modal.toggle" aria-label="close">
+						<i class="icon icon-close" aria-hidden="true"></i>
+						<span class="sr-only">關閉</span>
+					</button>
+				</div>
+				<div class="p-8 lg:px-16 lg:py-10">
+					<form class="form --h " action="">
+
+						<div class="field">
+							<label>計畫書是否可公開</label>
+							<div class="field">
+								<label class="radio mr-2">
+									<input type="radio" name="public">
+									<span>不公開</span>
+								</label>
+								<label class="radio ">
+									<input type="radio" name="public">
+									<span>公開</span>
+								</label>
+							</div>
+						</div>
+						<div class="field">
+							<label for="">後續報告</label>
+							<div>
+								<input class="input" type="file" id="file" name="file">
+								<p>可接受 pdf 及 zip 格式、最大 10MB 的檔案</p>
+							</div>
+						</div>
+						<div class="field mt-8 mb-0">
+							<a href="#" class="btn btn-primary btn-block" title="回報">回報</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal modal-create-plan">
+		<div class="modal-wrap px-8 w-full" style="max-width:700px">
+			<div class="rounded-lg bg-white overflow-hidden">
+				<div class=" w-full  bg-primary flex items-center px-4 py-2">
+					<div class="text-white ">新增計畫</div>
+					<button class="modal-close text-white ml-auto gee" data-ta=".modal-create-plan" data-gene="click:modal.toggle" aria-label="close">
+						<i class="icon icon-close" aria-hidden="true"></i>
+						<span class="sr-only">關閉</span>
+					</button>
+				</div>
+				<div class="p-8 lg:px-16 lg:py-10">
+					<form class="form --h " action="">
+						<div class="field">
+							<label for="annu">回報年度</label>
+							<select id="annu" class="input w-40" name="annu">
+								<option value="2019">2019</option>
+								<option value="2019">2020</option>
+								<option value="2019">2021</option>
+							</select>
+
+						</div>
+						<div class="field">
+							<label>計畫書是否可公開</label>
+							<div class="field">
+								<label class="radio">
+									<input type="radio" name="public">
+									<span>不公開</span>
+								</label>
+								<label class="radio ml-2">
+									<input type="radio" name="public">
+									<span>公開</span>
+								</label>
+							</div>
+						</div>
+						<div class="field">
+							<label for="">計劃書</label>
+							<div>
+								<input class="input" type="file" id="file" name="file">
+								<p>可接受 pdf 及 zip 格式、最大 10MB 的檔案</p>
+							</div>
+						</div>
+						<div class="field mt-8 mb-0">
+							<a href="#" class="btn btn-primary btn-block" title="新增">新增</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

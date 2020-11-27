@@ -1,0 +1,65 @@
+<article class="main-article {{post.class}} ">
+	<div class="container-sm px-4 lg:px-0">
+		{% include "@core/cmpt/prologue/prologue.wp.twig" with { row:row} %}
+	</div>
+	<div class="container-sm">
+		<div class="wysiwyg  md:wysiwyg mt-12  ">
+			{{ row.content }}
+		</div>
+	</div>
+	{% if row.gallery  %}
+		<div class="wrap relative  gee mt-8" data-gene="init:gallery.init">
+			<div class="container-sm px-4 lg:px-0">
+				{% include "@core/cmpt/grid/grid.twig" with {
+          mode:'masonry',
+          fluid:true,
+          color:'light',
+          gap:2,
+          cols:[3,2,2],
+          rows:row.gallery,
+          _slot: {
+            src:'@cmpt/item/card.gallery.wp.twig',
+            mode:'normal',
+            fields:['title','thumbnail'],
+          }
+     }%}
+			</div>
+		</div>
+	{% endif %}
+	<div class="container-sm px-4">
+		<section class="mt-12 py-4 flex border-t border-lightest">
+			{% if prev is defined %}
+				<a class="btn btn-link " href="{{prev}}">
+					<i class="icon icon-angle-left"></i>
+					Prev
+				</a>
+			{% endif %}
+			{% if next is defined %}
+				<a class="btn btn-link ml-auto" href="{{next}}">Next
+					<i class="icon icon-angle-right"></i>
+				</a>
+			{% endif %}
+		</section>
+	</div>
+
+</article>
+<div class="container-sm px-4 lg:px-0  text-center">
+	<div class="wrap border-t border-lightest">
+		<div class="wrap-header">
+			<h2>分享到社群</h2>
+		</div>
+		<div class="wrap-body">
+			{% include '@core/cmpt/share/share.twig' with {link:row.link ,title:row.title} %}
+		</div>
+	</div>
+</div>
+<div class="container-sm lg:px-0 px-4 ">
+	<div class="wrap my-8 border-t border-lightest">
+		<div class="wrap-header">
+			<h2>客戶。迴響</h2>
+		</div>
+		<div class="wrap-body">
+			{% include '@core/cmpt/comment/comment.twig' %}
+		</div>
+	</div>
+</div>

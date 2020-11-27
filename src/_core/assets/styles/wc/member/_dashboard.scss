@@ -1,0 +1,22 @@
+.page.woocommerce-account {
+  .woocommerce {
+    .woocommerce-MyAccount-content {
+      .woocommerce-notices-wrapper {
+      }
+
+      p {
+        &:nth-child(2) {
+          @apply mb-8;
+
+          strong {
+            @apply text-2xl font-black;
+          }
+        }
+
+        a {
+          @apply font-black;
+        }
+      }
+    }
+  }
+}

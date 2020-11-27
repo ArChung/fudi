@@ -1,0 +1,12 @@
+<section class="comment">
+	{% if row.comments is not empty %}
+		{# <h3 class="title is-3">{{ messages.single.comments }}</h3> #}
+		{% for comment in row.comments %}
+			{% include "@core/cmpt/comment/item.twig" %}
+		{% endfor %}
+	{% endif %}
+	{% if row.comment_status == "open" %}
+		{% include "@core/cmpt/comment/form.twig" with {cls:'mt-4'} %}
+	{% endif %}
+
+</section>

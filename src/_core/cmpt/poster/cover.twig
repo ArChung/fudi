@@ -1,0 +1,21 @@
+<div class="item">
+  <div class="bg z-0">
+    <img src="{{row.thumbnail.src('large')}}"
+         alt="{{row.title}}">
+  </div>
+  <div class="z-30 absolute bottom-0 left-0 ml-10 mb-32">
+    {% if 'subtitle' in fields %}
+    <p class="subtitle text-white text-md">{{row.subtitle}}</p>
+    {% endif %}
+    {% if 'title' in fields %}
+    <h2 class="title  font-black text-white lg:text-6xl text-4xl">{{row.title}}</h2>
+
+    {% endif %}
+    {% if 'link' in fields and row.link2  %}
+    <a class="block btn-link  text-lighter"
+       href="{{row.link2}}"
+       target="{{row.target}}}">了解更多 >
+    </a>
+    {% endif %}
+  </div>
+</div>

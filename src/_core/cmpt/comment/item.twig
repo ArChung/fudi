@@ -1,0 +1,39 @@
+<div class="{{ comment.comment_type }}" id="blog-comment-{{ comment.ID }}">
+	<article
+		id="comment-{{ comment.ID }}" class="message pb-4 my-8 ">
+		{# Message body #}
+		<div class="message-body ">
+			<div
+				class="flex">
+				{# <div class="w-24 rounded overflow-hiddin">
+																          <img src="{{ comment.author.avatar }}" />
+																        </div> #}
+				<div class="flex-grow">
+					<div class="flex flex-wrap items-end">
+						<h4 class="text-lg font-black">
+							{{ comment.author.name }}
+						</h4>
+						<time class="ml-3 text-xs text-lighter">
+							{{ comment.date }}
+							{{ comment.time }}
+						</time>
+						<div class="ml-auto text-sm font-bold">
+							{{ comment.reply_link('<span>' ~ messages.comment.reply ~ '</span>') }}
+						</div>
+					</div>
+					<div class="mt-3 text-light text-sm">
+						{{ comment.comment_content|wpautop }}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="reply-message pl-10 border-l-4  border-lightest">
+			{% if row.comments %}
+				{% for cmt in comment.children %}
+					{% include "@core/cmpt/comment/item.twig" with {row:cmt} %}
+				{% endfor %}
+			{% endif %}
+		</div>
+	</article>
+</div>

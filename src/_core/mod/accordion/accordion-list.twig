@@ -1,0 +1,12 @@
+<div class="accordion-list ">
+  <div class="accordion-list-header ">
+    <h2 class="title">{{rows.name}}</h2>
+  </div>
+  {% if rows.posts|length > 0 %}
+  {% for row in rows.posts %}
+
+  {% include "@core/cmpt/accordion/accordion-item.twig"  with { row : row}%}
+
+  {% endfor %}
+  {% endif %}
+</div>

@@ -1,0 +1,45 @@
+.woocommerce-EditAccountForm {
+	@extend .form-rows;
+
+	.form-row {
+		@extend .input-field;
+
+		textarea {
+			@extend .materialize-textarea;
+		}
+	}
+
+	p {
+		@apply w-full;
+	}
+
+	> p:nth-child(1),
+	> p:nth-child(2) {
+		@apply w-6/12;
+	}
+
+	em {
+		@apply text-lighter text-sm;
+
+		font-style: normal;
+	}
+
+	fieldset {
+		@apply px-4 w-full mt-10;
+		@extend .form-rows;
+
+		legend {
+			@apply font-black text-xl flex px-4;
+		}
+	}
+
+	> p:last-child {
+		@apply w-full px-4;
+
+		.woocommerce-Button {
+			@extend .btn;
+			@extend .btn-block;
+			@extend .btn-lighter;
+		}
+	}
+}

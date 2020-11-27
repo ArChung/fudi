@@ -1,0 +1,74 @@
+.page.woocommerce-account:not(.logged-in) {
+  .necker {
+    > * {
+      display: none;
+    }
+  }
+
+  .woocommerce {
+    @apply flex flex-col bg-white px-4 py-4 mx-auto;
+    @extend .container-xs;
+
+    //登入狀態切換
+    .form-row {
+      @extend .input-field;
+
+      textarea {
+        @extend .materialize-textarea;
+      }
+    }
+
+    &.logining {
+      .btn-login {
+        @apply border-b-2;
+        // @extend .active;
+      }
+
+      .col-2 {
+        @apply hidden;
+      }
+    }
+
+    &.registering {
+      .btn-register {
+        @apply border-b-2;
+      }
+
+      .col-1 {
+        @apply hidden;
+      }
+    }
+
+    .login-header {
+      @apply w-full text-center text-xl py-4;
+    }
+
+    .login-switch {
+      @apply flex justify-between py-6;
+
+      .btn {
+        @apply flex justify-between;
+      }
+    }
+
+    .woocommerce-Button,
+    .woocommerce-button {
+      @extend .btn;
+      @extend .btn-block;
+      @extend .btn-lighter;
+    }
+
+    // 登入前
+    #customer_login.col2-set {
+      display: flex;
+
+      h2 {
+        display: none;
+      }
+
+      .woocommerce-privacy-policy-text {
+        @apply text-xs text-light;
+      }
+    }
+  }
+}

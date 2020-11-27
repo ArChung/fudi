@@ -1,0 +1,13 @@
+.loopbar {
+  @apply flex items-center mb-6;
+  .woocommerce-result-count {
+    @apply text-sm;
+  }
+
+  .woocommerce-ordering {
+    @apply ml-auto;
+    select {
+      opacity: 1;
+    }
+  }
+}

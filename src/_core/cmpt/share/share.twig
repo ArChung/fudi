@@ -1,0 +1,44 @@
+<div
+	class="share inline-flex justify-center">
+	{# TUMBLR #}
+
+	{% if 'tumblr' in fields %}
+		<a class="{{btn_cls}}" target="_blank" title="tumblr" href="https://www.tumblr.com/share/link?url={{ link }}&name={{ title }}&description={{  excerpt }}">
+			<i class="bd bd-tumblr " aria-hidden="true"></i>
+			<span class="sr-only">分享到tumblr</span>
+		</a>
+	{% endif %}
+	{# FACEBOOK #}
+	{% if 'facebook' in fields  %}
+		<a class="{{btn_cls}}" target="_blank" title="Facebook" href="http://www.facebook.com/sharer.php?u={{ link }}">
+			<i class="bd bd-facebook " aria-hidden="true"></i>
+			<span class="sr-only">分享到facebook</span>
+		</a>
+	{% endif %}
+	{% if 'facebookf' in fields %}
+		<a class="{{btn_cls}}" target="_blank" title="Facebook" href="http://www.facebook.com/sharer.php?u={{ link }}">
+			<i class="bd bd-facebook-f " aria-hidden="true"></i>
+			<span class="sr-only">分享到facebook</span>
+		</a>
+	{% endif %}
+	{# LINKEDIN #}
+	{% if 'linkedin' in fields %}
+		<a class="{{btn_cls}}" target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?url={{ link }}&title={{ title }}">
+			<i class="bd bd-linkedin" aria-hidden="true"></i>
+			<span class="sr-only">分享到linkedin</span>
+		</a>
+	{% endif %}
+	{# TWITTER #}
+	{% if 'twitter' in fields %}
+		<a class="{{btn_cls}}" target="_blank" title="Twitter" href="https://twitter.com/share?url={{ link }}&text={{ title }}">
+			<i class="bd bd-twitter " aria-hidden="true"></i>
+		</a>
+	{% endif %}
+	{% if 'pinterest' in fields %}
+		{# PINTEREST #}
+		<a class="{{btn_cls}}" target="_blank" title="Pinterest" href="https://pinterest.com/pin/create/bookmarklet/?media={{ thumbnail }}&url={{ link }}&description={{ title }}">
+			<i class="bd bd-pinterest " aria-hidden="true"></i>
+			<span class="sr-only">分享到pinterest</span>
+		</a>
+	{% endif %}
+</div>
