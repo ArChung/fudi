@@ -4,15 +4,13 @@
 		<meta charset="UTF-8">
 		<meta content="width=device-width, initial-scale=1.0" name="viewport">
 		<meta content="ie=edge" http-equiv="X-UA-Compatible">
-		<title>
-			勞動部職業安全衛生署
-		</title>
+		<title></title>
 	</head>
 	<body class="font-body w-full {% block body_cls %}{% endblock %}">
-		<header class="app-header relative">
+		{# <header class="app-header relative">
 			<a href="#U" title="上方功能區塊" id="AU" accesskey="U" class="block h-1 -mb-1 text-white">:::</a>
 			{% include "@cmpt/appbar/appbar.twig" %}
-		</header>
+		</header> #}
 		<div class="necker">
 			<div class="container">
 				{% block necker %}
@@ -26,7 +24,7 @@
 				bodier
 			{% endblock %}
 		</div>
-		<footer class="app-footer bg-black text-white  py-4">
+		{# <footer class="app-footer bg-black text-white  py-4">
 			<a href="#Z" title="下方功能區塊" id="AZ" accesskey="Z" class="block h-1 -mb-1 overflow-hidden">:::</a>
 			{% block footer %}
 				<div class="container py-4 px-4 lg:px-0">
@@ -60,7 +58,7 @@
 					</div>
 				</div>
 			{% endblock %}
-		</footer>
+		</footer> #}
 		{% include '@core/mod/loader/loader.twig' %}
 		<div class="modal modal-search ">
 			<div class="modal-wrap px-8 w-full" style="max-width:500px">
