@@ -1,9 +1,140 @@
 {% set page = 'index' %}
 {% extends "@layouts/base.twig" %}
 {% block necker %}
-
+	<div class="index-necker flex justify-center items-center" style="background-image:url({{'images/index-banner.jpg'|assets}})">
+		<h1 class='section-title text-white'>POWER FOR POSSIBLE</h1>
+	</div>
 {% endblock %}
 {% block bodier %}
+	<div class="index-container">
+		<section class="bg-gray ">
+			<div class="container py-14">
+				<h2 class="text-xl font-black text-center ">WHY FUDY SOLUTIONS?</h2>
+				<h1 class="section-title text-center">OUR ADVANTAGES</h1>
 
+				<div class="mt-4 tag-list space-x-8">
+					<div class='bg-blue tag-list-item'>
+						<img src="{{'images/service-icon1.png'|assets}}" alt="">
+						<h3 class='txt'>Research power</h3>
+					</div>
+					<div class='bg-pink tag-list-item'>
+						<img src="{{'images/service-icon2.png'|assets}}" alt="">
+						<h3 class='txt'>Design power</h3>
+					</div>
+					<div class='bg-black tag-list-item'>
+						<img src="{{'images/service-icon3.png'|assets}}" alt="">
+						<h3 class='txt text-white'>Problem-solving power</h3>
+					</div>
+					<div class='bg-yellow tag-list-item'>
+						<img src="{{'images/service-icon4.png'|assets}}" alt="">
+						<h3 class='txt'>Management power</h3>
+					</div>
+					<div class='bg-white tag-list-item'>
+						<img src="{{'images/service-icon5.png'|assets}}" alt="">
+						<h3 class='txt'>Confidential power</h3>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<div
+			id='index-adventages'>
+
+			{# RESEARCH #}
+			<section class="ad-section bg-blue">
+				<div class="textWrap">
+					<div class="section-title text-white">RESEARCH<br>POWER</div>
+					<div class="ad-content bg-black">
+						Vestedin market research and industry leading manufacturing technologies to create customizable, innovative,and provenpackaging solutions.
+					</div>
+				</div>
+				<div class="picWrap">
+					<div class="pic">
+						<img class="w-full" src="{{'images/box_handline.png'|assets}}" alt="">
+					</div>
+				</div>
+			</section>
+
+			{# DESIGN #}
+			<section class="ad-section bg-pink">
+				<div class="textWrap">
+					<div class="section-title text-white">DESIGN<br>POWER</div>
+					<div class="ad-content bg-black">
+						n-house design teamspecialized in structural 2D design and 3D techniques. Proven experience with continuous innovation, and ability to transform product packaging imagination into reality with unrivaled precision and accuracy.
+					</div>
+				</div>
+				<div class="picWrap boxlines">
+					<div class="pic p6" style="background-image:url({{'images/box_line6.png'|assets}})"></div>
+					<div class="pic p5" style="background-image:url({{'images/box_line5.png'|assets}})"></div>
+					<div class="pic p4" style="background-image:url({{'images/box_line4.png'|assets}})"></div>
+					<div class="pic p3" style="background-image:url({{'images/box_line3.png'|assets}})"></div>
+					<div class="pic p2" style="background-image:url({{'images/box_line2.png'|assets}})"></div>
+					<div class="pic p1" style="background-image:url({{'images/box_line1.png'|assets}})"></div>
+				</div>
+			</section>
+
+			{# PROBLEM SOLVING #}
+			<section class="ad-section" style='background-color: #221815;	'>
+				<div class="textWrap">
+					<div class="section-title text-white">PROBLEM-
+						<br>SOLVING
+						<br>POWER</div>
+					<div class="ad-content bg-pink">
+						Integrated international resources across the world, dedicated to offer a one-stop service.Collaborate in every step of the development process from ideation, design, qualification,manufacturing, and supply chain execution.
+					</div>
+				</div>
+				<div class="picWrap boxs">
+					<div class="pic p11" style="background-image:url({{'images/box11.png'|assets}})"></div>
+					<div class="pic p1" style="background-image:url({{'images/box1.png'|assets}})"></div>
+					<div class="pic p2" style="background-image:url({{'images/box2.png'|assets}})"></div>
+					<div class="pic p3" style="background-image:url({{'images/box3.png'|assets}})"></div>
+					<div class="pic p4" style="background-image:url({{'images/box4.png'|assets}})"></div>
+					<div class="pic p5" style="background-image:url({{'images/box5.png'|assets}})"></div>
+					<div class="pic p6" style="background-image:url({{'images/box6.png'|assets}})"></div>
+					<div class="pic p7" style="background-image:url({{'images/box7.png'|assets}})"></div>
+					<div class="pic p8" style="background-image:url({{'images/box8.png'|assets}})"></div>
+					<div class="pic p9" style="background-image:url({{'images/box9.png'|assets}})"></div>
+					<div class="pic p10" style="background-image:url({{'images/box10.png'|assets}})"></div>
+				</div>
+			</section>
+
+			{# MANAGEMENT #}
+			<section class="ad-section bg-yellow">
+				<div class="textWrap">
+					<div class="section-title">MANAGEMENT<br>POWER</div>
+					<div class="ad-content bg-blue">
+						Dedicated quality management team responsible for driving best-in-class execution of your product through Fudy manufacturing facilities.  Data driven approach to managing manufacturing precision from raw material to finished goods.
+					</div>
+				</div>
+				<div class="picWrap boxs">
+					<div class="pic p11" style="background-image:url({{'images/box11.png'|assets}})"></div>
+					<div class="pic p1" style="background-image:url({{'images/box1.png'|assets}})"></div>
+					<div class="pic p2" style="background-image:url({{'images/box2.png'|assets}})"></div>
+					<div class="pic p3" style="background-image:url({{'images/box3.png'|assets}})"></div>
+					<div class="pic p4" style="background-image:url({{'images/box4.png'|assets}})"></div>
+					<div class="pic p5" style="background-image:url({{'images/box5.png'|assets}})"></div>
+					<div class="pic p6" style="background-image:url({{'images/box6.png'|assets}})"></div>
+					<div class="pic p7" style="background-image:url({{'images/box7.png'|assets}})"></div>
+					<div class="pic p8" style="background-image:url({{'images/box8.png'|assets}})"></div>
+					<div class="pic p9" style="background-image:url({{'images/box9.png'|assets}})"></div>
+					<div class="pic p10" style="background-image:url({{'images/box10.png'|assets}})"></div>
+				</div>
+			</section>
+
+			{# CONFIDENTIAL #}
+			<section class="ad-section bg-gray">
+				<div class="textWrap">
+					<div class="section-title">CONFIDENTIAL
+						<br>POWER</div>
+					<div class="ad-content text-black pt-0">
+						Security throughout the development process to ensure that customer confidentiality is maintained at the highest level.   Private printing rooms and security controlled assembly facilities provide isolation of confidential programs.
+					</div>
+				</div>
+				<div class="picWrap">
+					<div class="pic" style="background-image:url({{'images/box.png'|assets}})"></div>
+				</div>
+			</section>
+		</div>
+	</div>
 {% endblock %}
-

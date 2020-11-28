@@ -1,0 +1,93 @@
+html,body
+	font-family: 'Lato'
+
+*
+	box-sizing: border-box
+	
+
+.tag-list
+	display: flex
+	justify-content: center
+	.tag-list-item
+		display: flex
+		flex-direction: column 
+		padding: 15px 30px
+		align-items: center
+		width: 130px
+		cursor: pointer
+		.txt 
+			text-align: center
+			margin-top: 15px
+			font-weight: bold
+			@apply text-lg
+
+
+.section-title
+	font-size: 60px
+	font-weight: 900
+	letter-spacing: 0.05em
+	&.text-white
+		text-shadow: 1px 1px 2px rgba(66, 58, 58, 0.5)
+
+// section
+
+.index-necker
+	height: 100vh
+	max-height: 650px
+	+coverBg
+
+#index-adventages
+	.ad-section
+		padding-right: 90px
+		overflow: hidden
+		height: 100vh
+		position: relative
+		display: flex
+		align-items: center
+		.textWrap
+			position: relative
+			z-index: 2
+			width: 38%
+			min-width: 522px
+			.section-title
+				padding-left: 150px
+				line-height: 1.25em
+			.ad-content
+				padding: 30px 
+				padding-left: 150px
+				color: white
+				margin-top: 15px
+				line-height: 1.8em
+		.picWrap
+			width: 62%
+			border: 1px solid #000
+			height: 100%
+			position: relative
+			.pic 
+				+full
+				+containBg
+
+			&.boxlines
+				.p1
+					top: 45%
+				.p2
+					top: 20%
+				.p3
+					top: -5%
+				.p4
+					top: -15%
+				.p5
+					top: -40%
+				.p6
+					top: 20%
+					left: -70%
+
+			&.boxs
+				.pic
+					top: 20%
+				.p11
+					left: -70%
+					top: 20%
+
+
+	

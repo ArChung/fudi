@@ -3,14 +3,13 @@
 	--color-black: #000;
 	--color-green: #58B291;
 	--color-red: #ad0000;
-	--color-yellow: #fbca3c;
 	--color-lightest: #ebebeb;
 	--color-lighter: #ccc;
 	--color-light: #979797;
 	--color-dark: #333;
 	--color-darker: #111;
 	--color-primary: #fbca3c;
-	--color-blue: #0062ff;
+	
 	--color-secondary: #0072b4;
 	--color-info: #00cc0a;
 	--color-danger: #e00000;
@@ -21,6 +20,14 @@
 	--color-label: #666;
 	--color-input-border: #666;
 	--color-input-text: #666;
+
+	/* fir fudi website */
+	--color-blue: #00A0EA;
+	--color-pink: #E5007F;
+	--color-yellow: #FFF100;
+	--color-gray: #E4E4E4;
+
+
 }
 
 /* .w-1 {

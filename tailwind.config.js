@@ -2,7 +2,7 @@ module.exports = {
 	important: true,
 
 	purge: {
-		enabled: true,
+		enabled: false,
 		content: [
 			"./src/**/*.twig",
 			"./src/**/*.html"
@@ -14,11 +14,9 @@ module.exports = {
 		container: {
 			center: true
 		},
-
 		colors: {
 			white: "var(--color-white)",
 			black: "var(--color-black)",
-
 			green: "var(--color-green)",
 			lightest: "var(--color-lightest)",
 			lighter: "var(--color-lighter)",
@@ -27,7 +25,10 @@ module.exports = {
 			darker: "var(--color-darker)",
 			primary: "var(--color-primary)",
 			secondary: "var(--color-secondary)",
-			blue: "var(--color-blue)"
+			blue: "var(--color-blue)",
+			pink: "var(--color-pink)",
+			yellow: "var(--color-yellow)",
+			gray: "var(--color-gray)",
 		},
 		linearGradientColors: {
 			// defaults to {}
@@ -79,7 +80,13 @@ module.exports = {
 			// rubik: ['Rubik', 'Microsoft YaHei', '微軟正黑體']
 		},
 
-		extend: {}
+		extend: {
+			spacing: {
+        '12': '3rem',
+				'14': '4rem',
+				'16': '5rem',
+      },
+		}
 	},
 	variants: {
 		alignContent: ["responsive"],
