@@ -24,7 +24,7 @@
 {% endblock %}
 {% block bodier %}
 	<div class="index-container">
-		<section class="bg-gray">
+		<section class="bg-gray relative">
 			<div class="container py-14">
 				<h2 class="text-xl font-black text-center ">WHY FUDY SOLUTIONS?</h2>
 				<h1 class="section-title text-center">OUR ADVANTAGES</h1>
@@ -51,7 +51,18 @@
 						<h3 class='txt'>Confidential power</h3>
 					</div>
 				</div>
+
 			</div>
+			{% include "@core/cmpt/ribbon/ribbon.twig" with {
+				class: 'right-0 top-0 mt-12 flip',
+				color: 'blue',
+				type: 'small',
+			}%}
+			{% include "@core/cmpt/ribbon/ribbon.twig" with {
+				class: 'left-0 bottom-0 mb-14 ',
+				color: 'pink',
+				animate: true,
+			}%}
 		</section>
 
 
@@ -76,6 +87,11 @@
 					</div>
 
 				</div>
+				{% include "@core/cmpt/ribbon/ribbon.twig" with {
+					class: 'right-0 bottom-0 mb-2 flip',
+					color: 'yellow',
+					animate: true,
+				}%}
 			</section>
 
 			{# DESIGN #}

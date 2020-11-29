@@ -58,7 +58,7 @@ gee.hook("initScrollMagic", me => {
     start: 'top top',
     end: "+=5000",
     pin: true,
-    markers: true,
+    // markers: true,
     scrub: 1,
   })
 	// me.find('')
@@ -73,8 +73,9 @@ gee.hook("up-loop-infinte", me => {
   
 	gsap.to(me.find('.pic .imgWrap'), 10, {
     scrollTrigger: {
-      trigger: me.find('.pic'),
-      // toggleActions: 'resume pause resume pause'
+      trigger: me,
+      toggleActions: 'resume pause resume pause',
+      end: "bottom+=500px top",
     },
 		y: '-50%',
 		repeat: -1,
