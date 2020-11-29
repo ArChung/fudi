@@ -54,6 +54,7 @@ html,body
 				+dTime(1s)
 				opacity: 0
 				transform: translate(10px, 0)
+				
 			.icon
 				.non-active
 					+dTime
@@ -63,8 +64,9 @@ html,body
 					opacity: 0
 			&.active
 				.txt
-					opacity: 1
-					transform: translate(0px, 0)
+					+pc
+						opacity: 1
+						transform: translate(0px, 0)
 				.icon
 					.non-active
 						opacity: 0
@@ -86,12 +88,16 @@ html,body
 			width: 100vw
 			height: 100%
 			flex-direction: row-reverse
-		// +full
+			+phone 
+				flex-direction: column
+				padding-right: 60px
+				padding-bottom: 40px
+
 		.textWrap
 			position: relative
-			// z-index: 1
 			width: 38%
 			min-width: 522px
+			
 			.section-title
 				padding-left: 150px
 				line-height: 1.25em
@@ -102,11 +108,21 @@ html,body
 				color: white
 				margin-top: 15px
 				line-height: 1.8em
+
+			+phone 
+				width: 100%
+				transform: translate(0, -100px)
+				.section-title
+					padding-left: 60px
+				.ad-content
+					padding-left: 60px
 		.picWrap
 			width: 62%
 			// border: 1px solid #000
 			height: 100%
 			position: relative
+			+phone 
+				width: 100%
 			.pic 
 				+full
 				+containBg
