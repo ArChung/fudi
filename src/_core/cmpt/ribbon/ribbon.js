@@ -26,7 +26,9 @@ gee.hook("ribbonAnimation", me => {
     animation: tl,
     trigger: me,
     toggleActions: 'play pause resume reset',
+    end: 'bottom top',
     // start: 'top top',
-    // markers: true,
+    id:'ribbon',
+    markers: true,
   })
 });

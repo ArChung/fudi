@@ -11,57 +11,58 @@ window.gee = gee;
 gee.hook("initScrollMagic", me => {
 
 	console.log('initScrollMagic');
-  // var ta = me.data("ta") ? $(me.data("ta")) : me;
   
   const tl = gsap.timeline();
-  // const pageChangeTime = 1;
-  // const pageAddTime = 0.5;
-  // const pageTime = pageChangeTime*2 + pageAddTime;
+
+  const _num = me.find('.ad-section').length;
+  const _h = me.find('.ad-section').height();
+  const _d = '800';
 
   tl
-  .from(me.find('.ads-2'),1,{width:"0px"},"1")
-  .from(me.find('.ads-2 .p1'),3,{y:100},"1")
-  .from(me.find('.ads-2 .p2'),3,{y:50},"1")
-  .from(me.find('.ads-2 .p3'),3,{y:-50},"1")
-  .from(me.find('.ads-2 .p4'),3,{y:-100},"1")
-  .from(me.find('.ads-2 .p5'),3,{y:-200},"1")
-  .from(me.find('.ads-2 .p6'),3,{y:-20,x:-150},"1")
-  .from(me.find('.ads-3'),1,{width:"0px"},`3`)
-  .from(me.find('.ads-3 .p1'),5,{y:100},`3`)
-  .from(me.find('.ads-3 .p9'),5,{y:100},`3`)
-  .from(me.find('.ads-3 .p2'),5,{y:-100},`3`)
-  .from(me.find('.ads-3 .p3'),5,{y:-150},`3`)
-  .from(me.find('.ads-3 .p4'),5,{y:-200},`3`)
-  .from(me.find('.ads-3 .p5'),5,{y:-300},`3`)
-  .from(me.find('.ads-3 .p6'),5,{y:-400},`3`)
-  .from(me.find('.ads-3 .p7'),5,{y:-500},`3`)
-  .from(me.find('.ads-3 .p8'),5,{y:-600},`3`)
-  .from(me.find('.ads-3 .p10'),5,{y:-700},`3`)
-  .from(me.find('.ads-3 .p11'),5,{y:-20,x:-150},`3`)
-  .from(me.find('.ads-4 .p1'),5,{y:100},`3`)
-  .from(me.find('.ads-4 .p9'),5,{y:100},`3`)
-  .from(me.find('.ads-4 .p2'),5,{y:-100},`3`)
-  .from(me.find('.ads-4 .p3'),5,{y:-150},`3`)
-  .from(me.find('.ads-4 .p4'),5,{y:-200},`3`)
-  .from(me.find('.ads-4 .p5'),5,{y:-300},`3`)
-  .from(me.find('.ads-4 .p6'),5,{y:-400},`3`)
-  .from(me.find('.ads-4 .p7'),5,{y:-500},`3`)
-  .from(me.find('.ads-4 .p8'),5,{y:-600},`3`)
-  .from(me.find('.ads-4 .p10'),5,{y:-700},`3`)
-  .from(me.find('.ads-4 .p11'),5,{y:-20,x:-150},`3`)
-  .from(me.find('.ads-4'),1,{width:"0px"},`5`)
-  .from(me.find('.ads-5'),1,{width:"0px"},"7")
+  .from(me.find('.ads-2'),_d*1,{width:"0px"},_d)
+  .from(me.find('.ads-2 .p1'),_d*3,{y:100},_d)
+  .from(me.find('.ads-2 .p2'),_d*3,{y:50},_d)
+  .from(me.find('.ads-2 .p3'),_d*3,{y:-50},_d)
+  .from(me.find('.ads-2 .p4'),_d*3,{y:-100},_d)
+  .from(me.find('.ads-2 .p5'),_d*3,{y:-200},_d)
+  .from(me.find('.ads-2 .p6'),_d*3,{y:-20,x:-150},_d)
+  .from(me.find('.ads-3'),_d*1,{width:"0px"},_d*3)
+  .from(me.find('.ads-3 .p1'),_d*5,{y:100},_d*3)
+  .from(me.find('.ads-3 .p9'),_d*5,{y:100},_d*3)
+  .from(me.find('.ads-3 .p2'),_d*5,{y:-100},_d*3)
+  .from(me.find('.ads-3 .p3'),_d*5,{y:-150},_d*3)
+  .from(me.find('.ads-3 .p4'),_d*5,{y:-200},_d*3)
+  .from(me.find('.ads-3 .p5'),_d*5,{y:-300},_d*3)
+  .from(me.find('.ads-3 .p6'),_d*5,{y:-400},_d*3)
+  .from(me.find('.ads-3 .p7'),_d*5,{y:-500},_d*3)
+  .from(me.find('.ads-3 .p8'),_d*5,{y:-600},_d*3)
+  .from(me.find('.ads-3 .p10'),_d*5,{y:-700},_d*3)
+  .from(me.find('.ads-3 .p11'),_d*5,{y:-20,x:-150},_d*3)
+  .from(me.find('.ads-4 .p1'),_d*5,{y:100},_d*3)
+  .from(me.find('.ads-4 .p9'),_d*5,{y:100},_d*3)
+  .from(me.find('.ads-4 .p2'),_d*5,{y:-100},_d*3)
+  .from(me.find('.ads-4 .p3'),_d*5,{y:-150},_d*3)
+  .from(me.find('.ads-4 .p4'),_d*5,{y:-200},_d*3)
+  .from(me.find('.ads-4 .p5'),_d*5,{y:-300},_d*3)
+  .from(me.find('.ads-4 .p6'),_d*5,{y:-400},_d*3)
+  .from(me.find('.ads-4 .p7'),_d*5,{y:-500},_d*3)
+  .from(me.find('.ads-4 .p8'),_d*5,{y:-600},_d*3)
+  .from(me.find('.ads-4 .p10'),_d*5,{y:-700},_d*3)
+  .from(me.find('.ads-4 .p11'),_d*5,{y:-20,x:-150},_d*3)
+  .from(me.find('.ads-4'),_d*1,{width:"0px"},_d*5)
+  .from(me.find('.ads-5'),_d*1,{width:"0px"},_d*7)
+
+
 
   ScrollTrigger.create({
     animation: tl,
     trigger: me,
     start: 'top top',
-    end: "+=5000",
+    end: `+=${_num*_d+(_d*(_num-1))}`,
     pin: true,
-    // markers: true,
+    markers: true,
     scrub: 1,
   })
-	// me.find('')
 });
 
 
