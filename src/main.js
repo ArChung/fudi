@@ -20,6 +20,10 @@ import "@cmpt/touch/touch.js";
 import "@core/cmpt/nav/nav.js";
 import "@core/cmpt/pagination/pagination.js";
 import "./assets/styles/main.scss";
+// 20201128 by archung
+import "@core/cmpt/ribbon/ribbon.js";
+import "./assets/scripts/custom.js";
+// 20201128 by archung end 
 
 import "./assets/scripts/app";
 

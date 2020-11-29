@@ -37,16 +37,23 @@ html,body
 	+coverBg
 
 #index-adventages
+	height: 100vh
+	position: relative
 	.ad-section
-		padding-right: 90px
+		+full
 		overflow: hidden
-		height: 100vh
-		position: relative
-		display: flex
-		align-items: center
+		.section-container
+			padding-right: 90px
+			overflow: hidden
+			display: flex
+			align-items: center
+			width: 100vw
+			height: 100%
+			flex-direction: row-reverse
+		// +full
 		.textWrap
 			position: relative
-			z-index: 2
+			// z-index: 1
 			width: 38%
 			min-width: 522px
 			.section-title
@@ -60,7 +67,7 @@ html,body
 				line-height: 1.8em
 		.picWrap
 			width: 62%
-			border: 1px solid #000
+			// border: 1px solid #000
 			height: 100%
 			position: relative
 			.pic 

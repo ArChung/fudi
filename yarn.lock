@@ -5710,6 +5710,11 @@ grouped-queue@^0.3.3:
   dependencies:
     lodash "^4.17.2"
 
+gsap@^3.5.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.5.1.tgz#36cf76787d1758e749469d5e9cbe365c186544c4"
+  integrity sha512-EMV0RSUKZNeTUzLKAizGlwxVOUyif3/g8I3S1aA/hf3gbqwBvmQ02x1RdTBQNQMOpHCVBv9y/vaHwfctoAg8zw==
+
 gulp-cheerio@^0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/gulp-cheerio/-/gulp-cheerio-0.6.2.tgz#75063391516fc792974bec3c10519d7c9281e921"
