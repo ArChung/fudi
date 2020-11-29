@@ -1,0 +1,1084 @@
+@font-face {
+	font-family: "icon";
+	src: url("/assets/icon.woff2?ad919ec12cd9b3f5e4d5f5e508a21be1")
+			format("woff2"),
+		url("/assets/icon.woff?ad919ec12cd9b3f5e4d5f5e508a21be1") format("woff");
+}
+
+$webfont-icons: map-merge(
+	$webfont-icons,
+	(
+		"Italic": (
+			"icon" "f101"
+		),
+		"agenda": (
+			"icon" "f102"
+		),
+		"alarm-clock": (
+			"icon" "f103"
+		),
+		"alert": (
+			"icon" "f104"
+		),
+		"align-center": (
+			"icon" "f105"
+		),
+		"align-justify": (
+			"icon" "f106"
+		),
+		"align-left": (
+			"icon" "f107"
+		),
+		"align-right": (
+			"icon" "f108"
+		),
+		"anchor": (
+			"icon" "f109"
+		),
+		"android": (
+			"icon" "f10a"
+		),
+		"angle-double-down": (
+			"icon" "f10b"
+		),
+		"angle-double-left": (
+			"icon" "f10c"
+		),
+		"angle-double-right": (
+			"icon" "f10d"
+		),
+		"angle-double-up": (
+			"icon" "f10e"
+		),
+		"angle-down": (
+			"icon" "f10f"
+		),
+		"angle-left": (
+			"icon" "f110"
+		),
+		"angle-right": (
+			"icon" "f111"
+		),
+		"angle-up": (
+			"icon" "f112"
+		),
+		"announcement": (
+			"icon" "f113"
+		),
+		"apple": (
+			"icon" "f114"
+		),
+		"archive": (
+			"icon" "f115"
+		),
+		"arrow-circle-down": (
+			"icon" "f116"
+		),
+		"arrow-circle-left": (
+			"icon" "f117"
+		),
+		"arrow-circle-right": (
+			"icon" "f118"
+		),
+		"arrow-circle-up": (
+			"icon" "f119"
+		),
+		"arrow-down": (
+			"icon" "f11a"
+		),
+		"arrow-left": (
+			"icon" "f11b"
+		),
+		"arrow-right": (
+			"icon" "f11c"
+		),
+		"arrow-top-left": (
+			"icon" "f11d"
+		),
+		"arrow-top-right": (
+			"icon" "f11e"
+		),
+		"arrow-up": (
+			"icon" "f11f"
+		),
+		"arrow": (
+			"icon" "f120"
+		),
+		"arrows-corner": (
+			"icon" "f121"
+		),
+		"arrows-horizontal": (
+			"icon" "f122"
+		),
+		"arrows-vertical": (
+			"icon" "f123"
+		),
+		"back-left": (
+			"icon" "f124"
+		),
+		"back-right": (
+			"icon" "f125"
+		),
+		"bag": (
+			"icon" "f126"
+		),
+		"bar-chart-alt": (
+			"icon" "f127"
+		),
+		"bar-chart": (
+			"icon" "f128"
+		),
+		"basketball": (
+			"icon" "f129"
+		),
+		"bell": (
+			"icon" "f12a"
+		),
+		"blackboard": (
+			"icon" "f12b"
+		),
+		"bolt-alt": (
+			"icon" "f12c"
+		),
+		"bolt": (
+			"icon" "f12d"
+		),
+		"book": (
+			"icon" "f12e"
+		),
+		"bookmark-alt": (
+			"icon" "f12f"
+		),
+		"bookmark": (
+			"icon" "f130"
+		),
+		"briefcase": (
+			"icon" "f131"
+		),
+		"brush-alt": (
+			"icon" "f132"
+		),
+		"brush": (
+			"icon" "f133"
+		),
+		"calendar": (
+			"icon" "f134"
+		),
+		"camera": (
+			"icon" "f135"
+		),
+		"car": (
+			"icon" "f136"
+		),
+		"check-box": (
+			"icon" "f137"
+		),
+		"check": (
+			"icon" "f138"
+		),
+		"clip": (
+			"icon" "f139"
+		),
+		"clipboard": (
+			"icon" "f13a"
+		),
+		"close": (
+			"icon" "f13b"
+		),
+		"cloud-down": (
+			"icon" "f13c"
+		),
+		"cloud-up": (
+			"icon" "f13d"
+		),
+		"cloud": (
+			"icon" "f13e"
+		),
+		"comment-alt": (
+			"icon" "f13f"
+		),
+		"comment": (
+			"icon" "f140"
+		),
+		"comments-smiley": (
+			"icon" "f141"
+		),
+		"comments": (
+			"icon" "f142"
+		),
+		"control-backward": (
+			"icon" "f143"
+		),
+		"control-eject": (
+			"icon" "f144"
+		),
+		"control-forward": (
+			"icon" "f145"
+		),
+		"control-pause": (
+			"icon" "f146"
+		),
+		"control-play": (
+			"icon" "f147"
+		),
+		"control-record": (
+			"icon" "f148"
+		),
+		"control-shuffle": (
+			"icon" "f149"
+		),
+		"control-skip-backward": (
+			"icon" "f14a"
+		),
+		"control-skip-forward": (
+			"icon" "f14b"
+		),
+		"control-stop": (
+			"icon" "f14c"
+		),
+		"credit-card": (
+			"icon" "f14d"
+		),
+		"crown": (
+			"icon" "f14e"
+		),
+		"css3": (
+			"icon" "f14f"
+		),
+		"cup": (
+			"icon" "f150"
+		),
+		"cut": (
+			"icon" "f151"
+		),
+		"dashboard": (
+			"icon" "f152"
+		),
+		"desktop": (
+			"icon" "f153"
+		),
+		"direction-alt": (
+			"icon" "f154"
+		),
+		"direction": (
+			"icon" "f155"
+		),
+		"download": (
+			"icon" "f156"
+		),
+		"dribbble": (
+			"icon" "f157"
+		),
+		"dropbox-alt": (
+			"icon" "f158"
+		),
+		"dropbox": (
+			"icon" "f159"
+		),
+		"drupal": (
+			"icon" "f15a"
+		),
+		"email": (
+			"icon" "f15b"
+		),
+		"envelope": (
+			"icon" "f15c"
+		),
+		"eraser": (
+			"icon" "f15d"
+		),
+		"exchange-vertical": (
+			"icon" "f15e"
+		),
+		"export": (
+			"icon" "f15f"
+		),
+		"eye": (
+			"icon" "f160"
+		),
+		"face-sad": (
+			"icon" "f161"
+		),
+		"face-smile": (
+			"icon" "f162"
+		),
+		"facebook": (
+			"icon" "f163"
+		),
+		"file": (
+			"icon" "f164"
+		),
+		"files": (
+			"icon" "f165"
+		),
+		"filter": (
+			"icon" "f166"
+		),
+		"flag-alt-2": (
+			"icon" "f167"
+		),
+		"flag-alt": (
+			"icon" "f168"
+		),
+		"flag": (
+			"icon" "f169"
+		),
+		"flickr-alt": (
+			"icon" "f16a"
+		),
+		"flickr": (
+			"icon" "f16b"
+		),
+		"folder": (
+			"icon" "f16c"
+		),
+		"fullscreen": (
+			"icon" "f16d"
+		),
+		"gallery": (
+			"icon" "f16e"
+		),
+		"game": (
+			"icon" "f16f"
+		),
+		"gift": (
+			"icon" "f170"
+		),
+		"github": (
+			"icon" "f171"
+		),
+		"google": (
+			"icon" "f172"
+		),
+		"hand-drag": (
+			"icon" "f173"
+		),
+		"hand-open": (
+			"icon" "f174"
+		),
+		"hand-point-down": (
+			"icon" "f175"
+		),
+		"hand-point-left": (
+			"icon" "f176"
+		),
+		"hand-point-right": (
+			"icon" "f177"
+		),
+		"hand-point-up": (
+			"icon" "f178"
+		),
+		"hand-stop": (
+			"icon" "f179"
+		),
+		"harddrive": (
+			"icon" "f17a"
+		),
+		"harddrives": (
+			"icon" "f17b"
+		),
+		"headphone-alt": (
+			"icon" "f17c"
+		),
+		"headphone": (
+			"icon" "f17d"
+		),
+		"heart-broken": (
+			"icon" "f17e"
+		),
+		"heart": (
+			"icon" "f17f"
+		),
+		"help-alt": (
+			"icon" "f180"
+		),
+		"help": (
+			"icon" "f181"
+		),
+		"home": (
+			"icon" "f182"
+		),
+		"html5": (
+			"icon" "f183"
+		),
+		"hummer": (
+			"icon" "f184"
+		),
+		"id-badge": (
+			"icon" "f185"
+		),
+		"image": (
+			"icon" "f186"
+		),
+		"import": (
+			"icon" "f187"
+		),
+		"infinite": (
+			"icon" "f188"
+		),
+		"info-alt": (
+			"icon" "f189"
+		),
+		"info": (
+			"icon" "f18a"
+		),
+		"ink-pen": (
+			"icon" "f18b"
+		),
+		"instagram": (
+			"icon" "f18c"
+		),
+		"joomla": (
+			"icon" "f18d"
+		),
+		"jsfiddle": (
+			"icon" "f18e"
+		),
+		"key": (
+			"icon" "f18f"
+		),
+		"layers-alt": (
+			"icon" "f190"
+		),
+		"layers": (
+			"icon" "f191"
+		),
+		"layout-accordion-list": (
+			"icon" "f192"
+		),
+		"layout-accordion-merged": (
+			"icon" "f193"
+		),
+		"layout-accordion-separated": (
+			"icon" "f194"
+		),
+		"layout-column2-alt": (
+			"icon" "f195"
+		),
+		"layout-column2": (
+			"icon" "f196"
+		),
+		"layout-column3-alt": (
+			"icon" "f197"
+		),
+		"layout-column3": (
+			"icon" "f198"
+		),
+		"layout-column4-alt": (
+			"icon" "f199"
+		),
+		"layout-column4": (
+			"icon" "f19a"
+		),
+		"layout-cta-btn-left": (
+			"icon" "f19b"
+		),
+		"layout-cta-btn-right": (
+			"icon" "f19c"
+		),
+		"layout-cta-center": (
+			"icon" "f19d"
+		),
+		"layout-cta-left": (
+			"icon" "f19e"
+		),
+		"layout-cta-right": (
+			"icon" "f19f"
+		),
+		"layout-grid2-alt": (
+			"icon" "f1a0"
+		),
+		"layout-grid2-thumb": (
+			"icon" "f1a1"
+		),
+		"layout-grid2": (
+			"icon" "f1a2"
+		),
+		"layout-grid3-alt": (
+			"icon" "f1a3"
+		),
+		"layout-grid3": (
+			"icon" "f1a4"
+		),
+		"layout-grid4-alt": (
+			"icon" "f1a5"
+		),
+		"layout-grid4": (
+			"icon" "f1a6"
+		),
+		"layout-line-solid": (
+			"icon" "f1a7"
+		),
+		"layout-list-large-image": (
+			"icon" "f1a8"
+		),
+		"layout-list-post": (
+			"icon" "f1a9"
+		),
+		"layout-list-thumb-alt": (
+			"icon" "f1aa"
+		),
+		"layout-list-thumb": (
+			"icon" "f1ab"
+		),
+		"layout-media-center-alt": (
+			"icon" "f1ac"
+		),
+		"layout-media-center": (
+			"icon" "f1ad"
+		),
+		"layout-media-left-alt": (
+			"icon" "f1ae"
+		),
+		"layout-media-left": (
+			"icon" "f1af"
+		),
+		"layout-media-overlay-alt-2": (
+			"icon" "f1b0"
+		),
+		"layout-media-overlay-alt": (
+			"icon" "f1b1"
+		),
+		"layout-media-overlay": (
+			"icon" "f1b2"
+		),
+		"layout-media-right-alt": (
+			"icon" "f1b3"
+		),
+		"layout-media-right": (
+			"icon" "f1b4"
+		),
+		"layout-menu-full": (
+			"icon" "f1b5"
+		),
+		"layout-menu-separated": (
+			"icon" "f1b6"
+		),
+		"layout-menu-v": (
+			"icon" "f1b7"
+		),
+		"layout-menu": (
+			"icon" "f1b8"
+		),
+		"layout-placeholder": (
+			"icon" "f1b9"
+		),
+		"layout-sidebar-2": (
+			"icon" "f1ba"
+		),
+		"layout-sidebar-left": (
+			"icon" "f1bb"
+		),
+		"layout-sidebar-none": (
+			"icon" "f1bc"
+		),
+		"layout-sidebar-right": (
+			"icon" "f1bd"
+		),
+		"layout-slider-alt": (
+			"icon" "f1be"
+		),
+		"layout-slider": (
+			"icon" "f1bf"
+		),
+		"layout-tab-min": (
+			"icon" "f1c0"
+		),
+		"layout-tab-v": (
+			"icon" "f1c1"
+		),
+		"layout-tab-window": (
+			"icon" "f1c2"
+		),
+		"layout-tab": (
+			"icon" "f1c3"
+		),
+		"layout-width-default-alt": (
+			"icon" "f1c4"
+		),
+		"layout-width-default": (
+			"icon" "f1c5"
+		),
+		"layout-width-full": (
+			"icon" "f1c6"
+		),
+		"layout": (
+			"icon" "f1c7"
+		),
+		"light-bulb": (
+			"icon" "f1c8"
+		),
+		"line-dashed": (
+			"icon" "f1c9"
+		),
+		"line-dotted": (
+			"icon" "f1ca"
+		),
+		"line-double": (
+			"icon" "f1cb"
+		),
+		"link": (
+			"icon" "f1cc"
+		),
+		"linkedin": (
+			"icon" "f1cd"
+		),
+		"linux": (
+			"icon" "f1ce"
+		),
+		"list-ol": (
+			"icon" "f1cf"
+		),
+		"list": (
+			"icon" "f1d0"
+		),
+		"location-arrow": (
+			"icon" "f1d1"
+		),
+		"location-pin": (
+			"icon" "f1d2"
+		),
+		"lock": (
+			"icon" "f1d3"
+		),
+		"loop": (
+			"icon" "f1d4"
+		),
+		"magnet": (
+			"icon" "f1d5"
+		),
+		"map-alt": (
+			"icon" "f1d6"
+		),
+		"map": (
+			"icon" "f1d7"
+		),
+		"marker-alt": (
+			"icon" "f1d8"
+		),
+		"marker": (
+			"icon" "f1d9"
+		),
+		"medall-alt": (
+			"icon" "f1da"
+		),
+		"medall": (
+			"icon" "f1db"
+		),
+		"menu-alt": (
+			"icon" "f1dc"
+		),
+		"menu": (
+			"icon" "f1dd"
+		),
+		"microphone-alt": (
+			"icon" "f1de"
+		),
+		"microphone": (
+			"icon" "f1df"
+		),
+		"microsoft-alt": (
+			"icon" "f1e0"
+		),
+		"microsoft": (
+			"icon" "f1e1"
+		),
+		"minus": (
+			"icon" "f1e2"
+		),
+		"mobile": (
+			"icon" "f1e3"
+		),
+		"money": (
+			"icon" "f1e4"
+		),
+		"more-alt": (
+			"icon" "f1e5"
+		),
+		"more": (
+			"icon" "f1e6"
+		),
+		"mouse-alt": (
+			"icon" "f1e7"
+		),
+		"mouse": (
+			"icon" "f1e8"
+		),
+		"music-alt": (
+			"icon" "f1e9"
+		),
+		"music": (
+			"icon" "f1ea"
+		),
+		"na": (
+			"icon" "f1eb"
+		),
+		"new-window": (
+			"icon" "f1ec"
+		),
+		"notepad": (
+			"icon" "f1ed"
+		),
+		"package": (
+			"icon" "f1ee"
+		),
+		"paint-bucket": (
+			"icon" "f1ef"
+		),
+		"paint-roller": (
+			"icon" "f1f0"
+		),
+		"palette": (
+			"icon" "f1f1"
+		),
+		"panel": (
+			"icon" "f1f2"
+		),
+		"paragraph": (
+			"icon" "f1f3"
+		),
+		"pencil-alt": (
+			"icon" "f1f4"
+		),
+		"pencil-alt2": (
+			"icon" "f1f5"
+		),
+		"pencil": (
+			"icon" "f1f6"
+		),
+		"phone": (
+			"icon" "f1f7"
+		),
+		"pie-chart": (
+			"icon" "f1f8"
+		),
+		"pin-alt": (
+			"icon" "f1f9"
+		),
+		"pin": (
+			"icon" "f1fa"
+		),
+		"pin2": (
+			"icon" "f1fb"
+		),
+		"pinterest-alt": (
+			"icon" "f1fc"
+		),
+		"pinterest": (
+			"icon" "f1fd"
+		),
+		"plug": (
+			"icon" "f1fe"
+		),
+		"plus": (
+			"icon" "f1ff"
+		),
+		"power-off": (
+			"icon" "f200"
+		),
+		"printer": (
+			"icon" "f201"
+		),
+		"pulse": (
+			"icon" "f202"
+		),
+		"quote-left": (
+			"icon" "f203"
+		),
+		"quote-right": (
+			"icon" "f204"
+		),
+		"receipt": (
+			"icon" "f205"
+		),
+		"reddit": (
+			"icon" "f206"
+		),
+		"reload": (
+			"icon" "f207"
+		),
+		"rocket": (
+			"icon" "f208"
+		),
+		"rss-alt": (
+			"icon" "f209"
+		),
+		"rss": (
+			"icon" "f20a"
+		),
+		"ruler-alt-2": (
+			"icon" "f20b"
+		),
+		"ruler-alt": (
+			"icon" "f20c"
+		),
+		"ruler-pencil": (
+			"icon" "f20d"
+		),
+		"ruler": (
+			"icon" "f20e"
+		),
+		"save-alt": (
+			"icon" "f20f"
+		),
+		"save": (
+			"icon" "f210"
+		),
+		"search": (
+			"icon" "f211"
+		),
+		"server": (
+			"icon" "f212"
+		),
+		"settings": (
+			"icon" "f213"
+		),
+		"share-alt": (
+			"icon" "f214"
+		),
+		"share": (
+			"icon" "f215"
+		),
+		"sharethis-alt": (
+			"icon" "f216"
+		),
+		"sharethis": (
+			"icon" "f217"
+		),
+		"shield": (
+			"icon" "f218"
+		),
+		"shift-left-alt": (
+			"icon" "f219"
+		),
+		"shift-left": (
+			"icon" "f21a"
+		),
+		"shift-right-alt": (
+			"icon" "f21b"
+		),
+		"shift-right": (
+			"icon" "f21c"
+		),
+		"shine": (
+			"icon" "f21d"
+		),
+		"shopping-cart-full": (
+			"icon" "f21e"
+		),
+		"shopping-cart": (
+			"icon" "f21f"
+		),
+		"shortcode": (
+			"icon" "f220"
+		),
+		"signal": (
+			"icon" "f221"
+		),
+		"skype": (
+			"icon" "f222"
+		),
+		"slice": (
+			"icon" "f223"
+		),
+		"smallcap": (
+			"icon" "f224"
+		),
+		"soundcloud": (
+			"icon" "f225"
+		),
+		"split-h": (
+			"icon" "f226"
+		),
+		"split-v-alt": (
+			"icon" "f227"
+		),
+		"split-v": (
+			"icon" "f228"
+		),
+		"spray": (
+			"icon" "f229"
+		),
+		"stack-overflow": (
+			"icon" "f22a"
+		),
+		"stamp": (
+			"icon" "f22b"
+		),
+		"star": (
+			"icon" "f22c"
+		),
+		"stats-down": (
+			"icon" "f22d"
+		),
+		"stats-up": (
+			"icon" "f22e"
+		),
+		"support": (
+			"icon" "f22f"
+		),
+		"tablet": (
+			"icon" "f230"
+		),
+		"tag": (
+			"icon" "f231"
+		),
+		"target": (
+			"icon" "f232"
+		),
+		"text": (
+			"icon" "f233"
+		),
+		"themify-favicon-alt": (
+			"icon" "f234"
+		),
+		"themify-favicon": (
+			"icon" "f235"
+		),
+		"themify-logo": (
+			"icon" "f236"
+		),
+		"thought": (
+			"icon" "f237"
+		),
+		"thumb-down": (
+			"icon" "f238"
+		),
+		"thumb-up": (
+			"icon" "f239"
+		),
+		"ticket": (
+			"icon" "f23a"
+		),
+		"time": (
+			"icon" "f23b"
+		),
+		"timer": (
+			"icon" "f23c"
+		),
+		"trash": (
+			"icon" "f23d"
+		),
+		"trello": (
+			"icon" "f23e"
+		),
+		"truck": (
+			"icon" "f23f"
+		),
+		"tumblr-alt": (
+			"icon" "f240"
+		),
+		"tumblr": (
+			"icon" "f241"
+		),
+		"twitter-alt": (
+			"icon" "f242"
+		),
+		"twitter": (
+			"icon" "f243"
+		),
+		"underline": (
+			"icon" "f244"
+		),
+		"unlink": (
+			"icon" "f245"
+		),
+		"unlock": (
+			"icon" "f246"
+		),
+		"upload": (
+			"icon" "f247"
+		),
+		"uppercase": (
+			"icon" "f248"
+		),
+		"user": (
+			"icon" "f249"
+		),
+		"vector": (
+			"icon" "f24a"
+		),
+		"video-camera": (
+			"icon" "f24b"
+		),
+		"video-clapper": (
+			"icon" "f24c"
+		),
+		"view-grid": (
+			"icon" "f24d"
+		),
+		"view-list-alt": (
+			"icon" "f24e"
+		),
+		"view-list": (
+			"icon" "f24f"
+		),
+		"vimeo-alt": (
+			"icon" "f250"
+		),
+		"vimeo": (
+			"icon" "f251"
+		),
+		"volume": (
+			"icon" "f252"
+		),
+		"wallet": (
+			"icon" "f253"
+		),
+		"wand": (
+			"icon" "f254"
+		),
+		"wheelchair": (
+			"icon" "f255"
+		),
+		"widget-alt": (
+			"icon" "f256"
+		),
+		"widget": (
+			"icon" "f257"
+		),
+		"widgetized": (
+			"icon" "f258"
+		),
+		"window": (
+			"icon" "f259"
+		),
+		"wordpress": (
+			"icon" "f25a"
+		),
+		"world": (
+			"icon" "f25b"
+		),
+		"write": (
+			"icon" "f25c"
+		),
+		"yahoo": (
+			"icon" "f25d"
+		),
+		"youtube": (
+			"icon" "f25e"
+		),
+		"zip": (
+			"icon" "f25f"
+		),
+		"zoom-in": (
+			"icon" "f260"
+		),
+		"zoom-out": (
+			"icon" "f261"
+		)
+	)
+);
+
+@mixin webfont-icon($name) {
+	line-height: 1;
+
+	$icon: map-get($webfont-icons, $name);
+	&:before {
+		font-family: nth($icon, 1) !important;
+		font-style: normal;
+		font-weight: normal !important;
+		vertical-align: top;
+		content: str-slice("\x", 1, 1) + nth($icon, 2);
+	}
+}

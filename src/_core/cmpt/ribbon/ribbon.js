@@ -25,10 +25,10 @@ gee.hook("ribbonAnimation", me => {
   ScrollTrigger.create({
     animation: tl,
     trigger: me,
-    toggleActions: 'play pause resume reset',
-    end: 'bottom top',
+    // toggleActions: 'play pause resume reset',
+    // end: '+=1600',
     // start: 'top top',
-    id:'ribbon',
-    markers: true,
+    // id:'ribbon',
+    // markers: true,
   })
 });

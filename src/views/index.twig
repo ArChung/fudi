@@ -68,6 +68,7 @@
 
 		<div
 			id='index-adventages' class='gee' data-gene="init:initScrollMagic">
+
 			{# RESEARCH #}
 			<section class="ad-section  ads-1 bg-blue">
 				<div class="section-container">
@@ -110,6 +111,17 @@
 						<div class="ad-content bg-black">
 							n-house design teamspecialized in structural 2D design and 3D techniques. Proven experience with continuous innovation, and ability to transform product packaging imagination into reality with unrivaled precision and accuracy.
 						</div>
+						{% include "@core/cmpt/ribbon/ribbon.twig" with {
+							class: 'left-1/5 bottom-0 -mb-8 flip',
+							color: 'yellow',
+							type: 'small',
+						}%}
+						{% include "@core/cmpt/ribbon/ribbon.twig" with {
+							class: 'right-0 top-0 mt-16  -mr-32 flip',
+							color: 'blue',
+							width: 150,
+							animate: true,
+						}%}
 					</div>
 				</div>
 			</section>
@@ -138,7 +150,16 @@
 							Integrated international resources across the world, dedicated to offer a one-stop service.Collaborate in every step of the development process from ideation, design, qualification,manufacturing, and supply chain execution.
 						</div>
 					</div>
-
+						{% include "@core/cmpt/ribbon/ribbon.twig" with {
+							class: 'left-0 top-0 -mt-16',
+							color: 'blue',
+							animate: true,
+						}%}
+						{% include "@core/cmpt/ribbon/ribbon.twig" with {
+							class: 'right-0 bottom-0 mb-16 mr-4 flip',
+							color: 'pink',
+							type: 'small',
+						}%}
 				</div>
 			</section>
 
@@ -162,6 +183,16 @@
 						<div class="section-title">MANAGEMENT<br>POWER</div>
 						<div class="ad-content bg-blue">
 							Dedicated quality management team responsible for driving best-in-class execution of your product through Fudy manufacturing facilities.  Data driven approach to managing manufacturing precision from raw material to finished goods.
+							{% include "@core/cmpt/ribbon/ribbon.twig" with {
+								class: 'right-0 top-0 -mr-8 flip',
+								color: 'black',
+								type: 'small',
+							}%}
+							{% include "@core/cmpt/ribbon/ribbon.twig" with {
+								class: 'left-1/5 bottom-0 transform translate-y-full mb-4',
+								color: 'pink',
+								animate: true,
+							}%}
 						</div>
 					</div>
 
@@ -179,11 +210,47 @@
 							<br>POWER</div>
 						<div class="ad-content text-black pt-0">
 							Security throughout the development process to ensure that customer confidentiality is maintained at the highest level.   Private printing rooms and security controlled assembly facilities provide isolation of confidential programs.
+							{% include "@core/cmpt/ribbon/ribbon.twig" with {
+								class: 'bottom-0 right-0 flip -mr-16',
+								color: 'pink',
+								type: 'small',
+							}%}
 						</div>
 					</div>
-
+					{% include "@core/cmpt/ribbon/ribbon.twig" with {
+						class: 'right-0 top-0 mr-4 mt-16 flip',
+						color: 'yellow',
+						animate: true,
+					}%}
+					{% include "@core/cmpt/ribbon/ribbon.twig" with {
+						class: 'top-0 -mt-16 left-1/5',
+						color: 'blue',
+						animate: true,
+					}%}
 				</div>
 			</section>
+
+
+			<div class="ad-nav text-xs text-right space-y-2">
+				{% include "@core/cmpt/ribbonNavItem/ribbonNavItem.twig" with {
+					class: 'active',
+					txt: 'RESEARCH<br>POWER',
+				}%}
+				{% include "@core/cmpt/ribbonNavItem/ribbonNavItem.twig" with {
+					txt: 'DESIGN<br>POWER',
+				}%}
+				{% include "@core/cmpt/ribbonNavItem/ribbonNavItem.twig" with {
+					txt: 'PROBLEM-SOLVING<br>POWER',
+				}%}
+				{% include "@core/cmpt/ribbonNavItem/ribbonNavItem.twig" with {
+					txt: 'MANAGEMENT<br>POWER',
+				}%}
+				{% include "@core/cmpt/ribbonNavItem/ribbonNavItem.twig" with {
+					txt: 'CONFIDENTIAL<br>POWER',
+				}%}
+			</div>
 		</div>
+
+		<div class="bg-black" style='height:2000px'>123</div>
 	</div>
 {% endblock %}

@@ -39,9 +39,45 @@ html,body
 #index-adventages
 	height: 100vh
 	position: relative
+	.ad-nav
+		position: absolute
+		right: 25px
+		top: 50%
+		transform: translate(0, -50%)
+		z-index: 10
+		color: white
+		// mix-blend-mode: difference
+		.ad-nav-item
+			position: relative
+			padding-right: 35px
+			.txt
+				+dTime(1s)
+				opacity: 0
+				transform: translate(10px, 0)
+			.icon
+				.non-active
+					+dTime
+					opacity: 1
+				.active
+					+dTime
+					opacity: 0
+			&.active
+				.txt
+					opacity: 1
+					transform: translate(0px, 0)
+				.icon
+					.non-active
+						opacity: 0
+					.active
+						opacity: 1
+
+
 	.ad-section
 		+full
 		overflow: hidden
+		@for $i from 1 through 5
+			&:nth-child(#{$i})
+				z-index: $i
 		.section-container
 			padding-right: 90px
 			overflow: hidden
@@ -60,6 +96,7 @@ html,body
 				padding-left: 150px
 				line-height: 1.25em
 			.ad-content
+				position: relative
 				padding: 30px 
 				padding-left: 150px
 				color: white
