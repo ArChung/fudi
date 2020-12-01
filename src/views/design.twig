@@ -1,0 +1,70 @@
+{% set page = 'story' %}
+{% extends "@layouts/base.twig" %}
+{% block necker %}{% endblock %}
+{% block bodier %}
+
+	<div
+		class="container py-16 max-w-screen-lg px-8">
+
+		{# 導覽條 #}
+		{% include "@cmpt/service/serviceBar.twig" %}
+
+
+		<h1 class="section-title mt-12 text-center">
+			DESIGN
+		</h1>
+		<p class="text-center max-w-xl mx-auto mt-2">Transform your product packaging from imagination into reality with unrivaled precision and accuracy</p>
+
+		<div class="mt-8 tag-list with-arr flex items-center">
+			<div class='bg-blue tag-list-item'>
+				<h3 class='text-3xl txt'>1</h3>
+				<img src="{{'images/design1.png'|assets}}" alt="">
+				<h3 class='txt mt-2 text-sm'>ORDER</h3>
+			</div>
+			<div class="arr">
+				<img src='{{'images/arr.png'|assets}}' alt=""></div>
+			<div class='bg-pink tag-list-item'>
+				<h3 class='text-3xl txt'>2</h3>
+				<img src="{{'images/design2.png'|assets}}" alt="">
+				<h3 class='txt mt-2 text-sm'>DESIGN</h3>
+			</div>
+			<div class="arr">
+				<img src='{{'images/arr.png'|assets}}' alt=""></div>
+			<div class='bg-black tag-list-item'>
+				<h3 class='text-3xl txt text-white'>3</h3>
+				<img src="{{'images/design3.png'|assets}}" alt="">
+				<h3 class='txt mt-2 text-sm text-white'>PROTOTYPE</h3>
+			</div>
+			<div class="arr">
+				<img src='{{'images/arr.png'|assets}}' alt=""></div>
+			<div class='bg-yellow tag-list-item'>
+				<h3 class='text-3xl txt'>4</h3>
+				<img src="{{'images/design4.png'|assets}}" alt="">
+				<h3 class='txt mt-2 text-sm'>QUALIFICATION</h3>
+			</div>
+		</div>
+
+		<div class="mt-12">
+			<div class="bg-blue flex justify-between px-4 items-center">
+				<div class="txt text-3xl font-bold">1</div>
+				<img src='{{'images/design1.png'| assets }}' alt="" class='w-12'>
+			</div>
+			<div class="txtPicWrap mt-4 space-x-4">
+				<div class="txt text-lg flex-col items-start">
+					<h2 class="text-4xl font-bold">Order</h2>
+					<div class="content relative mt-4">
+						Engagement with the Fudy experts that are matched to execute your project. Alignment on key
+						deliverables such as timelines and desired outcomes
+					</div>
+				</div>
+				<div class="pic" style='background-image:url({{'images/story1.jpg'| assets}})'></div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+	{# 開始專案 #}
+	{% include "@cmpt/startProject/startProject.twig" %}
+{% endblock %}

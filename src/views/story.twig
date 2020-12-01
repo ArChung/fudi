@@ -1,0 +1,194 @@
+{% set page = 'story' %}
+{% extends "@layouts/base.twig" %}
+{% block necker %}
+  <div class="neck flex items-center justify-center">
+    <div class="section-title relative z-10 text-white">
+      BRAND STORY
+    </div>
+    <div class="videoBg">
+      <div class="bg-black opacity-25 absolute w-full h-full z-10 "></div>
+      <video src="{{ 'video/story_1.mp4' | assets }}" id='index-video-bg' class="video-bg" preload="auto" autoplay muted loop
+        poster='./images/index01.png' playsinline webkit-playsinline x5-playsinline
+        style="width: 100%; height: 100%;"></video>
+    </div>
+    {% include "@core/cmpt/ribbon/ribbon.twig" with {
+			class: 'bottom-0 left-1/5 -mb-6 ',
+			color: 'yellow',
+			animate: true,
+		}%}
+    {% include "@core/cmpt/ribbon/ribbon.twig" with {
+			class: 'top=1/2 right-0 -mt-6 flip',
+			color: 'blue',
+      animate: true,
+		}%}
+    {% include "@core/cmpt/ribbon/ribbon.twig" with {
+			class: 'left-1/5 top-1/4 transform -translate-y-1/2',
+			color: 'pink',
+      type: 'small',
+		}%}
+  </div>
+{% endblock %}
+{% block bodier %}
+	<div class="txtPicWrap ">
+    <div class="txt text-lg">
+      <div class="content w-1/2 relative py-6">
+        To unlock every possible imagination of product packaging,we have invested in cutting-edge software and hardware equipment together with professional design talents.
+        <div class="line bg-pink w-8/12 "></div>  
+      </div>
+    </div>
+    <div class="pic" style='background-image:url({{'images/story1.jpg'|assets}})'></div>
+  </div>
+  <div class="txtPicWrap flex-row-reverse relative">
+    <div class="txt text-lg relative">
+      <div class="content w-1/2 relative py-6">
+        TWithrigorous research and testing,our development process focuses on environmental sustainability to provide a comprehensive packaging solution.
+        <div class="line bg-blue w-8/12 "></div>  
+      </div>
+      {% include "@core/cmpt/ribbon/ribbon.twig" with {
+        class: 'right-0 top-1/2 -mt-16 flip',
+        color: 'black',
+        type: 'small',
+        animate: false,
+      }%}
+    </div>
+    <div class="pic relative" style='background-image:url({{'images/story2.jpg'|assets}})'>
+      {% include "@core/cmpt/ribbon/ribbon.twig" with {
+        class: 'left-1/3 bottom-0 -mb-4 ',
+        color: 'blue',
+        type: 'small',
+        animate: false,
+      }%}
+    </div>
+    {% include "@core/cmpt/ribbon/ribbon.twig" with {
+			class: 'left-1/2 top-0 transform -translate-y-1/2 -translate-x-1/2 flip',
+			color: 'pink',
+      animate: true,
+		}%}
+  </div>
+  <div class="w-full bg-cover bg-center bg-fixed" style='background-image:url({{'images/story3.jpg'|assets}});height:600px'></div>
+  <div class="py-16 flex justify-center items-center relative">
+    <div class="container text-center text-4xl font-bold relative py-6 tracking-wider">
+      We are Fudy, <br>
+      your product packaging consultant.
+      <div class="line w-1/4 bg-yellow left-1/2 transform -translate-x-1/2"></div>
+    </div>
+    {% include "@core/cmpt/ribbon/ribbon.twig" with {
+      class: 'left-0 bottom-0 mb-4 ',
+      color: 'yellow',
+      animate: true,
+    }%}
+    {% include "@core/cmpt/ribbon/ribbon.twig" with {
+      class: 'right-1/5 top-1/5 -mb-4 flip ',
+      color: 'pink',
+      type: 'small',
+      animate: false,
+    }%}
+    {% include "@core/cmpt/ribbon/ribbon.twig" with {
+      class: 'right-0 bottom-0 flip',
+      color: 'blue',
+      type: 'big',
+      animate: true,
+    }%}
+  </div>
+  
+
+
+  {# 客戶群#}
+		{% set clients = [{
+			thumbnail: {
+				src: 'images/client1.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/client2.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/client3.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/client4.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/client5.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/client6.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/client7.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/client8.png',
+				alt: '',
+			}
+		}] %}
+		{% include "@cmpt/clients/clients.twig" with clients %}
+
+
+
+    {# 認證 #}
+    {% set certifications = [{
+			thumbnail: {
+				src: 'images/certification1.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/certification2.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/certification3.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/certification4.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/certification5.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/certification6.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/certification7.png',
+				alt: '',
+			}
+		}] %}
+    <section class='bg-gray py-14'>
+      <div class="section-title text-center">CERTIFICATION</div>
+      <div class="mt-8 flex flex-wrap container justify-between px-16 space-y-4" style='max-width:1150px'>
+        {% for item in certifications %}
+          <img src="{{ item.thumbnail.src | assets }}" alt="{{ item.alt }}">
+        {% endfor %}
+        <div class="spacer" style='width:200px'></div>
+        <div class="spacer" style='width:200px'></div>
+        <div class="spacer" style='width:200px'></div>
+      </div>
+    </section>
+
+
+    {# 開始專案 #}
+		{% include "@cmpt/startProject/startProject.twig" %}
+{% endblock %}

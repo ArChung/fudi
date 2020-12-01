@@ -251,12 +251,76 @@
 			</div>
 		</div>
 
+		{# 最新產品 #}
+		{% set new_products = [{
+			title: 'Google NEST MINI',
+			color: 'pink',
+			link: '#',
+			thumbnail: {
+				src: 'images/product-demo1.jpg',
+			},
+		},{
+			title: 'Google NEST MINI',
+			color: 'blue',
+			link: '#',
+			thumbnail: {
+				src: 'images/product-demo2.jpg',
+			},
+		}] %}
+		{% for item in new_products %}
+			{% include "@cmpt/productBtn/productBtn.twig" with  item %}
+		{% endfor %}
 
-		<section class='relative h-64 bg-cover' style="background-image:url({{'images/product-demo1.jpg'|assets}})">
 
+		{# 開始專案 #}
+		{% include "@cmpt/startProject/startProject.twig" %}
 
+	
 		
-		</section>
-		<div class="bg-black" style='height:2000px'>123</div>
+		{# 客戶群#}
+		{% set clients = [{
+			thumbnail: {
+				src: 'images/client1.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/client2.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/client3.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/client4.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/client5.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/client6.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/client7.png',
+				alt: '',
+			}
+		},{
+			thumbnail: {
+				src: 'images/client8.png',
+				alt: '',
+			}
+		}] %}
+		{% include "@cmpt/clients/clients.twig" with clients %}
+		
+		
 	</div>
 {% endblock %}

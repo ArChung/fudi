@@ -3,8 +3,8 @@
 @import "../icons/_icon.css";
 @import "./sr.scss";
 @import "./dots.scss";
-@import "./functions.sass";
-@import "./index.sass";
+
+
 // @import "../icons/_icon.css";
 // @import "../../_core/assets/styles/index.scss";
 
@@ -22,6 +22,15 @@
 // @import "./wrap.scss";
 
 // @import "./wysiwyg.scss";
+
+// by archung
+@import "./functions.sass";
+@import "./common.sass";
+@import "./index.sass";
+@import "./story.sass";
+// by archung end
+
+
 .carou.\--basic {
 	.owl-dots {
 		text-align: center;
@@ -38,12 +47,7 @@
 	}
 }
 
-.bodier {
-	// min-height: calc(100vh - 222px);
-}
-.bodier {
-	background-color: #fff;
-}
+
 ul.nav {
 	li {
 		&.active {
