@@ -268,7 +268,7 @@
 			},
 		}] %}
 		{% for item in new_products %}
-			{% include "@cmpt/productBtn/productBtn.twig" with  item %}
+			{% include "@cmpt/productBtn/productBtn.twig" with  { item:item } %}
 		{% endfor %}
 
 

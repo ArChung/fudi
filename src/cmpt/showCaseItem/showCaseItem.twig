@@ -1,0 +1,37 @@
+{% set issOdd = (index % 2 == 1 )? true : false %}
+{% set ribbonSize = (random(1) > 0)?'big':'small' %}
+
+<div class="txtPicWrap relative mb-8 {{ (issOdd)?'flex-row-reverse' }}">
+	<div class="txt relative {{ (issOdd)?'pl-8':'pr-8' }}">
+		<div class="content ">
+			<h2 class="text-4xl font-bold">{{item.title}}</h2>
+			<p class="mt-1">{{item.excerpt}}</p>
+			<div class="fudiBtn bg-{{item.color}} mt-6">
+				<a href="{{item.link}}" class='absolute inset-0 z-10'></a>
+				<div class="txt">
+					MORE
+				</div>
+			</div>
+		</div>
+
+		{% if ( ribbonSize == 'big') %}
+			{% include "@core/cmpt/ribbon/ribbon.twig" with {
+        class: (issOdd)?'top-0 right-0 flip -mt-16 -mr-16':'top-0 left-0 -mt-16 -ml-16',
+        color: item.color,
+        animate: true,
+      }%}
+			{% else %} 
+      {% include "@core/cmpt/ribbon/ribbon.twig" with {
+        class: (issOdd)?'top-0 right-0 flip':'top-0 left-0 ',
+        color: item.color,
+        type: 'small',
+      }%}
+		{% endif %}
+
+
+	</div>
+	<div class="pic gee relative" data-color='{{ item.color }}' data-gene="init:aniPic">
+		<div class="img inset-0 absolute bg-cover" style='background-image:url({{item.thumbnail.src | assets}})'></div>
+		<a href="{{item.link}}" class="absolute inset-0 z-20"></a>
+	</div>
+</div>

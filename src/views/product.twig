@@ -1,0 +1,149 @@
+{% set page = 'product' %}
+{% extends "@layouts/base.twig" %}
+
+{% set row = {
+  title: 'Wi-fi Mesh System',
+  excerpt: 'Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesis',
+  id: 2,
+  color: 'black',
+  challenges: 'Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesis ',
+  solution: 'Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesis Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesis Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesis ',
+  result: 'Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesis Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesis Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesis ',
+  banner1: 'images/product1.jpg',
+  banner2: 'images/product2.jpg',
+  banner3: 'images/product3.jpg',
+  banner4: 'images/product4.jpg',
+  banner5: 'images/product5.jpg',
+} %}
+
+
+{% block necker %}
+	<div class="neck" style='background-image:url({{row.banner1|assets}})'></div>
+{% endblock %}
+{% block bodier %}
+	<div class="container max-w-screen-lg pb-14">
+		<div class="relative py-16 px-16">
+			<h1 class="section-title text-center">{{row.title}}</h1>
+			<p class="text-center max-w-screen-md mx-auto mt-2">{{row.excerpt}}</p>
+			{% include "@core/cmpt/ribbon/ribbon.twig" with {
+        class: 'right-0 top-0 flip mt-4 -mr-16',
+        width: 150,
+        color: row.color,
+        animate: true,
+      }%}
+			{% include "@core/cmpt/ribbon/ribbon.twig" with {
+        class: 'right-0 bottom-0 flip mb-4',
+        color: row.color,
+        type: 'small',
+        animate: false,
+      }%}
+			{% include "@core/cmpt/ribbon/ribbon.twig" with {
+        class: 'left-0 top-1/2 -ml-16 -mt-16',
+        width: 90,
+        color: row.color,
+        animate: true,
+      }%}
+		</div>
+
+		{# banner 2 #}
+		<div class="pic gee relative" data-color='{{row.color}}' data-gene="init:aniPic">
+			<img src='{{row.banner2|assets}}' alt="{{row.title}}" class='w-full img'>
+		</div>
+
+		{# Challenges #}
+		<div class="txtPicWrap min-h-auto mt-8">
+			<div class="txt pr-8 ">
+				<div class="content w-full relative py-14">
+					<h2 class="text-4xl font-bold">{{"Challenges"}}</h2>
+					<p class="mt-1">{{row.challenges}}</p>
+					{% include "@core/cmpt/ribbon/ribbon.twig" with {
+            class: 'top-0 left-0 flip',
+            color: row.color,
+            type: 'small',
+            animate: false,
+          }%}
+				</div>
+
+			</div>
+			<div class="pic gee relative" data-color='{{row.color}}' data-gene="init:aniPic">
+				<img src='{{row.banner3|assets}}' alt="{{row.title}}" class='w-full img'>
+			</div>
+		</div>
+
+		{# banner 4 #}
+		<div class="relative">
+			<div class="pic gee relative w-4/5 mt-8" data-color='{{row.color}}' data-gene="init:aniPic">
+				<img src='{{row.banner4|assets}}' alt="{{row.title}}" class='w-full img'>
+			</div>
+			{% include "@core/cmpt/ribbon/ribbon.twig" with {
+        class: 'right-0 top-0 -mr-16 mt-12',
+        width: 150,
+        color: row.color,
+        animate: true,
+      }%}
+		</div>
+
+		{# Solution #}
+		<div class="flex justify-end relative">
+			<div class="w-1/2 my-12">
+				<h2 class="text-4xl font-bold">{{"Solution"}}</h2>
+				<p class="mt-1">{{row.solution}}</p>
+			</div>
+			{% include "@core/cmpt/ribbon/ribbon.twig" with {
+        class: 'left-0 top-0 -ml-16 mt-12 flip',
+        width: 100,
+        color: row.color,
+        animate: true,
+      }%}
+		</div>
+
+		{# banner 5 #}
+		<div class="pic gee relative" data-color='{{row.color}}' data-gene="init:aniPic">
+			<img src='{{row.banner5|assets}}' alt="{{row.title}}" class='w-full img'>
+		</div>
+
+		<div class="flex mt-14 relative">
+			<h2 class="text-4xl font-bold w-2/5 pb-16">{{"Result"}}</h2>
+			<p class="w-3/5 pt-2">{{row.result}}</p>
+      {% include "@core/cmpt/ribbon/ribbon.twig" with {
+        class: 'left-0 bottom-0 mb-2',
+        color: row.color,
+        type: 'small',
+      }%}
+		</div> 
+
+    
+	</div>
+
+	{# 推薦產品 #}
+	{% set recomends = [{
+			title: 'Google NEST MINI',
+			color: 'pink',
+			link: '#1',
+			thumbnail: {
+				src: 'images/product-demo1.jpg',
+			},
+		},{
+			title: 'Google NEST MINI',
+			color: 'blue',
+			link: '#',
+			thumbnail: {
+				src: 'images/product-demo2.jpg',
+			},
+		}] %}
+
+	{% for item in recomends %}
+		{% include "@cmpt/productBtn/productBtn.twig" with  {item:item} %}
+	{% endfor %}
+
+
+  <div class="fixed z-40 top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 hover:translate-x-0 duration-500">
+    <a href="{{ recomends[0].link }}" class="inset-0 absolute z-10"></a>
+    <img src="{{'images/prevBtn.png' | assets}}" alt="">
+  </div>
+
+  <div class="fixed z-40 top-1/2 right-0 transform -translate-y-1/2 translate-x-1/2 hover:translate-x-0 duration-500">
+    <a href="{{ recomends[1].link }}" class="inset-0 absolute z-10"></a>
+    <img src="{{'images/nextBtn.png' | assets}}" alt="">
+  </div>
+{% endblock %}

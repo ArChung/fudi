@@ -1,0 +1,90 @@
+{% set page = 'showcase' %}
+{% extends "@layouts/base.twig" %}
+{% block necker %}{% endblock %}
+{% block bodier %}
+
+
+	<div class="container">
+		<h1 class="section-title mt-12 text-center">
+			SHOWCASE
+		</h1>
+		<p class="text-center max-w-2xl mx-auto mt-2">Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesis
+		</p>
+
+
+		{% set products = [{
+      title: 'SOLUTION',
+      color: 'pink',
+      excerpt: 'Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesis ',
+      thumbnail: {
+        src: 'images/case1.png',
+      },
+      link: '#',
+    },{
+      title: 'Secure Data',
+      color: 'blue',
+      excerpt: 'Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesis  ',
+      thumbnail: {
+        src: 'images/case2.png',
+      },
+      link: '#',
+    },{
+      title: '1 MORE',
+      color: 'yellow',
+      excerpt: 'Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesis ',
+      thumbnail: {
+        src: 'images/case3.png',
+      },
+      link: '#',
+    },{
+      title: 'Wi-fi Mesh System',
+      color: 'black',
+      excerpt: 'Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesis ',
+      thumbnail: {
+        src: 'images/case4.png',
+      },
+      link: '#',
+    },{
+      title: 'Google NEST MINI',
+      color: 'pink',
+      excerpt: 'Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesis ',
+      thumbnail: {
+        src: 'images/case5.png',
+      },
+      link: '#',
+    },{
+      title: 'Apple Airpods',
+      color: 'blue',
+      excerpt: 'Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesis  ',
+      thumbnail: {
+        src: 'images/case6.png',
+      },
+      link: '#',
+    },{
+      title: 'Green Box',
+      color: 'yellow',
+      excerpt: 'Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesis ',
+      thumbnail: {
+        src: 'images/case7.png',
+      },
+      link: '#',
+    },{
+      title: 'DIM',
+      color: 'black',
+      excerpt: 'Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesis ',
+      thumbnail: {
+        src: 'images/case8.png',
+      },
+      link: '#',
+    }] %}
+		<div class="py-14">
+			{% for item in products %}
+				{% include "@cmpt/showCaseItem/showCaseItem.twig" with { item: item ,index: loop.index}%}
+			{% endfor %}
+		</div>
+	</div>
+
+
+	{# 開始專案 #}
+	{% include "@cmpt/startProject/startProject.twig" %}
+{% endblock %}

@@ -171,3 +171,29 @@ gee.hook("up-loop-infinte", me => {
 		ease: "none"
 	});
 });
+
+
+gee.hook("aniPic", me => {
+
+  const el = $(`<span class="inset-y-0 absolute bg-${me.data('color')} z-10"></span>`);
+  me.append(el);
+
+  const tl = gsap.timeline();
+  const pic = me.find('.img');
+
+  tl.set(me,{overflow:'hidden'})
+  .set(pic,{autoAlpha: 0,scale:1.05})
+  .set(el,{width: '0%'})
+  .to(el,{duration:.3,width: '100%'})
+  .set(pic,{autoAlpha: 1})
+  .to(pic,{duration:3,scale:1},'in')
+  .to(el,{duration:.3,width: '0%',left: '100%'},'in')
+  .to(el,{autoAlpha: 0})
+
+
+  ScrollTrigger.create({
+    animation: tl,
+    trigger: me,
+    start: `top+=200 bottom`,
+  })
+});

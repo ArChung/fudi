@@ -1,4 +1,4 @@
-{% set page = 'design' %}
+{% set page = 'production' %}
 {% extends "@layouts/base.twig" %}
 {% block necker %}{% endblock %}
 {% block bodier %}
@@ -11,51 +11,59 @@
 
 
 		<h1 class="section-title mt-12 text-center">
-			DESIGN
+			PRODUCTION
 		</h1>
 		<p class="text-center max-w-xl mx-auto mt-2">Transform your product packaging from imagination into reality with unrivaled precision and accuracy</p>
 
 		<div class="mt-8 tag-list with-arr flex">
 			<div class='bg-blue tag-list-item'>
 				<h3 class='text-3xl txt'>1</h3>
-				<img src="{{'images/design1.png'|assets}}" alt="">
-				<h3 class='txt mt-2 text-sm'>ORDER</h3>
+				<img src="{{'images/pro1.png'|assets}}" alt="">
+				<h3 class='txt mt-2 text-sm'>PRE-PRESS</h3>
 			</div>
 			<div class="arr self-center">
 				<img src='{{'images/arr.png'|assets}}' alt=""></div>
 			<div class='bg-pink tag-list-item'>
 				<h3 class='text-3xl txt'>2</h3>
-				<img src="{{'images/design2.png'|assets}}" alt="">
-				<h3 class='txt mt-2 text-sm'>DESIGN</h3>
+				<img src="{{'images/pro2.png'|assets}}" alt="">
+				<h3 class='txt mt-2 text-sm'>PRESS</h3>
 			</div>
 			<div class="arr self-center">
 				<img src='{{'images/arr.png'|assets}}' alt=""></div>
 			<div class='bg-black tag-list-item'>
 				<h3 class='text-3xl txt text-white'>3</h3>
-				<img src="{{'images/design3.png'|assets}}" alt="">
-				<h3 class='txt mt-2 text-sm text-white'>PROTOTYPE</h3>
+				<img src="{{'images/pro3.png'|assets}}" alt="">
+				<h3 class='txt mt-2 text-sm text-white'>POST-PRESS</h3>
 			</div>
 			<div class="arr self-center">
 				<img src='{{'images/arr.png'|assets}}' alt=""></div>
 			<div class='bg-yellow tag-list-item'>
 				<h3 class='text-3xl txt'>4</h3>
-				<img src="{{'images/design4.png'|assets}}" alt="">
-				<h3 class='txt mt-2 text-sm'>QUALIFICATION</h3>
+				<img src="{{'images/pro4.png'|assets}}" alt="">
+				<h3 class='txt mt-2 text-sm'>ASSEMBLY</h3>
+			</div>
+			<div class="arr self-center">
+				<img src='{{'images/arr.png'|assets}}' alt=""></div>
+			<div class='bg-white tag-list-item'>
+				<h3 class='text-3xl txt'>5</h3>
+				<img src="{{'images/pro5.png'|assets}}" alt="">
+				<h3 class='txt mt-2 text-sm'>QUALITY</h3>
 			</div>
 		</div>
 
 		<div class="mt-12">
 			<div class="bg-blue flex justify-between px-4 items-center">
 				<div class="txt text-3xl font-bold">1</div>
-				<img src='{{'images/design1.png'| assets }}' alt="" class='w-12'>
+				<img src='{{'images/pro1.png'| assets }}' alt="" class='w-12'>
 			</div>
 			<div class="txtPicWrap mt-4">
 				<div class="txt text-lg flex-col items-start p-6">
-					<h2 class="text-4xl font-bold">Program Management</h2>
+					<h2 class="text-4xl font-bold">Pre-Press</h2>
 					<div class="content relative mt-4">
-						Dedicated program management team focused on managing demand cycles to ensure continuity of your product. 
+						Reviewing material substrate options and a formulated color selection allows our customers to make branding decisions prior to production on press.  Our collaborative efforts with secure file management and color proof alignment will allow expedited execution during first article inspection.
 					</div>
 				</div>
+				
 				<div class="pic gee relative" data-color='blue' data-gene="init:aniPic">
 					<div class="img inset-0 absolute bg-cover" style='background-image:url({{'images/demoPic1.jpg'| assets}})'></div>
 				</div>
@@ -63,14 +71,12 @@
 
 			<div class="bg-pink flex justify-between px-4 items-center mt-8">
 				<div class="txt text-3xl font-bold">2</div>
-				<img src='{{'images/design5.png'| assets }}' alt="" class='w-12'>
+				<img src='{{'images/pro2.png'| assets }}' alt="" class='w-12'>
 			</div>
 			<div class="txtPicWrap mt-4 flex-row-reverse">
 				<div class="txt text-lg flex-col items-start p-6">
-					<h2 class="text-4xl font-bold">Warehouse Management</h2>
-					<div class="content relative mt-4">
-						Warehousing solutions both outside and inside bonded zones to support JIT delivery to your facility. 
-					</div>
+					<h2 class="text-4xl font-bold">Press</h2>
+					<div class="content relative mt-4"></div>
 				</div>
 				<div class="pic gee relative" data-color='pink' data-gene="init:aniPic">
 					<div class="img inset-0 absolute bg-cover" style='background-image:url({{'images/demoPic2.jpg'| assets}})'></div>
@@ -80,13 +86,13 @@
 
 			<div class="bg-black flex justify-between px-4 items-center mt-8">
 				<div class="txt text-3xl font-bold text-white">3</div>
-				<img src='{{'images/design2.png'| assets }}' alt="" class='w-12'>
+				<img src='{{'images/pro3.png'| assets }}' alt="" class='w-12'>
 			</div>
 			<div class="txtPicWrap mt-4 ">
 				<div class="txt text-lg flex-col items-start p-6">
-					<h2 class="text-4xl font-bold">Transportation</h2>
+					<h2 class="text-4xl font-bold">Post-Press</h2>
 					<div class="content relative mt-4">
-						Global transportation management to ensure your product arrives where you need it, when you need it.  
+						Fudy post press technologies give our customers the ability to cost effectively differentiate their product on the retail shelf.  Innovative coatings, embossing, debossing, and foil treatments are just the beginning.
 					</div>
 				</div>
 				<div class="pic gee relative" data-color='black' data-gene="init:aniPic">
@@ -97,16 +103,33 @@
 
 			<div class="bg-yellow flex justify-between px-4 items-center mt-8">
 				<div class="txt text-3xl font-bold">4</div>
-				<img src='{{'images/design3.png'| assets }}' alt="" class='w-12'>
+				<img src='{{'images/pro4.png'| assets }}' alt="" class='w-12'>
 			</div>
 			<div class="txtPicWrap mt-4 flex-row-reverse">
 				<div class="txt text-lg flex-col items-start p-6">
-					<h2 class="text-4xl font-bold">Qualification</h2>
+					<h2 class="text-4xl font-bold">Assembly</h2>
 					<div class="content relative mt-4">
-						Package performance testing in accordance with industry standards. Unboxing and customer experience analysis to confirm our solution exceeds expectations.
+						Secure workshops with customized assembly procedures focused on finalizing your complete solution.  Our in-house manufacturing team and automated factory solutions allow for burst capacity during peak demand cycles.
 					</div>
 				</div>
 				<div class="pic gee relative" data-color='yellow' data-gene="init:aniPic">
+					<div class="img inset-0 absolute bg-cover" style='background-image:url({{'images/demoPic4.jpg'| assets}})'></div>
+				</div>
+			</div>
+
+
+			<div class="bg-white flex justify-between px-4 items-center mt-8">
+				<div class="txt text-3xl font-bold">4</div>
+				<img src='{{'images/pro5.png'| assets }}' alt="" class='w-12'>
+			</div>
+			<div class="txtPicWrap mt-4">
+				<div class="txt text-lg flex-col items-start p-6">
+					<h2 class="text-4xl font-bold">Quality</h2>
+					<div class="content relative mt-4">
+						Our data driven quality management team is focused on delivering a consistent product across Fudy manufacturing facilities. Lot level quality management delivers an unrivaled precision in the packaging industry.
+					</div>
+				</div>
+				<div class="pic gee relative" data-color='white' data-gene="init:aniPic">
 					<div class="img inset-0 absolute bg-cover" style='background-image:url({{'images/demoPic4.jpg'| assets}})'></div>
 				</div>
 			</div>

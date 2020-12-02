@@ -76,7 +76,10 @@
 		&:hover
 			color: black
 			
-			
+	&.bg-yellow
+		color: black
+		&:hover
+			color: white
 
 .section-title
 	font-size: 60px
@@ -112,6 +115,8 @@
 	width: 100%
 	display: flex
 	min-height: 443px
+	&.min-h-auto
+		min-height: auto
 	.txt
 		width: 50%
 		display: flex
@@ -122,6 +127,7 @@
 	.pic
 		width: 50%
 		+coverBg
+		
 
 
 .line
@@ -148,6 +154,7 @@
 			// margin-top: 15px
 			font-weight: bold
 			@apply text-lg
+
 	&.with-arr
 		.arr
 			z-index: 2
@@ -155,3 +162,7 @@
 			margin-left: -25px
 			
 
+.neck
+	height: 438px
+	+coverBg
+	position: relative

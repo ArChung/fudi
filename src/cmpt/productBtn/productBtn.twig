@@ -1,11 +1,11 @@
 <section class="sectionBtn">
-  <div class="pic" style="background-image:url({{ thumbnail.src | assets}})"></div>
+  <div class="pic" style="background-image:url({{ item.thumbnail.src | assets}})"></div>
   <div class="sb-conatiner flex flex-col justify-center">
-  <div class="text-5xl text-shadow font-bold text-white">{{title}}</div>
+  <div class="text-5xl text-shadow font-bold text-white">{{item.title}}</div>
     {% include "@cmpt/fudiBtn/fudiBtn.twig" with {
-      color: color,
+      color: item.color,
       txt: 'MORE',
-      link: link,
+      link: item.link,
     }%}
   </div>
 </section>

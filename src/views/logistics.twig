@@ -1,0 +1,99 @@
+{% set page = 'logistics' %}
+{% extends "@layouts/base.twig" %}
+{% block necker %}{% endblock %}
+{% block bodier %}
+
+	<div
+		class="container py-16 max-w-screen-lg px-8">
+
+		{# 導覽條 #}
+		{% include "@cmpt/service/serviceBar.twig" %}
+
+
+		<h1 class="section-title mt-12 text-center">
+			LOGISTICS
+		</h1>
+		<p class="text-center max-w-xl mx-auto mt-2">Transform your product packaging from imagination into reality with unrivaled precision and accuracy</p>
+
+		<div class="mt-8 tag-list with-arr flex ">
+			<div class='bg-blue tag-list-item'>
+				<h3 class='text-3xl txt'>1</h3>
+				<img src="{{'images/log1.png'|assets}}" alt="">
+				<h3 class='txt mt-2 text-sm'>PROGRAM MGT</h3>
+			</div>
+			<div class="arr self-center">
+				<img src='{{'images/arr.png'|assets}}' alt=""></div>
+			<div class='bg-pink tag-list-item'>
+				<h3 class='text-3xl txt'>2</h3>
+				<img src="{{'images/log2.png'|assets}}" alt="">
+				<h3 class='txt mt-2 text-sm'>WAREHOUSE MGT</h3>
+			</div>
+			<div class="arr self-center">
+				<img src='{{'images/arr.png'|assets}}' alt=""></div>
+			<div class='bg-yellow tag-list-item'>
+				<h3 class='text-3xl txt'>3</h3>
+				<img src="{{'images/log3.png'|assets}}" alt="">
+				<h3 class='txt mt-2 text-sm'>TRANSPORTATION</h3>
+			</div>
+		</div>
+
+		<div class="mt-12">
+			<div class="bg-blue flex justify-between px-4 items-center">
+				<div class="txt text-3xl font-bold">1</div>
+				<img src='{{'images/log1.png'| assets }}' alt="" class='w-12'>
+			</div>
+			<div class="txtPicWrap mt-4">
+				<div class="txt text-lg flex-col items-start p-6">
+					<h2 class="text-4xl font-bold">OrdeProgram Managementr</h2>
+					<div class="content relative mt-4">
+						Dedicated program management team focused on managing demand cycles to ensure continuity of your product.
+					</div>
+				</div>
+				<div class="pic gee relative" data-color='blue' data-gene="init:aniPic">
+					<div class="img inset-0 absolute bg-cover" style='background-image:url({{'images/demopic1.jpg'| assets}})'></div>
+				</div>
+			</div>
+
+			<div class="bg-pink flex justify-between px-4 items-center mt-8">
+				<div class="txt text-3xl font-bold">2</div>
+				<img src='{{'images/log2.png'| assets }}' alt="" class='w-12'>
+			</div>
+			<div class="txtPicWrap mt-4 flex-row-reverse">
+				<div class="txt text-lg flex-col items-start p-6">
+					<h2 class="text-4xl font-bold">Warehouse Management</h2>
+					<div class="content relative mt-4">
+						Warehousing solutions both outside and inside bonded zones to support JIT delivery to your facility.
+					</div>
+				</div>
+				<div class="pic gee relative" data-color='pink' data-gene="init:aniPic">
+					<div class="img inset-0 absolute bg-cover" style='background-image:url({{'images/demopic2.jpg'| assets}})'></div>
+				</div>
+			</div>
+
+
+			<div class="bg-yellow flex justify-between px-4 items-center mt-8">
+				<div class="txt text-3xl font-bold">3</div>
+				<img src='{{'images/log3.png'| assets }}' alt="" class='w-12'>
+			</div>
+			<div class="txtPicWrap mt-4 ">
+				<div class="txt text-lg flex-col items-start p-6">
+					<h2 class="text-4xl font-bold">Transportation</h2>
+					<div class="content relative mt-4">
+						Global transportation management to ensure your product arrives where you need it, when you need it.
+					</div>
+				</div>
+				<div class="pic gee relative" data-color='yellow' data-gene="init:aniPic">
+					<div class="img inset-0 absolute bg-cover" style='background-image:url({{'images/demopic3.jpg'| assets}})'></div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+	</div>
+
+
+	{# 開始專案 #}
+	{% include "@cmpt/startProject/startProject.twig" %}
+{% endblock %}
