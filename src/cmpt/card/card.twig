@@ -1,8 +1,9 @@
 <div class="relative h-full pb-4 flex {{ (type == 'row')? 'flex-col lg:flex-row items-center':'flex-col'}} {{ class }}">
 	<div class='{{ (type == 'row')? 'w-full lg:w-1/2'}}'>
-		<div class="z-10 relative inline-block px-3 py-1 bg-{{item.color}} {{(item.color == 'yellow')?'text-black':'text-white'}}">
-			{{item.date}}
-		</div>
+		{% include "@cmpt/card/date.twig" with { item: {
+      color: item.color,
+      date: item.date,
+    }}%}
 		<div class="pic overflow-hidden pb-2/3 relative -mt-3 ">
 			<img class='w-full h-full absolute object-cover' src="{{ item.thumbnail.src | assets }}" alt="">
 		</div>

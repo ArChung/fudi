@@ -1,0 +1,108 @@
+{% set page = 'product' %}
+{% extends "@layouts/base.twig" %}
+
+{% set row = {
+	title: '',
+	tags: ['#tag1','#tag2','#tag3','#tag4'],
+	author: 'John Wu',
+	date: 'Jun 16  2020',
+	post_content: '<p>123</p>',
+  color: 'blue',
+	link: 'this page link',
+	thumbnail: {
+		src: 'images/product1.jpg',
+	},
+} %}
+
+
+{% set recomends = [{
+	title: 'SOLUTION',
+	color: 'pink',
+	excerpt: 'Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesisOpen repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesisOpen repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesisOpen repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial trauma, following unsuccessful endovascular repair; aorto-bi-iliac prosthesis ',
+	date: 'Jun 16 2020',
+	thumbnail: {
+		src: 'images/news1.png',
+	},
+	link: '#',
+},{
+	title: 'Secure Data',
+	color: 'blue',
+	excerpt: 'Open repair of infrarenal aortic aneurysm or dissection, plus repair of associated arterial  ',
+	date: 'Jun 16 2020',
+	thumbnail: {
+		src: 'images/news2.png',
+	},
+	link: '#',
+},{
+	title: '1 MORE',
+	color: 'yellow',
+	excerpt: 'Open repair of infrarenal aortic aneurysm or dissection, plus repair of as',
+	date: 'Jun 16 2020',
+	thumbnail: {
+		src: 'images/news3.png',
+	},
+	link: '#',
+}] %}
+
+
+{% block necker %}
+	<div class="neck" style='background-image:url({{row.thumbnail.src|assets}})'></div>
+	<div class="flex justify-center relative z-10 -mt-3">
+		{% include "@cmpt/card/date.twig" with { item: {
+			color: row.color,
+			date: row.date,
+		}}%}
+	</div>
+{% endblock %}
+{% block bodier %}
+	<div class="container max-w-screen-lg pb-14 ">
+		<h1 class="section-title text-4xl text-center mt-8">What Makes a Person Interesting? SELF-AWARENESS</h1>
+		<div class="flex justify-center mt-8">
+			<div class="bg-{{row.color}} w-1/4" style='height:2px'></div>
+		</div>
+		<div class="mt-8 text-center text-xl">{{row.author}}</div>
+
+		<div class="container max-w-screen-md mt-8 pt-8 border-t" style='border-color:#CFCFCF;'>
+			<div class="flex justify-between ">
+				{% for item in row.tags %}
+					<div class="text-{{row.color}}">{{item}}</div>
+				{% endfor %}
+			</div>
+			<div class="wysiwyg mt-8">{{row.post_content|raw}}</div>
+		</div>
+		<div class="mt-8">
+			{% include '@core/cmpt/share/share.twig' with {
+				link: row.link ,
+				title: row.title,
+				fields:['facebook','twitter'],
+				btn_cls: 'mx-5 hoverScale',
+			}%}
+		</div>
+
+
+		<div class="flex flex-wrap mt-16 pt-8 border-t border-light">
+				{% for item in recomends[:3] %}
+					<div class="w-full lg:w-1/3 px-5 mb-8">
+						{% include "@cmpt/card/card.twig" with { 
+              item: item, 
+              type:'col',
+              class: 'hoverScale',
+              maxLength: 110,
+            }%}
+					</div>
+				{% endfor %}
+			</div>
+
+	</div>
+
+
+	{# <div class="fixed z-40 top-1/2 left-0 transform -translate-y-1/2 -translate-x-1/2 hover:translate-x-0 duration-500">
+		<a href="{{ recomends[0].link }}" class="inset-0 absolute z-10"></a>
+		<img src="{{'images/prevBtn.png' | assets}}" alt="">
+	</div>
+
+	<div class="fixed z-40 top-1/2 right-0 transform -translate-y-1/2 translate-x-1/2 hover:translate-x-0 duration-500">
+		<a href="{{ recomends[1].link }}" class="inset-0 absolute z-10"></a>
+		<img src="{{'images/nextBtn.png' | assets}}" alt="">
+	</div> #}
+{% endblock %}
