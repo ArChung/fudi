@@ -9,25 +9,29 @@
 {% endblock %}
 {% block bodier %}
 	<div class="relative py-8">
-		<div class="text-center container max-w-screen-sm py-8 border-b-2 border-yellow">
+		<div class="text-center container max-w-screen-sm py-8 border-b-2 border-yellow px-16 relative">
 			Environmental friendliness is not only a corporate social responsibility. It isour continuous motive to power up.
+			
 		</div>
-		{% include "@core/cmpt/ribbon/ribbon.twig" with {
-			class: 'right-0 top-0  flip',
-			color: 'blue',
-			animate: true,
-			type: 'big',
-		}%}
+
 		{% include "@core/cmpt/ribbon/ribbon.twig" with {
 			class: 'left-0 bottom-0 -mb-16',
 			color: 'yellow',
 			animate: true,
 			type: 'big',
 		}%}
+		{% include "@core/cmpt/ribbon/ribbon.twig" with {
+			class: 'right-0 top-0 flip -mr-8',
+			color: 'blue',
+			animate: true,
+			width: 100,
+			type: 'big',
+		}%}
 	</div>
 
 
 	<div class="container max-w-screen-lg py-8">
+
 		<div class="txtPicWrap min-h-auto">
 			<div class="txt px-4">
 				<div class="content">
@@ -122,6 +126,6 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="neck mt-16" style='background-image:url({{"images/greenFooter.jpg"|assets}})'></div>
 {% endblock %}
