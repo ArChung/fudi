@@ -197,3 +197,37 @@ gee.hook("aniPic", me => {
     start: `top+=200 bottom`,
   })
 });
+
+
+gee.hook("formSteps", me => {
+
+  ScrollTrigger.create({
+    trigger: me,
+    start: `top center`,
+    end: 'bottom center',
+    onEnter: ()=>{
+      updateSteps(+me.data('index')-1,me.data('color'));
+    },
+    onEnterBack: ()=>{
+      updateSteps(+me.data('index')-1,me.data('color'));
+
+    },
+  })
+
+  function updateSteps(_index,color){
+    removeClassWithFilter($('.fixed-steps .item'),'bg-');
+    $('.fixed-steps .item').eq(_index).addClass(`bg-${color}`);
+  }
+
+  function removeClassWithFilter(elemt, prefix) {
+    elemt.each(function(i, el) {
+        var classes = el.className.split(" ").filter(function(c) {
+            return c.lastIndexOf(prefix, 0) !== 0;
+        });
+        el.className = $.trim(classes.join(" "));
+    });
+}; 
+
+
+});
+

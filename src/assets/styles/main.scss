@@ -197,9 +197,22 @@ ul.nav {
 }
 
 form {
+	.radioWrap{
+		.radioItem{
+			display: flex;
+			align-items: center;
+			@apply mb-4;
+			input{
+				@apply w-6 h-6;
+			}
+			label{
+				@apply text-lg font-bold ml-3 mt-1;
+			}
+		}
+	}
 	.field,
 	.input-field {
-		@apply flex flex-col mb-4;
+		@apply flex flex-col mb-6;
 		label {
 			@apply text-lg font-bold mb-1;
 		}
@@ -209,12 +222,14 @@ form {
 		input[type="email"],
 		input[type="text"],
 		input[type="password"],
+		input[type="number"],
 		select {
 			@apply border border-light rounded-md bg-white px-4;
 		}
 		input[type="email"],
 		input[type="text"],
 		input[type="password"],
+		input[type="number"],
 		select {
 			@apply h-10;
 		}
