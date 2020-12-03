@@ -28,16 +28,16 @@
 
 		> .item,
 		> li {
-			~ li {
-				&:after {
-					content: "";
-					width: 1px;
-					height: 50%;
-					top: 25%;
+			// ~ li {
+			// 	&:after {
+			// 		content: "";
+			// 		width: 1px;
+			// 		height: 50%;
+			// 		top: 25%;
 
-					@apply mx-0 absolute left-0  bg-lighter;
-				}
-			}
+			// 		@apply mx-0 absolute left-0  bg-lighter;
+			// 	}
+			// }
 			a {
 				@apply px-4 py-4 whitespace-no-wrap;
 			}
