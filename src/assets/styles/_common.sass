@@ -21,13 +21,13 @@
 		&::after
 			height: 5px
 
-	&.text-pink:after
+	&.line-pink:after
 		@apply bg-pink
-	&.text-blue:after
+	&.line-blue:after
 		@apply bg-blue
-	&.text-black:after
+	&.line-black:after
 		@apply bg-black
-	&.text-yellow:after
+	&.line-yellow:after
 		@apply bg-yellow
 
 
@@ -166,3 +166,8 @@
 	height: 438px
 	+coverBg
 	position: relative
+
+.hoverScale
+	+dTime
+	&:hover
+		transform: scale(1.05)

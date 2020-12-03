@@ -1,0 +1,16 @@
+<div class="relative h-full pb-4 flex {{ (type == 'row')? 'flex-col lg:flex-row items-center':'flex-col'}} {{ class }}">
+	<div class='{{ (type == 'row')? 'w-full lg:w-1/2'}}'>
+		<div class="z-10 relative inline-block px-3 py-1 bg-{{item.color}} {{(item.color == 'yellow')?'text-black':'text-white'}}">
+			{{item.date}}
+		</div>
+		<div class="pic overflow-hidden pb-2/3 relative -mt-3 ">
+			<img class='w-full h-full absolute object-cover' src="{{ item.thumbnail.src | assets }}" alt="">
+		</div>
+	</div>
+	<div class="pt-4  relative {{ (type == 'row')? 'lg:w-1/2 lg:p-8'}}">
+		<h2 class='font-bold text-2xl'>{{item.title}}</h2>
+		<p class="mt-2">{{ item.excerpt|striptags|length > maxLength ? item.excerpt|striptags|slice(0, maxLength) ~ '...' : item.excerpt|striptags }}</p>
+    <div class="txt line-{{item.color}} text-lineBtn  font-bold inline-block mt-4">SEE MORE</div>
+	</div>
+	<a href="{{ tiem.link }}" class="z-20 absolute inset-0"></a>
+</div>
