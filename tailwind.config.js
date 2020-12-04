@@ -166,7 +166,8 @@ module.exports = {
 	},
 
 	plugins: [
-		require("tailwindcss-gradients")
+		require("tailwindcss-gradients"),
+		require('@tailwindcss/custom-forms'),
 		// function({ addComponents }) {
 		// const buttons = {
 		// 	'.btn-123': {

@@ -219,17 +219,29 @@ gee.hook("formSteps", me => {
     $('.fixed-steps .item').eq(_index).addClass(`bg-${color}`);
   }
 
-  function removeClassWithFilter(elemt, prefix) {
-    elemt.each(function(i, el) {
-        var classes = el.className.split(" ").filter(function(c) {
-            return c.lastIndexOf(prefix, 0) !== 0;
-        });
-        el.className = $.trim(classes.join(" "));
-    });
-  }; 
+  
 });
 
 $('.menu .hasChild').click(function(){
   $(this).toggleClass('active');
 });
 
+gee.hook("googleMapSection", me => {
+  // console.log('googleMapSection');
+  me.find('.form-select').change(e=>{3
+    // console.log($(e.currentTarget).val());
+    removeClassWithFilter(me,'channel-');
+    me.addClass(`channel-${$(e.currentTarget).val()}`);
+  })
+});
+
+
+
+function removeClassWithFilter(elemt, prefix) {
+  elemt.each(function(i, el) {
+      var classes = el.className.split(" ").filter(function(c) {
+          return c.lastIndexOf(prefix, 0) !== 0;
+      });
+      el.className = $.trim(classes.join(" "));
+  });
+}; 

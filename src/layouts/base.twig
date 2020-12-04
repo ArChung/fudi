@@ -25,43 +25,12 @@
 				bodier
 			{% endblock %}
 		</div>
-		{# <footer class="app-footer bg-black text-white  py-4">
-					<a href="#Z" title="下方功能區塊" id="AZ" accesskey="Z" class="block h-1 -mb-1 overflow-hidden">:::</a>
-					{% block footer %}
-						<div class="container py-4 px-4 lg:px-0">
-							<div class="flex lg:flex-row flex-col">
-								<div>
-									<h4 class="text-xl">職場安全健康週專網</h4>
-									<ul class="">
-										<li>資訊應用平台諮詢客服專線：02-22470449</li>
-										<li>服務時間：週一至週五 上午9:00-12:00，下午13:30-17:30</li>
-										<li>地址：24219 新北市新莊區中平路439號南棟11樓
-										</li>
-									</ul>
-								</div>
-								<div class="lg:ml-auto flex flex-col justify-between lg:items-end">
-									<ul class="nav --normal -mx-4 lg:mx-0">
-										<li>
-											<a href="#" title="隱私權政策">隱私權政策</a>
-										</li>
-										<li>
-											<a href="#" title="會員權限">會員權限</a>
-										</li>
-									</ul>
-									<div class="mark w-32">
-										<img src="{{'images/accessibility-A.jpg' | assets}}" alt="無障礙標章">
-									</div>
-								</div>
-							</div>
-							<hr class="border-lightest my-4">
-							<div class=" ">
-								<p>Copyright © 勞動部職業安全衛生署    建議使用IE10以上、Firefox、Chrome瀏覽器，在1024x768模式下瀏覽</p>
-							</div>
-						</div>
-					{% endblock %}
-				</footer> #}
+		
+		{# footer #}
+		{% include "@cmpt/footer/footer.twig" %}
+
 		{% include '@core/mod/loader/loader.twig' %}
-		<div class="modal modal-search ">
+		{# <div class="modal modal-search ">
 			<div class="modal-wrap px-8 w-full" style="max-width:500px">
 				<div class="rounded-lg bg-white overflow-hidden">
 					<div class=" w-full  bg-primary flex items-center px-4 py-2">
@@ -85,7 +54,7 @@
 					</form>
 				</div>
 			</div>
-		</div>
+		</div> #}
 		{% block append %}{% endblock %}
 	</body>
 </html>
