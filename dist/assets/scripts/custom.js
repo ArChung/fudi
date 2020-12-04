@@ -171,3 +171,77 @@ gee.hook("up-loop-infinte", me => {
 		ease: "none"
 	});
 });
+
+
+gee.hook("aniPic", me => {
+
+  const el = $(`<span class="inset-y-0 absolute bg-${me.data('color')} z-10"></span>`);
+  me.append(el);
+
+  const tl = gsap.timeline();
+  const pic = me.find('.img');
+
+  tl.set(me,{overflow:'hidden'})
+  .set(pic,{autoAlpha: 0,scale:1.05})
+  .set(el,{width: '0%'})
+  .to(el,{duration:.3,width: '100%'})
+  .set(pic,{autoAlpha: 1})
+  .to(pic,{duration:3,scale:1},'in')
+  .to(el,{duration:.3,width: '0%',left: '100%'},'in')
+  .to(el,{autoAlpha: 0})
+
+
+  ScrollTrigger.create({
+    animation: tl,
+    trigger: me,
+    start: `top+=200 bottom`,
+  })
+});
+
+
+gee.hook("formSteps", me => {
+
+  ScrollTrigger.create({
+    trigger: me,
+    start: `top center`,
+    end: 'bottom center',
+    onEnter: ()=>{
+      updateSteps(+me.data('index')-1,me.data('color'));
+    },
+    onEnterBack: ()=>{
+      updateSteps(+me.data('index')-1,me.data('color'));
+
+    },
+  })
+
+  function updateSteps(_index,color){
+    removeClassWithFilter($('.fixed-steps .item'),'bg-');
+    $('.fixed-steps .item').eq(_index).addClass(`bg-${color}`);
+  }
+
+  
+});
+
+$('.menu .hasChild').click(function(){
+  $(this).toggleClass('active');
+});
+
+gee.hook("googleMapSection", me => {
+  // console.log('googleMapSection');
+  me.find('.form-select').change(e=>{3
+    // console.log($(e.currentTarget).val());
+    removeClassWithFilter(me,'channel-');
+    me.addClass(`channel-${$(e.currentTarget).val()}`);
+  })
+});
+
+
+
+function removeClassWithFilter(elemt, prefix) {
+  elemt.each(function(i, el) {
+      var classes = el.className.split(" ").filter(function(c) {
+          return c.lastIndexOf(prefix, 0) !== 0;
+      });
+      el.className = $.trim(classes.join(" "));
+  });
+}; 
