@@ -1,0 +1,83 @@
+{# footer 選單 #}
+{% set footer = [
+	{
+		title:'About',
+		uri:'/about.html',
+	},
+	{
+		title:'Service',
+		uri:'/design.html',
+		rows: [{
+			title: 'Design',
+			uri: 'design.html',
+		},{
+			title: 'Production',
+			uri: 'production.html',
+		},{
+			title: 'Logistics',
+			uri: 'logistics.html',
+		}]
+	},
+	{
+		title:'Showcase',
+		uri:'/showcase.html',
+		
+	},
+	{
+		title:'Green',
+		uri:'/green.html',
+
+	},
+	{
+		title:'Blog',
+		uri:'/blog.html',
+
+	},
+]%}
+
+{# 公司資訊 #}
+{% set company_info = {
+  title: 'FUDY SOLUTIONS',
+  phone: '510-399-9922',
+  address: '3054 Lawrence Expy Santa Clara, CA 95051 USA',
+  email: 'henry@fudy-solutions.com ',
+  skype: 'henry_hsu',
+} %}
+
+
+<div class="bg-black py-10">
+	<div class="container text-white px-6">
+		<div class=" flex justify-between border-b border-light py-4 flex-wrap">
+			{% for item in footer %}
+				<div class="">
+					<a href="{{item.uri}}" class="text-lg font-bold py-2 block hover-yellow">{{item.title}}</a>
+					{% if item.rows %}
+						<ul>
+							{% for row in item.rows %}
+								<li>
+									<a href="{{row.uri}}" class='py-2 block hover-yellow'>{{row.title}}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</div>
+			{% endfor %}
+		</div>
+		<div class=" flex justify-between pt-8 flex-col space-y-4 lg:space-y-0 lg:flex-row">
+			<div>
+				<img src='{{"images/logo.png"|assets}}' alt="">
+			</div>
+			<div class="">
+				<p class='font-bold'>{{company_info.title}}</p>
+				<p>{{company_info.address}}</p>
+			</div>
+			<div class="">
+				<p class='font-bold'>CONTACT</p>
+				<p><a class='hover-yellow' href="mailto:{{company_info.email}}">{{company_info.email}}</a></p>
+				<p>Skype: {{company_info.skype}}</p>
+				<p>t: <a class='hover-yellow' href="tel:{{company_info.phone}}">{{company_info.phone}}</a></p>
+			</div>
+		</div>
+
+	</div>
+</div>

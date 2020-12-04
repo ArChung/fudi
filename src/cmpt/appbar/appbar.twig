@@ -6,11 +6,21 @@
 	{
 		title:'Service',
 		uri:'/design.html',
+		rows: [{
+			title: 'Design',
+			uri: 'design.html',
+		},{
+			title: 'Production',
+			uri: 'production.html',
+		},{
+			title: 'Logistics',
+			uri: 'logistics.html',
+		}]
 	},
 	{
 		title:'Showcase',
 		uri:'/showcase.html',
-
+		
 	},
 	{
 		title:'Green',
@@ -22,16 +32,16 @@
 		uri:'/blog.html',
 
 	},
-] %}
+]%}
 
 
 <nav class="app-bar flex lg:flex-col bg-black fixed top-0 z-50 w-full left-0 pl-4">
 	<div
 		class="flex items-center justify-between w-full">
 		{# logo #}
-		<div class="brand z-5 lg:w-auto w-56">
+		<div class="brand z-5 lg:w-auto">
 			<a href="{{'index' | r}}" title="首頁">
-				<img class="logo link" src="{{ '/images/logo.png'| assets }}" title="網站logo" alt="網站logo">
+				<img class="logo link w-32" src="{{ '/images/logo.png'| assets }}" title="網站logo" alt="網站logo">
 			</a>
 		</div>
 		<div class='flex'>
@@ -45,11 +55,30 @@
 				<div class="container flex lg:justify-end  h-full lg:h-auto text-white">
 					<ul class="nav --normal flex lg:flex-row flex-col ">
 						{% for item in menu %}
-							<li class="item  {{ item.class }}">
-								<a class="link flex items-center" href="{{ item.uri }}" title="{{ item.title }}">
-									{{ item.title }}
-								</a>
-							</li>
+							{% if item.rows %}
+								<li class="item hasChild">
+									<a class="link flex items-center cursor-pointer">
+										{{ item.title }}
+									</a>
+									{# Second level menu #}
+									<ul class="dropdown bg-black pl-6 lg:absolute lg:pl-0">
+										{% for child in item.rows %}
+											<li class="item ">
+												<a class="link flex items-center" href="{{ child.uri }}">
+													{{ child.title }}
+												</a>
+											</li>
+										{% endfor %}
+									</ul>
+								</li>
+							{% else %}
+								<li class="item">
+									<a class="link flex items-center" href="{{ item.uri }}" title="{{ item.title }}">
+										{{ item.title }}
+									</a>
+								</li>
+							{% endif %}
+
 						{% endfor %}
 					</ul>
 				</div>
@@ -68,21 +97,6 @@
 				</a>
 			</div>
 		</div>
-		{# <ul class="icons nav --normal  flex ml-auto">
-								
-											<li class="item  lg:hidden xs:block ">
-												<a class="gee link" data-gene="click:drawer.toggle" data-ta="{{toggle is defined ? toggle :'.app-bar .menu'}}">
-													<i class="icon icon-menu"></i>
-													<span class="sr-only">Toggle</span>
-												</a>
-											</li>
-										</ul> #}
-		{# <div class="item toggler lg:hidden xs:block ">
-																																			<button class="gee link" data-gene="click:drawer.toggle" data-ta="{{toggle is defined ? toggle :'.app-bar .menu'}}">
-																																				<i class="icon icon-menu"></i>
-																																				<span class="sr-only">Toggle</span>
-																																			</button>
-																																		</div> #}
 	</div>
 
 </nav>

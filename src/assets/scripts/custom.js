@@ -226,8 +226,10 @@ gee.hook("formSteps", me => {
         });
         el.className = $.trim(classes.join(" "));
     });
-}; 
+  }; 
+});
 
-
+$('.menu .hasChild').click(function(){
+  $(this).toggleClass('active');
 });
 

@@ -1,6 +1,6 @@
 .nav {
 	@apply flex relative;
-	overflow-y: auto;
+	// overflow-y: auto;
 	max-width: 100%;
 	&.dark {
 	}
@@ -24,10 +24,11 @@
 
 	&.\--normal {
 		max-width: 100%;
-		overflow-x: auto;
+		// overflow-x: auto;
 
 		> .item,
 		> li {
+			position: relative;
 			// ~ li {
 			// 	&:after {
 			// 		content: "";
@@ -38,9 +39,37 @@
 			// 		@apply mx-0 absolute left-0  bg-lighter;
 			// 	}
 			// }
+				
 			a {
 				@apply px-4 py-4 whitespace-no-wrap;
 			}
+
+			.dropdown{
+				display: none;
+			}
+
+			
+
+			@media (max-width: 1023px) {
+				&.hasChild.active{
+					> .dropdown{
+						display: block;
+					}
+				}
+			}
+
+			@media (min-width: 1024px) {
+				&.hasChild:hover{
+					> .dropdown{
+						display: block;
+					}
+				}
+			}
+			
+		}
+
+		.item:not(.hasChild):hover{
+			@apply text-yellow
 		}
 	}
 	&.\--stacked {
